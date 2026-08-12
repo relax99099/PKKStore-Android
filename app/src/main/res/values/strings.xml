@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">PKKStore</string>
-    <string name="app_name_long" translatable="false">PKKStore for Android</string>
+    <string name="app_name_long" translatable="false">PKKStore</string>
     <string name="app_desc">The universal proxy toolchain for Android, written in Kotlin.</string>
     <string name="project">Project</string>
     <string name="github">Source code</string>
@@ -66,3 +66,189 @@
     <string name="ws_browser_forwarding">Browser Forwarding</string>
     <string name="ws_browser_forwarding_sum">Forward corresponding WebSockets through the browser.</string>
     <string name="speed_interval">Speed Notification Update Interval</string>
+    <string name="cag_misc">Misc Settings</string>
+    <string name="show_stop">Show Stop Button</string>
+    <string name="show_stop_sum">If you don’t want to use Quick Tile as the switch</string>
+    <string name="show_direct_speed">Show Direct Speed</string>
+    <string name="show_direct_speed_sum">Show the traffic speed without proxy in the notification as
+        well</string>
+    <string name="security_settings">TLS Security Settings</string>
+    <string name="allow_insecure">Allow Insecure</string>
+    <string name="allow_insecure_sum">Disable certificate checking. When enabled, this configuration
+        is as secure as plaintext</string>
+    <string name="traffic" translatable="false">%1$s↑ %2$s↓</string>
+    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\nDirect： %3$s↑ %4$s↓</string>
+    <string name="speed">%s/s</string>
+    <string name="connection_test_testing">Testing…</string>
+    <string name="connection_test_available">Success: HTTPS handshake took %dms</string>
+    <string name="connection_test_available_http">Success: HTTP handshake took %dms</string>
+    <string name="connection_test_error">Failed: %s</string>
+    <string name="connection_test_fail">Internet Unavailable</string>
+    <string name="connection_test_error_status_code">Error code: #%d</string>
+    <string name="cag_dns">DNS Settings</string>
+    <string name="remote_dns">Remote DNS</string>
+    <string name="direct_dns">Direct DNS</string>
+    <string name="enable_dns_routing">Enable DNS Routing</string>
+    <string name="dns_routing_message">Resolve domains in bypass routes with Direct DNS. Be aware of
+        potential DNS leaks</string>
+    <string name="enable_fakedns">Enable FakeDNS</string>
+    <string name="fakedns_message">May cause other applications need to be restarted to reconnect to
+        the network after proxy stopped</string>
+    <string name="dns_hosts">Domain rewrite</string>
+    <string name="port_local_dns">Local DNS Port</string>
+    <string name="require_transproxy">Enable Transproxy Inbound</string>
+    <string name="transproxy_mode">Transproxy Mode</string>
+    <string name="connection_test_url">Connection Test URL</string>
+    <!-- proxy category -->
+    <string name="profile_name">Profile Name</string>
+    <string name="server_address">Server</string>
+    <string name="server_port">Remote Port</string>
+    <string name="username">Username</string>
+    <string name="username_opt">Username (Optional)</string>
+    <string name="password_opt">Password (Optional)</string>
+    <string name="key_opt">Key (Optional)</string>
+    <string name="password">Password</string>
+    <string name="enc_method">Encrypt Method</string>
+    <string name="protocol">Protocol</string>
+    <string name="protocol_param">Protocol Param</string>
+    <string name="obfs">Obfs</string>
+    <string name="obfs_param">Obfs Param</string>
+    <string name="uuid">User ID</string>
+    <string name="alter_id">Alter ID</string>
+    <string name="security">Transport layer encryption</string>
+    <string name="network">Network</string>
+    <string name="header_type">Header Type</string>
+    <string name="ws_host">WebSocket Host</string>
+    <string name="ws_path">WebSocket Path</string>
+    <string name="http_host">HTTP Host</string>
+    <string name="http_path">HTTP Path</string>
+    <string name="grpc_service_name">gRPC ServiceName</string>
+    <string name="tls">Use TLS</string>
+    <string name="sni">Server Name Indication</string>
+    <string name="alpn">Application-Layer Protocol Negotiation</string>
+    <string name="certificates">Certificates</string>
+    <string name="early_data_header_name">Early Data Header Name</string>
+    <string name="encryption">Encryption</string>
+    <string name="extra_headers">Extra Headers</string>
+    <string name="config_type">Config Type</string>
+    <string name="edit_config">Edit Config</string>
+    <!-- feature category -->
+    <string name="ipv6">IPv6 Route</string>
+    <string name="prefer">Prefer</string>
+    <string name="only">Only</string>
+    <string name="metered">Metered Hint</string>
+    <string name="metered_summary">Hint system to treat VPN as metered</string>
+    <string name="menu_route">Route</string>
+    <string name="route_add">Create Route</string>
+    <string name="delete_route_prompt">Are you sure you want to remove this route?</string>
+    <string name="route_name">Route Name</string>
+    <string name="route_proxy">Proxy</string>
+    <string name="route_bypass">Bypass</string>
+    <string name="route_block">Block</string>
+    <string name="route_profile">Select Profile…</string>
+    <string name="empty_route">Empty Route</string>
+    <string name="empty_route_notice">Set some rules before saving</string>
+    <string name="route_bypass_domain">Domain rule for %s</string>
+    <string name="route_play_store">Play store rule for %s</string>
+    <string name="route_bypass_ip">IP rule for %s</string>
+    <string name="route_reset">Reset</string>
+    <string name="route_manage_assets">Manage Route Assets</string>
+    <string name="route_assets">Assets</string>
+    <string name="route_rules_provider">Rule Assets Provider</string>
+    <string name="route_rules_official">Official</string>
+    <string name="route_asset_status">Local version: %s</string>
+    <string name="route_asset_no_update">No update</string>
+    <string name="route_asset_updated">Updated</string>
+    <string name="route_not_asset">Not an asset file: excepted .db, but %s</string>
+    <string name="route_opt_bypass_lan">Bypass LAN</string>
+    <string name="route_opt_block_ads">Block ADs</string>
+    <string name="route_opt_block_analysis">Block analysis</string>
+    <string name="route_opt_block_quic">Block QUIC</string>
+    <string name="domain_strategy">Domain Resolution Strategy</string>
+    <string name="traffic_sniffing">Enable Traffic Sniffing</string>
+    <string name="enable_mux">Enable Multiplexer</string>
+    <string name="mux_sum">Mux is designed to reduce TCP handshake latency, not to increase
+        connection throughput. Using Mux to watch videos, download or speed test is usually counter
+        productive. If the server does not support it, you will not be able to access the Internet.</string>
+    <string name="mux_concurrency">Mux Concurrent Connections</string>
+    <string name="tcp_keep_alive_interval">TCP keep active packet delivery interval</string>
+    <string name="proxied_apps">Apps VPN mode</string>
+    <string name="proxied_apps_summary">Configure VPN mode for selected apps</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="search_apps">Search…</string>
+    <string name="scanning">Scanning…</string>
+    <string name="invert_selections">Invert selections</string>
+    <string name="clear_selections">Clear selections</string>
+    <string name="bypass_apps">Bypass</string>
+    <string name="show_system_apps">Show system apps</string>
+    <string name="auto_connect">Auto Connect</string>
+    <string name="auto_connect_summary">Enable proxy on startup/app update if it was running before</string>
+    <string name="direct_boot_aware">Allow Toggling in Lock Screen</string>
+    <string name="direct_boot_aware_summary">Your selected profile information will be less
+        protected</string>
+    <!-- notification category -->
+    <string name="service_vpn">VPN Service</string>
+    <string name="service_proxy">Proxy Service</string>
+    <string name="forward_success">Proxy started.</string>
+    <string name="invalid_server">Invalid server name</string>
+    <string name="service_failed">Failed: </string>
+    <string name="stop">Stop</string>
+    <string name="stopping">Shutting down…</string>
+    <string name="vpn_error">%s</string>
+    <string name="vpn_permission_denied">Permission denied to create a VPN service</string>
+    <string name="reboot_required">Failed to start VPN service. You might need to reboot your
+        device.</string>
+    <!-- alert category -->
+    <string name="profile_empty">Please select a profile</string>
+    <string name="connect">Connect</string>
+    <string name="clipboard_empty">Clipboard is empty</string>
+    <!-- menu category -->
+    <string name="settings">Settings</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="add_profile">Add Profile</string>
+    <string name="select_profile">Select Profile</string>
+    <string name="action_socks" translatable="false">SOCKS</string>
+    <string name="action_http" translatable="false">HTTP</string>
+    <string name="action_shadowsocks" translatable="false">Shadowsocks</string>
+    <string name="action_shadowsocksr" translatable="false">ShadowsocksR</string>
+    <string name="action_vmess" translatable="false">Vk1lc3M=</string>
+    <string name="action_trojan" translatable="false">VHJvamFu</string>
+    <string name="action_trojan_go" translatable="false">VHJvamFuIEdv</string>
+    <string name="action_mieru" translatable="false">TWllcnU=</string>
+    <string name="action_naive" translatable="false">TmHDr3Zl</string>
+    <string name="action_anytls" translatable="false">QW55VExT</string>
+    <string name="action_hysteria" translatable="false">SHlzdGVyaWE=</string>
+    <string name="action_ssh" translatable="false">U1NI</string>
+    <string name="action_wireguard" translatable="false">V2lyZUd1YXJk</string>
+    <string name="action_tuic" translatable="false">VFVJQw==</string>
+    <string name="proxy_chain">UHJveHkgQ2hhaW4=</string>
+    <string name="custom_config">Q3VzdG9tIENvbmZpZw==</string>
+    <string name="balancer">QmFsYW5jZXI=</string>
+    <string name="balancer_settings">QmFsYW5jZXIgU2V0dGluZ3M=</string>
+    <string name="balancer_type">VHlwZQ==</string>
+    <string name="balancer_strategy">U3RyYXRlZ3k=</string>
+    <string name="chain_settings">Q2hhaW4gU2V0dGluZ3M=</string>
+    <string name="config_settings">Q29uZmlnIFNldHRpbmdz</string>
+    <string name="circular_reference">Q2lyY3VsYXIgcmVmZXJlbmNl</string>
+    <string name="circular_reference_sum">VGhlIHJvdXRlIGNhbm5vdCBjb250YWluIGl0c2VsZi4=</string>
+    <string name="clear_profiles">Q2xlYXI=</string>
+    <string name="action_create_group">RW1wdHkgZ3JvdXA=</string>
+    <string name="action_from_link">RnJvbSBzdWJzY3JpcHRpb24=</string>
+    <string name="action_scan_china_apps">U2NhbiBDaGluYSBhcHBz</string>
+    <string name="action_export_file">RXhwb3J0IHRvIGZpbGU=</string>
+    <string name="action_export_clipboard">RXhwb3J0IHRvIENsaXBib2FyZA==</string>
+    <string name="action_export">RXhwb3J0</string>
+    <string name="action_import">SW1wb3J0IGZyb20gQ2xpcGJvYXJk</string>
+    <string name="action_import_file">SW1wb3J0IGZyb20gZmlsZQ==</string>
+    <string name="action_export_msg">U3VjY2Vzc2Z1bGx5IGV4cG9ydCE=</string>
+    <string name="action_export_err">RmFpbGVkIHRvIGV4cG9ydC4=</string>
+    <string name="action_import_msg">U3VjY2Vzc2Z1bGx5IGltcG9ydCE=</string>
+    <string name="action_import_err">RmFpbGVkIHRvIGltcG9ydC4=</string>
+    <string name="file_manager_missing">WW91ciBkZXZpY2UgbGFja3MgYW4gQW5kcm9pZCBzdGFuZGFyZCBmaWxlIHNlbGVjdG9yLCBwbGVhc2UKICAgICAgICBpbnN0YWxsIG9uZSwgc3VjaCBhcyBNYXRlcmlhbCBGaWxlcy4=</string>
+    <!-- share -->
+    <!-- profile -->
+    <string name="profile_config">UHJvZmlsZSBjb25maWc=</string>
+    <string name="delete">UmVtb3Zl</string>
+    <string name="delete_confirm_prompt">QXJlIHlvdSBzdXJlIHlvdSB3YW50IHRvIHJlbW92ZSB0aGlzIHByb2ZpbGU/PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNoYXJlX3FyX25mYyI+UVIgY29kZTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhZGRfcHJvZmlsZV9tZXRob2RzX3NjYW5fcXJfY29kZSI+U2NhbiBRUiBjb2RlPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImFjdGlvbl9zd2l0Y2giPlN3aXRjaDwvc3RyaW5nPgoKICAgIDxzdHJpbmcgbmFtZT0idHVpY191ZHBfcmVsYXlfbW9kZSI+VURQIFJlbGF5IE1vZGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idHVpY19jb25nZXN0aW9uX2NvbnRyb2xsZXIiPkNvbmdlc3Rpb24gQ29udHJvbGxlcjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ0dWljX2Rpc2FibGVfc25pIj5EaXNhYmxlIFNOSTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ0dWljX3JlZHVjZV9ydHQiPkVuYWJsZSAwLVJUVCBRVUlDIGhhbmRzaGFrZTwvc3RyaW5nPgoKICAgIDxzdHJpbmcgbmFtZT0icGxlYXNlX3VwZGF0ZSI+WW91ciBBUEAgaXMgdG9vIG9sZCAoJXMpLiBBbmQgd2lsbCBzdG9wIHdvcmtpbWcgYXQgJXMuIFBsZWFzZQogICAgICAgIHVwZGF0ZSE8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icGxlYXNlX3VwZGF0ZV9mb3JjZSI+WW91ciBBUEAgaXMgdG9vIG9sZCAoJXMpLiBBbmQgaGFzIGJlZW4gc3RvcHBlZCB3b3JraW5nIGF0ICVzLgogICAgICAgIFBsZWFzZSB1cGRhdGUhPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImNvbm5lY3Rpb25fdGVzdF9kZWxldGVfdW5hdmFpbGFibGUiPkNsZWFyIHVuYXZhaWxhYmxlPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Im1vdmUiPk1vdmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZXhlX3ByZWZlcl9wcm92aWRlciI+UGx1Z2luIFByZWZlcnJlZCBQcm92aWRlcjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJjcmVhdGVfc2hvcnRjdXQiPkNyZWF0ZSBTaG9ydGN1dDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhcHBfdGxzX3ZlcnNpb24iPlN1YnNjcmlwdGlvbiBNaW4gVExTIFZlcnNpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaG9wX2ludGVydmFsIj5Qb3J0IEhvcHBpbmcgSW50ZXJ2YWwoc2Vjb25kKTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJkb21haW5fc3RyYXRlZ3lfZm9yX3JlbW90ZSI+RG9tYWluIHN0cmF0ZWd5IGZvciBSZW1vdGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZG9tYWluX3N0cmF0ZWd5X2Zvcl9kaXJlY3QiPkRvbWFpbiBzdHJhdGVneSBmb3IgRGlyZWN0PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImRvbWFpbl9zdHJhdGVneV9mb3Jfc2VydmVyIj5Eb21haW4gc3RyYXRlZ3kgZm9yIFNlcnZlciBhZGRyZXNzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNob3dfYm90dG9tX2JhciI+U2hvdyBib3R0b20gYmFyIGxpa2UgU2FnZXJOZXQ8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXRsc19maW5nZXJwcmludCI+dVRMUyBmaW5nZXJwcmludDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJjdXN0b21fb3V0Ym91bmRfanNvbiI+Q3VzdG9tIG91dGJvdW5kIEpTT048L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY3VzdG9tX2NvbmZpZ19qc29uIj5DdXN0b20gY29uZmlnIEpTT048L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaXNfb3V0Ym91bmRfb25seSI+VGhlIEpTT04gc2V0IGlzIG91dGJvdW5kPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNhdmUiPlNhdmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2V0X3BhbmVsX3VybCI+U2V0IHBhbmVsIFVSTDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJlbmFibGVfY2xhc2hfYXBpIj5FbmFibGUgQ2xhc2ggQVBJPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImxvZ19sZXZlbCI+TG9nIExldmVsPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVuYWJsZV9jbGFzaF9hcGlfc3VtbWFyeSI+UHJvdmlkZSBjbGFzaCBhcGkgYW5kIHlhY2QgZGFzaGJvYXJkIGF0IDEyNy4wLjAuMTo5MDkwPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Inh0bHNfZmxvdyI+RmxvdyAoVkxFU1MgU3ViLXByb3RvY29sKTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhZHMiPkFkczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJieXBhc3NfbGFuX2luX2NvcmUiPkJ5cGFzcyBMQU4gaW4gQ29yZTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJuZWVkX3Jlc3RhcnQiPlJlc3RhcnQgQVBQIHRvIGFwcGx5IGNoYW5nZXM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXNlX3NlbGVjdG9yIj5Vc2Ugc2VsZWN0b3I8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZnJvbnRfcHJveHkiPkZyb250IHByb3h5PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImxhbmRpbmdfcHJveHkiPkxhbmRpbmcgUHJveHk8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYWN0aW9uX3NoYWRvd3RscyIgdHJhbnNsYXRhYmxlPSJmYWxzZSI+U2hhZG93VExTPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InByb3RvY29sX3ZlcnNpb24iPlByb3RvY29sIFZlcnNpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2hhcmVfc3Vic2NyaXB0aW9uIj5TaGFyZSBTdWJzY3JpcHRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2hvd19ncm91cF9pbl9ub3RpZmljYXRpb24iPlNob3cgZ3JvdXAgbmFtZSBpbiBub3RpZmljYXRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzZXRfY29ubmVjdGlvbnMiPlJlc2V0IENvbm5lY3Rpb25zPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InJlbW92ZV9kdXBsaWNhdGUiPlJlbW92ZSBkdXBsaWNhdGUgc2VydmVyczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJtdHVfaGVscCI+TG9uZyBwcmVzcyB0aGUgcHJlZmVyZW5jZSB0byBzZXQgY3VzdG9tIE1VVS48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibG9nX2xldmVsX2hlbHAiPkxvbmcgcHJlc3MgdGhlIHByZWZlcmVuY2UgdG8gc2V0IHRoZSBidWZmZXIgc2l6ZS48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idGxzX2NhbW91ZmxhZ2Vfc2V0dGluZ3MiPlRMUyBDYW1vdWZsYWdlIFNldHRpbmdzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InRlc3RfY29uY3VycmVuY3kiPlRlc3QgY29uY3VycmVuY3k8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibXV4X3R5cGUiPk11eCBwcm90b2NvbDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJzbmlmZl9yb3V0aW5nIj5TbmlmZiByZXN1bHQgZm9yIHJvdXRpbmc8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic25pZmZfb3ZlcnJpZGUiPlNuaWZmIHJlc3VsdCBmb3IgZGVzdGluYXRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzb2x2ZV9zZXJ2ZXIiPlJlc29sdmUgdGhlIHNlcnZlciBhZGRyZXNzIGFjY29yZGluZyB0byB0aGUgSVB2NiBwb2xpY3k8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYXV0b19zZWxlY3RfcHJveHlfYXBwcyI+QXV0byBzZWxlY3QgcHJveHkgYXBwczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhdXRvX3NlbGVjdF9wcm94eV9hcHBzX21lc3NhZ2UiPkF1dG8gc2VsZWN0IHByb3h5IGFwcHMsIHRoaXMgd2lsbCBjbGVhciB5b3VyCiAgICAgICAgY3VycmVudCBzZWxlY3Rpb24uPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVuYWJsZV9lY2giPkVuYWJsZSBFQ0g8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZW5hYmxlX2VjaF9zdW0iPkVuYWJsZSBFbmNyeXB0ZWQgQ2xpZW50IEhlbGxvPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVjaF9zZXR0aW5ncyI+RUNIIFNldHRpbmdzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVjaF9jb25maWciPkVDSCBDb25maWc8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaHR0cF91cGdyYWRlX2hvc3QiPkhUVFBVcGdyYWRlIEhvc3Q8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaHR0cF91cGdyYWRlX3BhdGgiPkhUVFBVcGdyYWRlIFBhdGg8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXBkYXRlX2N1cnJlbnRfc3Vic2NyaXB0aW9uIj5VcGRhdGUgY3VycmVudCBHcm91cCdzIHN1YnNjcmlwdGlvbjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJncm91cF9ub3Rfc3Vic2NyaXB0aW9uIj5Hcm91cCB0eXBlIGlzIG5vdCBzdWJzY3JpcHRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYWxsb3dfaW5zZWN1cmVfb25fcmVxdWVzdF9zdW0iPkRpc2FibGUgY2VydGlmaWNhdGUgY2hlY2tpbmcgd2hlbiB1cGRhdGluZwogICAgICAgIHN1YnNjcmlwdGlvbnM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZ2xvYmFsX2FsbG93X2luc2VjdWJlIj5BbHdheXMgYWxsb3cgaW5zZWN1cmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibXV4X3ByZWZlcmVuY2UiPk11bGl0cGxleDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJwYWRkaW5nIj5QYWRkaW5nPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Im5ldHdvcmtfY2hhbmdlX3Jlc2V0X2Nvbm5lY3Rpb25zIj5SZXNldCBvdXRib3VuZCBjb25uZWN0aW9ucyB3aGVuIG5ldHdvcmsgY2hhbmdlczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ3YWtlX3Jlc2V0X2Nvbm5lY3Rpb25zIj5SZXNldCBvdXRib3VuZCBjb25uZWN0aW9ucyB3aGVuIGRldmljZSB3YWtlIGZyb20gc2xlZXA8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icHJldmlld192ZXJzaW9uX2hpbnQiPlRoaXMgYXBwbGljYXRpb24gaXMgYSBwcmV2aWV3IHZlcnNpb24gYW5kIG1heSBjb250YWluIG1hbnkgcHJvYmxlbXMuIElmIHlvdSBkbyBub3Qgd2FudCB0byB0ZXN0IGl0LCBwbGVhc2UgZ28gdG8gR2l0SHViIHRvIGRvd25sb2FkIHRoZSBSZWxlYXNlIHZlcnNpb24hPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImNoZWNrX3VwZGF0ZV9wcmV2aWV3Ij5DaGVjayBmb3IgcHJldmlldyB2ZXJzaW9uIHVwZGF0ZXM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY2hlY2tfdXBkYXRlX3JlbGVhc2UiPkNoZWNrIGZvciByZWxlYXNlIHZlcnNpb24gdXBkYXRlczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ1cGRhdGVfZGlhbG9nX3RpdGxlIj5OZXcgdmVyc2lvbiBhdmFpbGFibGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXBkYXRlX2RpYWxvZ19tZXNzYWdlIj5DdXJyZW50IHZlcnNpb246ICUxJHNcbkF2YWlsYWJsZSB2ZXJzaW9uOiAlMiRzXG5EbyB5b3Ugd2FudCB0byBkb3dubG9hZCBpdD88L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY2hlY2tfdXBkYXRlX25vIj5DaGVjayBzdWNjZXNzZnVsLCBidXQgbm8gdXBkYXRlcy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzZXRfc2V0dGluZ3MiPlJlc3RvcmUgZGVmYXVsdCBzZXR0aW5nczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJyZXNldF9zZXR0aW5ncy9tZXNzYWdlIj5SZXN0b3JlIGRlZmF1bHQgc2V0dGluZ3MsIGJ1dCBkYXRhIHN1Y2ggYXMgbm9kZXMgYW5kIGdyb3VwcyB3aWxsIGJlIHJldGFpbmVkLiBUbyBjb21wbGV0ZWx5IGNsZWFyIGRhdGEsIGNsZWFyIGFwcGxpY2F0aW9uIGRhdGEgZGlyZWN0bHkgaW4gdGhlIHN5c3RlbSBzZXR0aW5ncy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibWluaW1pemUiPk1pbmltaXplPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImFwcF9saXN0X3Blcm1pc3Npb25fZGVuaWVkIj5VbmFibGUgdG8gcmVhZCBpbnN0YWxsZWQgYXBwcy5cblRoaXMgaXMgdXN1YWxseSBiZWNhdXNlIHRoZSBzeXN0ZW0gaGFzIHJlc3RyaWN0ZWQgYXBwIHJlYWQgcGVybWlzc2lvbnMuXG5QbGVhc2UgZ3JhbnQgcGVybWlzc2lvbnMgaW4gdGhlIHN5c3RlbSBzZXR0aW5ncy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ib3Blbl9hcHBfc2V0dGluZ3MiPk9wZW4gU3lzdGVtIFNldHRpbmdzPC9zdHJpbmc+CjwvcmVzb3VyY2VzPg==
