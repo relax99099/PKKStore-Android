@@ -213,42 +213,226 @@
     <string name="action_http" translatable="false">HTTP</string>
     <string name="action_shadowsocks" translatable="false">Shadowsocks</string>
     <string name="action_shadowsocksr" translatable="false">ShadowsocksR</string>
-    <string name="action_vmess" translatable="false">Vk1lc3M=</string>
-    <string name="action_trojan" translatable="false">VHJvamFu</string>
-    <string name="action_trojan_go" translatable="false">VHJvamFuIEdv</string>
-    <string name="action_mieru" translatable="false">TWllcnU=</string>
-    <string name="action_naive" translatable="false">TmHDr3Zl</string>
-    <string name="action_anytls" translatable="false">QW55VExT</string>
-    <string name="action_hysteria" translatable="false">SHlzdGVyaWE=</string>
-    <string name="action_ssh" translatable="false">U1NI</string>
-    <string name="action_wireguard" translatable="false">V2lyZUd1YXJk</string>
-    <string name="action_tuic" translatable="false">VFVJQw==</string>
-    <string name="proxy_chain">UHJveHkgQ2hhaW4=</string>
-    <string name="custom_config">Q3VzdG9tIENvbmZpZw==</string>
-    <string name="balancer">QmFsYW5jZXI=</string>
-    <string name="balancer_settings">QmFsYW5jZXIgU2V0dGluZ3M=</string>
-    <string name="balancer_type">VHlwZQ==</string>
-    <string name="balancer_strategy">U3RyYXRlZ3k=</string>
-    <string name="chain_settings">Q2hhaW4gU2V0dGluZ3M=</string>
-    <string name="config_settings">Q29uZmlnIFNldHRpbmdz</string>
-    <string name="circular_reference">Q2lyY3VsYXIgcmVmZXJlbmNl</string>
-    <string name="circular_reference_sum">VGhlIHJvdXRlIGNhbm5vdCBjb250YWluIGl0c2VsZi4=</string>
-    <string name="clear_profiles">Q2xlYXI=</string>
-    <string name="action_create_group">RW1wdHkgZ3JvdXA=</string>
-    <string name="action_from_link">RnJvbSBzdWJzY3JpcHRpb24=</string>
-    <string name="action_scan_china_apps">U2NhbiBDaGluYSBhcHBz</string>
-    <string name="action_export_file">RXhwb3J0IHRvIGZpbGU=</string>
-    <string name="action_export_clipboard">RXhwb3J0IHRvIENsaXBib2FyZA==</string>
-    <string name="action_export">RXhwb3J0</string>
-    <string name="action_import">SW1wb3J0IGZyb20gQ2xpcGJvYXJk</string>
-    <string name="action_import_file">SW1wb3J0IGZyb20gZmlsZQ==</string>
-    <string name="action_export_msg">U3VjY2Vzc2Z1bGx5IGV4cG9ydCE=</string>
-    <string name="action_export_err">RmFpbGVkIHRvIGV4cG9ydC4=</string>
-    <string name="action_import_msg">U3VjY2Vzc2Z1bGx5IGltcG9ydCE=</string>
-    <string name="action_import_err">RmFpbGVkIHRvIGltcG9ydC4=</string>
-    <string name="file_manager_missing">WW91ciBkZXZpY2UgbGFja3MgYW4gQW5kcm9pZCBzdGFuZGFyZCBmaWxlIHNlbGVjdG9yLCBwbGVhc2UKICAgICAgICBpbnN0YWxsIG9uZSwgc3VjaCBhcyBNYXRlcmlhbCBGaWxlcy4=</string>
+    <string name="action_vmess" translatable="false">VMess</string>
+    <string name="action_trojan" translatable="false">Trojan</string>
+    <string name="action_trojan_go" translatable="false">Trojan Go</string>
+    <string name="action_mieru" translatable="false">Mieru</string>
+    <string name="action_naive" translatable="false">Naïve</string>
+    <string name="action_anytls" translatable="false">AnyTLS</string>
+    <string name="action_hysteria" translatable="false">Hysteria</string>
+    <string name="action_ssh" translatable="false">SSH</string>
+    <string name="action_wireguard" translatable="false">WireGuard</string>
+    <string name="action_tuic" translatable="false">TUIC</string>
+    <string name="proxy_chain">Proxy Chain</string>
+    <string name="custom_config">Custom Config</string>
+    <string name="balancer">Balancer</string>
+    <string name="balancer_settings">Balancer Settings</string>
+    <string name="balancer_type">Type</string>
+    <string name="balancer_strategy">Strategy</string>
+    <string name="chain_settings">Chain Settings</string>
+    <string name="config_settings">Config Settings</string>
+    <string name="circular_reference">Circular reference</string>
+    <string name="circular_reference_sum">The route cannot contain itself.</string>
+    <string name="clear_profiles">Clear</string>
+    <string name="action_create_group">Empty group</string>
+    <string name="action_from_link">From subscription</string>
+    <string name="action_scan_china_apps">Scan China apps</string>
+    <string name="action_export_file">Export to file</string>
+    <string name="action_export_clipboard">Export to Clipboard</string>
+    <string name="action_export">Export</string>
+    <string name="action_import">Import from Clipboard</string>
+    <string name="action_import_file">Import from file</string>
+    <string name="action_export_msg">Successfully export!</string>
+    <string name="action_export_err">Failed to export.</string>
+    <string name="action_import_msg">Successfully import!</string>
+    <string name="action_import_err">Failed to import.</string>
+    <string name="file_manager_missing">Your device lacks an Android standard file selector, please
+        install one, such as Material Files.</string>
     <!-- share -->
     <!-- profile -->
-    <string name="profile_config">UHJvZmlsZSBjb25maWc=</string>
-    <string name="delete">UmVtb3Zl</string>
-    <string name="delete_confirm_prompt">QXJlIHlvdSBzdXJlIHlvdSB3YW50IHRvIHJlbW92ZSB0aGlzIHByb2ZpbGU/PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNoYXJlX3FyX25mYyI+UVIgY29kZTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhZGRfcHJvZmlsZV9tZXRob2RzX3NjYW5fcXJfY29kZSI+U2NhbiBRUiBjb2RlPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImFjdGlvbl9zd2l0Y2giPlN3aXRjaDwvc3RyaW5nPgoKICAgIDxzdHJpbmcgbmFtZT0idHVpY191ZHBfcmVsYXlfbW9kZSI+VURQIFJlbGF5IE1vZGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idHVpY19jb25nZXN0aW9uX2NvbnRyb2xsZXIiPkNvbmdlc3Rpb24gQ29udHJvbGxlcjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ0dWljX2Rpc2FibGVfc25pIj5EaXNhYmxlIFNOSTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ0dWljX3JlZHVjZV9ydHQiPkVuYWJsZSAwLVJUVCBRVUlDIGhhbmRzaGFrZTwvc3RyaW5nPgoKICAgIDxzdHJpbmcgbmFtZT0icGxlYXNlX3VwZGF0ZSI+WW91ciBBUEAgaXMgdG9vIG9sZCAoJXMpLiBBbmQgd2lsbCBzdG9wIHdvcmtpbWcgYXQgJXMuIFBsZWFzZQogICAgICAgIHVwZGF0ZSE8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icGxlYXNlX3VwZGF0ZV9mb3JjZSI+WW91ciBBUEAgaXMgdG9vIG9sZCAoJXMpLiBBbmQgaGFzIGJlZW4gc3RvcHBlZCB3b3JraW5nIGF0ICVzLgogICAgICAgIFBsZWFzZSB1cGRhdGUhPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImNvbm5lY3Rpb25fdGVzdF9kZWxldGVfdW5hdmFpbGFibGUiPkNsZWFyIHVuYXZhaWxhYmxlPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Im1vdmUiPk1vdmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZXhlX3ByZWZlcl9wcm92aWRlciI+UGx1Z2luIFByZWZlcnJlZCBQcm92aWRlcjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJjcmVhdGVfc2hvcnRjdXQiPkNyZWF0ZSBTaG9ydGN1dDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhcHBfdGxzX3ZlcnNpb24iPlN1YnNjcmlwdGlvbiBNaW4gVExTIFZlcnNpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaG9wX2ludGVydmFsIj5Qb3J0IEhvcHBpbmcgSW50ZXJ2YWwoc2Vjb25kKTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJkb21haW5fc3RyYXRlZ3lfZm9yX3JlbW90ZSI+RG9tYWluIHN0cmF0ZWd5IGZvciBSZW1vdGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZG9tYWluX3N0cmF0ZWd5X2Zvcl9kaXJlY3QiPkRvbWFpbiBzdHJhdGVneSBmb3IgRGlyZWN0PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImRvbWFpbl9zdHJhdGVneV9mb3Jfc2VydmVyIj5Eb21haW4gc3RyYXRlZ3kgZm9yIFNlcnZlciBhZGRyZXNzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNob3dfYm90dG9tX2JhciI+U2hvdyBib3R0b20gYmFyIGxpa2UgU2FnZXJOZXQ8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXRsc19maW5nZXJwcmludCI+dVRMUyBmaW5nZXJwcmludDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJjdXN0b21fb3V0Ym91bmRfanNvbiI+Q3VzdG9tIG91dGJvdW5kIEpTT048L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY3VzdG9tX2NvbmZpZ19qc29uIj5DdXN0b20gY29uZmlnIEpTT048L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaXNfb3V0Ym91bmRfb25seSI+VGhlIEpTT04gc2V0IGlzIG91dGJvdW5kPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InNhdmUiPlNhdmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2V0X3BhbmVsX3VybCI+U2V0IHBhbmVsIFVSTDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJlbmFibGVfY2xhc2hfYXBpIj5FbmFibGUgQ2xhc2ggQVBJPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImxvZ19sZXZlbCI+TG9nIExldmVsPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVuYWJsZV9jbGFzaF9hcGlfc3VtbWFyeSI+UHJvdmlkZSBjbGFzaCBhcGkgYW5kIHlhY2QgZGFzaGJvYXJkIGF0IDEyNy4wLjAuMTo5MDkwPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Inh0bHNfZmxvdyI+RmxvdyAoVkxFU1MgU3ViLXByb3RvY29sKTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhZHMiPkFkczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJieXBhc3NfbGFuX2luX2NvcmUiPkJ5cGFzcyBMQU4gaW4gQ29yZTwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJuZWVkX3Jlc3RhcnQiPlJlc3RhcnQgQVBQIHRvIGFwcGx5IGNoYW5nZXM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXNlX3NlbGVjdG9yIj5Vc2Ugc2VsZWN0b3I8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZnJvbnRfcHJveHkiPkZyb250IHByb3h5PC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImxhbmRpbmdfcHJveHkiPkxhbmRpbmcgUHJveHk8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYWN0aW9uX3NoYWRvd3RscyIgdHJhbnNsYXRhYmxlPSJmYWxzZSI+U2hhZG93VExTPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InByb3RvY29sX3ZlcnNpb24iPlByb3RvY29sIFZlcnNpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2hhcmVfc3Vic2NyaXB0aW9uIj5TaGFyZSBTdWJzY3JpcHRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic2hvd19ncm91cF9pbl9ub3RpZmljYXRpb24iPlNob3cgZ3JvdXAgbmFtZSBpbiBub3RpZmljYXRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzZXRfY29ubmVjdGlvbnMiPlJlc2V0IENvbm5lY3Rpb25zPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InJlbW92ZV9kdXBsaWNhdGUiPlJlbW92ZSBkdXBsaWNhdGUgc2VydmVyczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJtdHVfaGVscCI+TG9uZyBwcmVzcyB0aGUgcHJlZmVyZW5jZSB0byBzZXQgY3VzdG9tIE1VVS48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibG9nX2xldmVsX2hlbHAiPkxvbmcgcHJlc3MgdGhlIHByZWZlcmVuY2UgdG8gc2V0IHRoZSBidWZmZXIgc2l6ZS48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idGxzX2NhbW91ZmxhZ2Vfc2V0dGluZ3MiPlRMUyBDYW1vdWZsYWdlIFNldHRpbmdzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9InRlc3RfY29uY3VycmVuY3kiPlRlc3QgY29uY3VycmVuY3k8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibXV4X3R5cGUiPk11eCBwcm90b2NvbDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJzbmlmZl9yb3V0aW5nIj5TbmlmZiByZXN1bHQgZm9yIHJvdXRpbmc8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ic25pZmZfb3ZlcnJpZGUiPlNuaWZmIHJlc3VsdCBmb3IgZGVzdGluYXRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzb2x2ZV9zZXJ2ZXIiPlJlc29sdmUgdGhlIHNlcnZlciBhZGRyZXNzIGFjY29yZGluZyB0byB0aGUgSVB2NiBwb2xpY3k8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYXV0b19zZWxlY3RfcHJveHlfYXBwcyI+QXV0byBzZWxlY3QgcHJveHkgYXBwczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJhdXRvX3NlbGVjdF9wcm94eV9hcHBzX21lc3NhZ2UiPkF1dG8gc2VsZWN0IHByb3h5IGFwcHMsIHRoaXMgd2lsbCBjbGVhciB5b3VyCiAgICAgICAgY3VycmVudCBzZWxlY3Rpb24uPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVuYWJsZV9lY2giPkVuYWJsZSBFQ0g8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZW5hYmxlX2VjaF9zdW0iPkVuYWJsZSBFbmNyeXB0ZWQgQ2xpZW50IEhlbGxvPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVjaF9zZXR0aW5ncyI+RUNIIFNldHRpbmdzPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImVjaF9jb25maWciPkVDSCBDb25maWc8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaHR0cF91cGdyYWRlX2hvc3QiPkhUVFBVcGdyYWRlIEhvc3Q8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iaHR0cF91cGdyYWRlX3BhdGgiPkhUVFBVcGdyYWRlIFBhdGg8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXBkYXRlX2N1cnJlbnRfc3Vic2NyaXB0aW9uIj5VcGRhdGUgY3VycmVudCBHcm91cCdzIHN1YnNjcmlwdGlvbjwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJncm91cF9ub3Rfc3Vic2NyaXB0aW9uIj5Hcm91cCB0eXBlIGlzIG5vdCBzdWJzY3JpcHRpb248L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iYWxsb3dfaW5zZWN1cmVfb25fcmVxdWVzdF9zdW0iPkRpc2FibGUgY2VydGlmaWNhdGUgY2hlY2tpbmcgd2hlbiB1cGRhdGluZwogICAgICAgIHN1YnNjcmlwdGlvbnM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iZ2xvYmFsX2FsbG93X2luc2VjdWJlIj5BbHdheXMgYWxsb3cgaW5zZWN1cmU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibXV4X3ByZWZlcmVuY2UiPk11bGl0cGxleDwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJwYWRkaW5nIj5QYWRkaW5nPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9Im5ldHdvcmtfY2hhbmdlX3Jlc2V0X2Nvbm5lY3Rpb25zIj5SZXNldCBvdXRib3VuZCBjb25uZWN0aW9ucyB3aGVuIG5ldHdvcmsgY2hhbmdlczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ3YWtlX3Jlc2V0X2Nvbm5lY3Rpb25zIj5SZXNldCBvdXRib3VuZCBjb25uZWN0aW9ucyB3aGVuIGRldmljZSB3YWtlIGZyb20gc2xlZXA8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icHJldmlld192ZXJzaW9uX2hpbnQiPlRoaXMgYXBwbGljYXRpb24gaXMgYSBwcmV2aWV3IHZlcnNpb24gYW5kIG1heSBjb250YWluIG1hbnkgcHJvYmxlbXMuIElmIHlvdSBkbyBub3Qgd2FudCB0byB0ZXN0IGl0LCBwbGVhc2UgZ28gdG8gR2l0SHViIHRvIGRvd25sb2FkIHRoZSBSZWxlYXNlIHZlcnNpb24hPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImNoZWNrX3VwZGF0ZV9wcmV2aWV3Ij5DaGVjayBmb3IgcHJldmlldyB2ZXJzaW9uIHVwZGF0ZXM8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY2hlY2tfdXBkYXRlX3JlbGVhc2UiPkNoZWNrIGZvciByZWxlYXNlIHZlcnNpb24gdXBkYXRlczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJ1cGRhdGVfZGlhbG9nX3RpdGxlIj5OZXcgdmVyc2lvbiBhdmFpbGFibGU8L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0idXBkYXRlX2RpYWxvZ19tZXNzYWdlIj5DdXJyZW50IHZlcnNpb246ICUxJHNcbkF2YWlsYWJsZSB2ZXJzaW9uOiAlMiRzXG5EbyB5b3Ugd2FudCB0byBkb3dubG9hZCBpdD88L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0iY2hlY2tfdXBkYXRlX25vIj5DaGVjayBzdWNjZXNzZnVsLCBidXQgbm8gdXBkYXRlcy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0icmVzZXRfc2V0dGluZ3MiPlJlc3RvcmUgZGVmYXVsdCBzZXR0aW5nczwvc3RyaW5nPgogICAgPHN0cmluZyBuYW1lPSJyZXNldF9zZXR0aW5ncy9tZXNzYWdlIj5SZXN0b3JlIGRlZmF1bHQgc2V0dGluZ3MsIGJ1dCBkYXRhIHN1Y2ggYXMgbm9kZXMgYW5kIGdyb3VwcyB3aWxsIGJlIHJldGFpbmVkLiBUbyBjb21wbGV0ZWx5IGNsZWFyIGRhdGEsIGNsZWFyIGFwcGxpY2F0aW9uIGRhdGEgZGlyZWN0bHkgaW4gdGhlIHN5c3RlbSBzZXR0aW5ncy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ibWluaW1pemUiPk1pbmltaXplPC9zdHJpbmc+CiAgICA8c3RyaW5nIG5hbWU9ImFwcF9saXN0X3Blcm1pc3Npb25fZGVuaWVkIj5VbmFibGUgdG8gcmVhZCBpbnN0YWxsZWQgYXBwcy5cblRoaXMgaXMgdXN1YWxseSBiZWNhdXNlIHRoZSBzeXN0ZW0gaGFzIHJlc3RyaWN0ZWQgYXBwIHJlYWQgcGVybWlzc2lvbnMuXG5QbGVhc2UgZ3JhbnQgcGVybWlzc2lvbnMgaW4gdGhlIHN5c3RlbSBzZXR0aW5ncy48L3N0cmluZz4KICAgIDxzdHJpbmcgbmFtZT0ib3Blbl9hcHBfc2V0dGluZ3MiPk9wZW4gU3lzdGVtIFNldHRpbmdzPC9zdHJpbmc+CjwvcmVzb3VyY2VzPg==
+    <string name="profile_config">Profile config</string>
+    <string name="delete">Remove</string>
+    <string name="delete_confirm_prompt">Are you sure you want to remove this profile?</string>
+    <string name="share_qr_nfc">QR code</string>
+    <string name="add_profile_methods_scan_qr_code">Scan QR code</string>
+    <string name="add_profile_methods_manual_settings">Manual Settings</string>
+    <plurals name="removed">
+        <item quantity="one">Removed</item>
+        <item quantity="other">%d items removed</item>
+    </plurals>
+    <plurals name="added">
+        <item quantity="one">Added</item>
+        <item quantity="other">%d proxies added</item>
+    </plurals>
+    <string name="undo">Undo</string>
+    <string name="insecure">Insecure</string>
+    <string name="deprecated">Deprecated</string>
+    <!-- tasker -->
+    <string name="tasker_setting_start">Start</string>
+    <string name="tasker_setting_stop">Stop</string>
+    <string name="tasker_setting_toggle">Toggle</string>
+    <string name="tasker_setting_status_connected">Connected</string>
+    <string name="tasker_setting_status_disconnected">Disconnected</string>
+    <string name="tasker_setting_switch_profile">Switch Profile</string>
+    <string name="tasker_setting_update_subscription">Update Subscription</string>
+    <string name="tasker_setting_update_all_subscription">Update All Subscriptions</string>
+    <string name="tasker_variable_traffic">Traffic</string>
+    <string name="tasker_variable_speed">Speed</string>
+    <string name="tasker_variable_profile_name">Profile Name</string>
+    <string name="tasker_variable_profile_type">Profile Type</string>
+    <!-- log -->
+    <string name="log">Log</string>
+    <string name="log_summary">Show sing-box logs</string>
+    <string name="log_empty">No logs</string>
+    <string name="log_cleared">Logs cleared</string>
+    <string name="log_export_success">Logs exported to %s</string>
+    <string name="log_export_failure">Failed to export logs</string>
+    <!-- dashboard -->
+    <string name="dashboard_connections">Connections</string>
+    <string name="dashboard_proxies">Proxies</string>
+    <string name="dashboard_rules">Rules</string>
+    <string name="dashboard_logs">Logs</string>
+    <string name="dashboard_settings">Settings</string>
+    <string name="dashboard_empty">No data</string>
+    <!-- about -->
+    <string name="about_version">Version %s</string>
+    <string name="about_check_update">Check for updates</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_telegram">Telegram</string>
+    <string name="about_license">License</string>
+    <string name="about_oss_license">Open Source Licenses</string>
+    <string name="about_developer">Developer</string>
+    <!-- accessibility -->
+    <string name="accessibility_connected">Connected</string>
+    <string name="accessibility_disconnected">Disconnected</string>
+    <string name="accessibility_connecting">Connecting</string>
+    <string name="accessibility_stopping">Stopping</string>
+    <string name="accessibility_traffic">Traffic: %s</string>
+    <string name="accessibility_speed">Speed: %s</string>
+    <string name="accessibility_profile">Profile: %s</string>
+    <!-- per-app proxy -->
+    <string name="app_proxy_title">Per-app proxy</string>
+    <string name="app_proxy_summary">Select apps to be proxied</string>
+    <string name="app_proxy_search">Search apps</string>
+    <string name="app_proxy_system">Show system apps</string>
+    <string name="app_proxy_none">No apps selected</string>
+    <string name="app_proxy_all">All apps selected</string>
+    <string name="app_proxy_selected">%d apps selected</string>
+    <!-- advanced -->
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="advanced_log_level">Log level</string>
+    <string name="advanced_dns_routing">DNS routing</string>
+    <string name="advanced_fake_dns">Fake DNS</string>
+    <string name="advanced_sniffing">Traffic sniffing</string>
+    <string name="advanced_mux">Multiplex</string>
+    <string name="advanced_ipv6">IPv6 route</string>
+    <!-- theme -->
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System</string>
+    <!-- language -->
+    <string name="language">Language</string>
+    <string name="language_system">System</string>
+    <!-- auto connect -->
+    <string name="auto_connect_title">Auto connect</string>
+    <string name="auto_connect_on_boot">On boot</string>
+    <string name="auto_connect_on_update">On update</string>
+    <!-- tiles -->
+    <string name="tile_start">Start</string>
+    <string name="tile_stop">Stop</string>
+    <string name="tile_toggle">Toggle</string>
+    <!-- shortcuts -->
+    <string name="shortcut_start">Start</string>
+    <string name="shortcut_stop">Stop</string>
+    <string name="shortcut_toggle">Toggle</string>
+    <!-- widgets -->
+    <string name="widget_start">Start</string>
+    <string name="widget_stop">Stop</string>
+    <string name="widget_toggle">Toggle</string>
+    <!-- error -->
+    <string name="error_invalid_config">Invalid configuration</string>
+    <string name="error_vpn_not_supported">VPN not supported</string>
+    <string name="error_permission_denied">Permission denied</string>
+    <string name="error_unknown">Unknown error</string>
+
+    <string name="action_switch">Switch</string>
+
+    <string name="tuic_udp_relay_mode">UDP Relay Mode</string>
+    <string name="tuic_congestion_controller">Congestion Controller</string>
+    <string name="tuic_disable_sni">Disable SNI</string>
+    <string name="tuic_reduce_rtt">Enable 0-RTT QUIC handshake</string>
+
+    <string name="please_update">Your APP is too old (%s). And will stop working at %s. Please
+        update!</string>
+    <string name="please_update_force">Your APP is too old (%s). And has been stopped working at %s.
+        Please update!</string>
+    <string name="connection_test_delete_unavailable">Clear unavailable</string>
+    <string name="move">Move</string>
+    <string name="exe_prefer_provider">Plugin Preferred Provider</string>
+    <string name="create_shortcut">Create Shortcut</string>
+    <string name="app_tls_version">Subscription Min TLS Version</string>
+    <string name="hop_interval">Port Hopping Interval(second)</string>
+    <string name="domain_strategy_for_remote">Domain strategy for Remote</string>
+    <string name="domain_strategy_for_direct">Domain strategy for Direct</string>
+    <string name="domain_strategy_for_server">Domain strategy for Server address</string>
+    <string name="show_bottom_bar">Show bottom bar like SagerNet</string>
+    <string name="utls_fingerprint">uTLS fingerprint</string>
+    <string name="custom_outbound_json">Custom outbound JSON</string>
+    <string name="custom_config_json">Custom config JSON</string>
+    <string name="is_outbound_only">The JSON set is outbound</string>
+    <string name="save">Save</string>
+    <string name="set_panel_url">Set panel URL</string>
+    <string name="enable_clash_api">Enable Clash API</string>
+    <string name="log_level">Log Level</string>
+    <string name="enable_clash_api_summary">Provide clash api and yacd dashboard at 127.0.0.1:9090</string>
+    <string name="xtls_flow">Flow (VLESS Sub-protocol)</string>
+    <string name="ads">Ads</string>
+    <string name="bypass_lan_in_core">Bypass LAN in Core</string>
+    <string name="need_restart">Restart APP to apply changes</string>
+    <string name="use_selector">Use selector</string>
+    <string name="front_proxy">Front proxy</string>
+    <string name="landing_proxy">Landing Proxy</string>
+    <string name="action_shadowtls" translatable="false">ShadowTLS</string>
+    <string name="protocol_version">Protocol Version</string>
+    <string name="share_subscription">Share Subscription</string>
+    <string name="show_group_in_notification">Show group name in notification</string>
+    <string name="reset_connections">Reset Connections</string>
+    <string name="remove_duplicate">Remove duplicate servers</string>
+    <string name="mtu_help">Long press the preference to set custom MTU.</string>
+    <string name="log_level_help">Long press the preference to set the buffer size.</string>
+    <string name="tls_camouflage_settings">TLS Camouflage Settings</string>
+    <string name="test_concurrency">Test concurrency</string>
+    <string name="mux_type">Mux protocol</string>
+    <string name="sniff_routing">Sniff result for routing</string>
+    <string name="sniff_override">Sniff result for destination</string>
+    <string name="resolve_server">Resolve the server address according to the IPv6 policy</string>
+    <string name="auto_select_proxy_apps">Auto select proxy apps</string>
+    <string name="auto_select_proxy_apps_message">Auto select proxy apps, this will clear your
+        current selection.</string>
+    <string name="enable_ech">Enable ECH</string>
+    <string name="enable_ech_sum">Enable Encrypted Client Hello</string>
+    <string name="ech_settings">ECH Settings</string>
+    <string name="ech_config">ECH Config</string>
+    <string name="http_upgrade_host">HTTPUpgrade Host</string>
+    <string name="http_upgrade_path">HTTPUpgrade Path</string>
+    <string name="update_current_subscription">Update current Group's subscription</string>
+    <string name="group_not_subscription">Group type is not subscription</string>
+    <string name="allow_insecure_on_request_sum">Disable certificate checking when updating
+        subscriptions</string>
+    <string name="global_allow_insecure">Always allow insecure</string>
+    <string name="mux_preference">Mulitplex</string>
+    <string name="padding">Padding</string>
+    <string name="network_change_reset_connections">Reset outbound connections when network changes</string>
+    <string name="wake_reset_connections">Reset outbound connections when device wake from sleep</string>
+    <string name="preview_version_hint">This application is a preview version and may contain many problems. If you do not want to test it, please go to GitHub to download the Release version!</string>
+    <string name="check_update_preview">Check for preview version updates</string>
+    <string name="check_update_release">Check for release version updates</string>
+    <string name="update_dialog_title">New version available</string>
+    <string name="update_dialog_message">Current version: %1$s\nAvailable version: %2$s\nDo you want to download it?</string>
+    <string name="check_update_no">Check successful, but no updates.</string>
+    <string name="reset_settings">Restore default settings</string>
+    <string name="reset_settings_message">Restore default settings, but data such as nodes and groups will be retained. To completely clear data, clear application data directly in the system settings.</string>
+    <string name="minimize">Minimize</string>
+    <string name="app_list_permission_denied">Unable to read installed apps.\nThis is usually because the system has restricted app read permissions.\nPlease grant permissions in the system settings.</string>
+    <string name="open_app_settings">Open System Settings</string>
+</resources>
