@@ -94,13 +94,13 @@
     <string name="port_local_dns">Локальний порт DNS</string>
     <string name="require_transproxy">Увімкнути вхідний сигнал Transproxy</string>
     <string name="transproxy_mode">Режим Transproxy</string>
-    <string name="connection_test_url">URL-адреса перевірки з\&apos;єднання</string>
+    <string name="connection_test_url">URL-адреса перевірки з&apos;єднання</string>
     <!-- proxy category -->
-    <string name="profile_name">Ім\&apos;я профілю</string>
+    <string name="profile_name">Ім&apos;я профілю</string>
     <string name="server_address">Сервер</string>
     <string name="server_port">Віддалений порт</string>
-    <string name="username">Ім\&apos;я користувача</string>
-    <string name="username_opt">Ім\&apos;я користувача (необов’язково)</string>
+    <string name="username">Ім&apos;я користувача</string>
+    <string name="username_opt">Ім&apos;я користувача (необов’язково)</string>
     <string name="password_opt">Пароль (необов’язково)</string>
     <string name="key_opt">Ключ (необов’язково)</string>
     <string name="password">Пароль</string>
@@ -118,7 +118,7 @@
     <string name="ws_path">Шлях WebSocket</string>
     <string name="http_host">Хост HTTP</string>
     <string name="http_path">Шлях HTTP</string>
-    <string name="grpc_service_name">ім\&apos;я служби gRPC</string>
+    <string name="grpc_service_name">ім&apos;я служби gRPC</string>
     <string name="tls">Використовувати TLS</string>
     <string name="sni">Індикація імені сервера</string>
     <string name="alpn">Переговори про протокол шару додатків</string>
@@ -133,7 +133,7 @@
     <string name="prefer">Віддавати перевагу</string>
     <string name="only">Тільки</string>
     <string name="metered">Лімітне підключення</string>
-    <string name="metered_summary">Повідомляти системі, що VPN-з\&apos;єднання є лімітним</string>
+    <string name="metered_summary">Повідомляти системі, що VPN-з&apos;єднання є лімітним</string>
     <string name="menu_route">Маршрут</string>
     <string name="route_add">Створити маршрут</string>
     <string name="delete_route_prompt">Ви впевнені, що хочете видалити цей маршрут?</string>
@@ -163,8 +163,8 @@
     <string name="domain_strategy">Стратегія визначення доменів</string>
     <string name="traffic_sniffing">Увімкнути аналіз трафіку</string>
     <string name="enable_mux">Увімкнути мультиплексор</string>
-    <string name="mux_sum">Mux призначений для зменшення затримки рукостискання TCP, а не для збільшення пропускної здатності з\&apos;єднання. Використання Mux для перегляду відео, завантаження або тестування швидкості зазвичай є контрпродуктивним. Якщо сервер його не підтримує, ви не зможете отримати доступ до Інтернету.</string>
-    <string name="mux_concurrency">Паралельні з\&apos;єднання Mux</string>
+    <string name="mux_sum">Mux призначений для зменшення затримки рукостискання TCP, а не для збільшення пропускної здатності з&apos;єднання. Використання Mux для перегляду відео, завантаження або тестування швидкості зазвичай є контрпродуктивним. Якщо сервер його не підтримує, ви не зможете отримати доступ до Інтернету.</string>
+    <string name="mux_concurrency">Паралельні з&apos;єднання Mux</string>
     <string name="tcp_keep_alive_interval">Інтервал доставки пакетів TCP keep-alive</string>
     <string name="proxied_apps">Програми в режимі VPN</string>
     <string name="proxied_apps_summary">Налаштувати режим VPN для вибраних програм</string>
@@ -184,7 +184,7 @@
     <string name="service_vpn">Служба VPN</string>
     <string name="service_proxy">Служба проксі</string>
     <string name="forward_success">Проксі запущено.</string>
-    <string name="invalid_server">Неправильне ім\&apos;я сервера</string>
+    <string name="invalid_server">Неправильне ім&apos;я сервера</string>
     <string name="service_failed">Не вдалося: </string>
     <string name="stop">Зупинити</string>
     <string name="stopping">Зупинка…</string>
@@ -265,7 +265,7 @@
     <!-- tasker -->
     <!-- status -->
     <string name="connecting">Підключення…</string>
-    <string name="vpn_connected">Підключено, торкніться, щоб перевірити з\&apos;єднання</string>
+    <string name="vpn_connected">Підключено, торкніться, щоб перевірити з&apos;єднання</string>
     <string name="not_connected">Не підключено</string>
     <!-- subscriptions -->
     <string name="subscriptions">Підписки</string>
@@ -316,7 +316,7 @@
     <string name="always_show_address">Завжди показувати адресу</string>
     <string name="always_show_address_sum">Завжди відображати адресу сервера на картці конфігурації</string>
     <string name="clear_traffic_statistics">Очистити статистику трафіку</string>
-    <string name="connection_test">Тест з\&apos;єднання</string>
+    <string name="connection_test">Тест з&apos;єднання</string>
     <string name="connection_test_clear_results">Очистити результати тесту</string>
     <string name="connection_test_tcp_ping" translatable="false">TCPing</string>
     <string name="connection_test_tcp_ping_unavailable">TCPing недоступний</string>
@@ -324,7 +324,7 @@
     <string name="connection_test_icmp_ping_unavailable">ICMPing недоступний</string>
     <string name="connection_test_url_test" translatable="false">URL Test</string>
     <string name="connection_test_domain_not_found">Домен не знайдено</string>
-    <string name="connection_test_refused">З\&apos;єднання відхилено</string>
+    <string name="connection_test_refused">З&apos;єднання відхилено</string>
     <string name="connection_test_unreachable">Недоступний</string>
     <string name="connection_test_timeout">Час очікування минув</string>
     <string name="append_http_proxy">Додати HTTP-проксі до VPN</string>
@@ -383,7 +383,7 @@
     <string name="hysteria_download_mbps">Макс. швидкість завантаження (у Мбіт/с)</string>
     <string name="experimental_settings">Експериментальні</string>
     <string name="hysteria_stream_receive_window">Вікно прийому потоку QUIC</string>
-    <string name="hysteria_connection_receive_window">Вікно прийому з\&apos;єднання QUIC</string>
+    <string name="hysteria_connection_receive_window">Вікно прийому з&apos;єднання QUIC</string>
     <string name="hysteria_disable_mtu_discovery">Вимкнути виявлення Path MTU</string>
     <string name="group_order">Порядок</string>
     <string name="group_order_origin">За замовчуванням</string>
@@ -396,8 +396,8 @@
     <string name="traffic_downlink" translatable="false">%1$s | %2$s/с ↓</string>
     <string name="traffic_uplink_total" translatable="false">Всього %s ↑</string>
     <string name="traffic_downlink_total" translatable="false">Всього %s ↓</string>
-    <string name="tcp_connections">%d TCP-з\&apos;єднань</string>
-    <string name="udp_connections">%d UDP-з\&apos;єднань</string>
+    <string name="tcp_connections">%d TCP-з&apos;єднань</string>
+    <string name="udp_connections">%d UDP-з&apos;єднань</string>
     <string name="copy_label">Копіювати назву</string>
     <string name="copy_package_name">Копіювати назву пакета</string>
     <string name="open_app">Відкрити програму</string>
@@ -436,7 +436,7 @@
     <string name="pcap" translatable="false">Pcap</string>
     <string name="pcap_notice">Файли Pcap будуть збережені в %s</string>
     <string name="naive_insecure_concurrency">Небезпечна паралельність</string>
-    <string name="naive_insecure_concurrency_summary">Використовуйте N паралельних тунельних з\&apos;єднань для більшої стійкості в поганих мережевих умовах. Більша кількість з\&apos;єднань полегшує виявлення тунелювання та робить його менш безпечним. Цей проєкт прагне до найсильнішого захисту від аналізу трафіку. Використання його небезпечним способом суперечить його меті. \n\nЯкщо ви все ж таки повинні це використовувати, спробуйте спочатку N=2, щоб побачити, чи це вирішить ваші проблеми. Наполегливо не рекомендується використовувати більше 4 з\&apos;єднань.</string>
+    <string name="naive_insecure_concurrency_summary">Використовуйте N паралельних тунельних з&apos;єднань для більшої стійкості в поганих мережевих умовах. Більша кількість з&apos;єднань полегшує виявлення тунелювання та робить його менш безпечним. Цей проєкт прагне до найсильнішого захисту від аналізу трафіку. Використання його небезпечним способом суперечить його меті. \n\nЯкщо ви все ж таки повинні це використовувати, спробуйте спочатку N=2, щоб побачити, чи це вирішить ваші проблеми. Наполегливо не рекомендується використовувати більше 4 з&apos;єднань.</string>
     <string name="stun_test">Виявлення поведінки NAT</string>
     <string name="stun_test_summary">Визначити поведінку відображення NAT клієнта та поведінку фільтрації NAT, визначену в RFC 3478, за допомогою STUN.</string>
     <string name="start">Почати</string>
@@ -449,7 +449,7 @@
     <string name="backup_groups_and_configurations">Групи та конфігурації</string>
     <string name="backup_rules">Правила маршрутизації</string>
     <string name="backup_settings">Налаштування</string>
-    <string name="backup_summary">Якщо налаштування маршрутизації не будуть збережені разом з конфігураціями, власні вихідні з\&apos;єднання будуть втрачені.</string>
+    <string name="backup_summary">Якщо налаштування маршрутизації не будуть збережені разом з конфігураціями, власні вихідні з&apos;єднання будуть втрачені.</string>
     <string name="backup_not_file">Не є файлом резервної копії: очікувався .json, але отримано %s</string>
     <string name="invalid_backup_file">Неправильний файл резервної копії</string>
     <string name="backup_import">Імпорт</string>
@@ -477,9 +477,9 @@
     <string name="domain_strategy_for_server">Стратегія доменів для адреси сервера</string>
     <string name="show_bottom_bar">Показувати нижню панель, як у SagerNet</string>
     <string name="utls_fingerprint">Відбиток uTLS</string>
-    <string name="custom_outbound_json">Власний JSON вихідного з\&apos;єднання</string>
+    <string name="custom_outbound_json">Власний JSON вихідного з&apos;єднання</string>
     <string name="custom_config_json">Власний JSON конфігурації</string>
-    <string name="is_outbound_only">Встановлений JSON є лише вихідним з\&apos;єднанням</string>
+    <string name="is_outbound_only">Встановлений JSON є лише вихідним з&apos;єднанням</string>
     <string name="save">Зберегти</string>
     <string name="set_panel_url">Встановити URL панелі</string>
     <string name="enable_clash_api">Увімкнути Clash API</string>
@@ -496,7 +496,7 @@
     <string name="protocol_version">Версія протоколу</string>
     <string name="share_subscription">Поділитися підпискою</string>
     <string name="show_group_in_notification">Показувати назву групи у сповіщенні</string>
-    <string name="reset_connections">Скинути з\&apos;єднання</string>
+    <string name="reset_connections">Скинути з&apos;єднання</string>
     <string name="remove_duplicate">Видалити дублікати серверів</string>
     <string name="mtu_help">Довге натискання на налаштування, щоб встановити власний MTU.</string>
     <string name="log_level_help">Довге натискання на налаштування, щоб встановити розмір буфера.</string>
@@ -520,6 +520,6 @@
     <string name="global_allow_insecure">Завжди дозволяти незахищене</string>
     <string name="mux_preference">Мультиплексування</string>
     <string name="padding">Заповнення (Padding)</string>
-    <string name="network_change_reset_connections">Скидати вихідні з\&apos;єднання при зміні мережі</string>
-    <string name="wake_reset_connections">Скидати вихідні з\&apos;єднання при виході пристрою зі сну</string>
+    <string name="network_change_reset_connections">Скидати вихідні з&apos;єднання при зміні мережі</string>
+    <string name="wake_reset_connections">Скидати вихідні з&apos;єднання при виході пристрою зі сну</string>
 </resources>

@@ -474,7 +474,7 @@
         see if it solves your issues. Strongly recommend against using more than 4 connections here.</string>
 
     <string name="stun_test">NAT behaviour discovery</string>
-    <string name="stun_test_summary">Determine the client\&apos;s NAT mapping behaviour and the NAT
+    <string name="stun_test_summary">Determine the client&apos;s NAT mapping behaviour and the NAT
         filtering behaviour defined in RFC 3478 using STUN.</string>
     <string name="start">Start</string>
     <string name="stun_attest_loading">This may take a few minutes…</string>
@@ -559,7 +559,7 @@
     <string name="ech_config">ECH Config</string>
     <string name="http_upgrade_host">HTTPUpgrade Host</string>
     <string name="http_upgrade_path">HTTPUpgrade Path</string>
-    <string name="update_current_subscription">Update current Group\&apos;s subscription</string>
+    <string name="update_current_subscription">Update current Group&apos;s subscription</string>
     <string name="group_not_subscription">Group type is not subscription</string>
     <string name="allow_insecure_on_request_sum">Disable certificate checking when updating
         subscriptions</string>

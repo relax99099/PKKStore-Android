@@ -84,7 +84,7 @@
     <string name="server_port">Uzak Bağlantı Noktası</string>
     <string name="server_address">Sunucu</string>
     <string name="profile_name">Profil ismi</string>
-    <string name="connection_test_url">Bağlantı Testi URL\&apos;si</string>
+    <string name="connection_test_url">Bağlantı Testi URL&apos;si</string>
     <string name="transproxy_mode">Transproxy Modu</string>
     <string name="require_transproxy">Transproxy Gelenini Etkinleştir</string>
     <string name="port_local_dns">Yerel DNS Bağlantı Noktası</string>
@@ -124,7 +124,7 @@
     <string name="delete_route_prompt">Bu rotayı kaldırmak istediğinize emin misiniz\?</string>
     <string name="route_add">Rota Oluştur</string>
     <string name="metered">Kota Belirteci</string>
-    <string name="metered_summary">Sisteme VPN\&apos;i kotalı olarak belirt</string>
+    <string name="metered_summary">Sisteme VPN&apos;i kotalı olarak belirt</string>
     <string name="menu_route">Rota</string>
     <string name="only">Sadece</string>
     <string name="prefer">Öner</string>
@@ -137,7 +137,7 @@
     <string name="bypass_apps">Atlat</string>
     <string name="route_opt_bypass_lan">Yerel Ağı Atlat</string>
     <string name="route_bypass">Atlat</string>
-    <string name="route_need_vpn">%s yönlendirme kuralı VPN\&apos;in etkin olmasına bağlıdır ve bu nedenle görmezden gelindi.</string>
+    <string name="route_need_vpn">%s yönlendirme kuralı VPN&apos;in etkin olmasına bağlıdır ve bu nedenle görmezden gelindi.</string>
     <string name="shadowsocks_plugin_v2ray">V2Ray (Shadowsocks Android Eklentisi)</string>
     <string name="shadowsocks_plugin_simple_obfs">Basit Şaşırtmaca (Shadowsocks Android Eklentisi)</string>
     <string name="hysteria_connection_receive_window">QUIC Bağlantı Alım Penceresi</string>
@@ -196,8 +196,8 @@
     <string name="update_subscription_warning">Vekil sunucu bağlanmadı, güncellemeye devam etmek istediğinize emin misiniz\?</string>
     <string name="ooc_subscription_token_invalid">OOCv1 Anahtarı Geçersiz</string>
     <string name="download">İndir</string>
-    <string name="install_from_fdroid">F-Droid\&apos;den Kur</string>
-    <string name="install_from_play_store">Play Store\&apos;dan Kur</string>
+    <string name="install_from_fdroid">F-Droid&apos;den Kur</string>
+    <string name="install_from_play_store">Play Store&apos;dan Kur</string>
     <string name="action_download">İNDİR</string>
     <string name="action_learn_more">DAHA FAZLASINI ÖĞREN</string>
     <string name="profile_requiring_plugin">Profil %1$s %2$s eklentisinin kurulmasını gerektirir ama kurulu değil.</string>
@@ -222,7 +222,7 @@
     <string name="trojan_provider">Trojan Sağlayıcısı</string>
     <string name="protocol_settings">Protokol Ayarları</string>
     <string name="append_http_proxy_sum">HTTP vekil sunucu direkt tarayıcı veya bazı destekli uygulamalar tarafından, sanal NIC aygıtından geçmeden kullanılır (Android 10+)</string>
-    <string name="append_http_proxy">HTTP Vekil Sunucuyu VPN\&apos;e Dahil Et</string>
+    <string name="append_http_proxy">HTTP Vekil Sunucuyu VPN&apos;e Dahil Et</string>
     <string name="connection_test_timeout">Zaman Aşımı</string>
     <string name="connection_test_unreachable">Erişilemez</string>
     <string name="connection_test_refused">Bağlantı reddedildi</string>
@@ -246,7 +246,7 @@
     <string name="follow_system">Sistemi Takip Et</string>
     <string name="night_mode">Gece Modu</string>
     <string name="lines">%d Satır</string>
-    <string name="route_warn">Kişisel kurallar eklemeden önce dökümanı okuduğunuza emin olun, yoksa Internet\&apos;e bağlanamayabilirsiniz.</string>
+    <string name="route_warn">Kişisel kurallar eklemeden önce dökümanı okuduğunuza emin olun, yoksa Internet&apos;e bağlanamayabilirsiniz.</string>
     <string name="license">Lisans</string>
     <string name="need_reload">Değişiklikleri uygulamak için vekil sunucu servisini yeniden başlatın</string>
     <string name="apply">Uygula</string>
@@ -387,5 +387,5 @@
     <string name="naive_insecure_concurrency">Güvensiz Eşzamanlılık</string>
     <string name="naive_insecure_concurrency_summary">Kötü ağ koşullarında daha sağlam olmak için N eşzamanlı tünel bağlantısı kullan. Daha fazla bağlantı, tünellemeyi algılamayı kolaylaştırır ve daha az güvenli hale getirir. Bu proje, trafik çözümlemesine karşı en güçlü güvenlik için çaba göstermektedir. Güvensiz bir şekilde kullanmak amacını bozar.
 \n
-\nBunu kullanmanız gerekiyorsa, sorunlarınızı çözüp çözmediğini görmek için önce N=2 değerini deneyin. Burada 4\&apos;ten fazla bağlantı kullanmamanızı şiddetle tavsiye ederiz.</string>
+\nBunu kullanmanız gerekiyorsa, sorunlarınızı çözüp çözmediğini görmek için önce N=2 değerini deneyin. Burada 4&apos;ten fazla bağlantı kullanmamanızı şiddetle tavsiye ederiz.</string>
 </resources>
