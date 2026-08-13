@@ -1,135 +1,41 @@
 name: Apply Fixes
-
 on:
-
   workflow_dispatch:
-  
 jobs:
-
   apply:
-  
     runs-on: ubuntu-latest
-    
     permissions:
-    
       contents: write
-      
-      workflows: write
-      
     steps:
-    
       - name: Checkout
-      
         uses: actions/checkout@v4
-        
       - name: Move files
-      
         run: |
-        
           # Move strings.xml files
-          
           if [ -f strings_values.xml ]; then
-          
             mkdir -p app/src/main/res/values
-            
             mv -f strings_values.xml app/src/main/res/values/strings.xml
-            
           fi
-          
           for f in strings_values-*.xml; do
-          
             if [ -f "$f" ]; then
-            
               dir=$(echo $f | sed 's/strings_//' | sed 's/\.xml//')
-              
               mkdir -p app/src/main/res/$dir
-              
               mv -f "$f" "app/src/main/res/$dir/strings.xml"
-              
             fi
-            
           done
-          
           # Move other files
-          
           if [ -f Theme.kt ]; then
-          
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/utils
-            
             mv -f Theme.kt app/src/main/java/io/nekohasekai/sagernet/utils/Theme.kt
-            
           fi
-          
           if [ -f RawUpdater.kt ]; then
-          
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/group
-            
             mv -f RawUpdater.kt app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt
-            
           fi
-          
-          if [ -f build.yml ]; then
-          
-            mkdir -p .github/workflows
-            
-            mv -f build.yml .github/workflows/build.yml
-            
-          fi
-          
       - name: Commit and push
-      
         run: |
-        
           git config --global user.name "github-actions[bot]"
-          
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
           git add .
-          
           git commit -m "Apply fixes and update project structure" || echo "No changes to commit"
-          
           git push
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
