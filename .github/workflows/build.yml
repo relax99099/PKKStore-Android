@@ -66,21 +66,22 @@ jobs:
         run: |
           mv app/build/outputs/apk/oss/release/app-oss-release.apk PKKStore.apk || \
           mv app/build/outputs/apk/oss/release/NekoBox-*.apk PKKStore.apk || \
-          find app/build/outputs/apk -name "*.apk" -exec mv {} PKKStore.apk \;
+          find app/build/outputs/apk/oss/release/ -name "*.apk" -exec mv {} PKKStore.apk \;
 
-      - name: Upload APK
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: PKKStore-APK
           path: PKKStore.apk
 
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         with:
-          files: PKKStore.apk
           tag_name: v${{ github.run_number }}
-          name: Release v${{ github.run_number }}
+          name: PKKStore Release v${{ github.run_number }}
+          files: PKKStore.apk
           draft: false
           prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
