@@ -72,8 +72,16 @@ jobs:
 
               content = re.sub(r'(<string[^>]*?)>(.*?)</string>', replace_non_positional, content, flags=re.DOTALL)
               
-              # Final pass for unicode escape errors
-              content = re.sub(r'\\(?![nt'"\\u])', '', content)
+              # Final pass for unicode escape errors: more robust replacement
+              # Find backslashes that are not followed by valid escape characters
+              valid_escapes = 'nt\' + "'" + '"u'
+              def escape_fixer(m):
+                  s = m.group(0)
+                  if len(s) > 1 and s[1] in valid_escapes:
+                      return s
+                  return s[1:] if len(s) > 1 else ''
+
+              content = re.sub(r'\\.', escape_fixer, content)
 
               with open(path, 'w', encoding='utf-8') as f:
                   f.write(content)
