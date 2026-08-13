@@ -1,6 +1,7 @@
 name: Apply Fixes
 on:
   workflow_dispatch:
+
 jobs:
   apply:
     runs-on: ubuntu-latest
@@ -9,6 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Move files
         run: |
           # Move strings.xml files
@@ -23,6 +25,7 @@ jobs:
               mv -f "$f" "app/src/main/res/$dir/strings.xml"
             fi
           done
+
           # Move other files
           if [ -f Theme.kt ]; then
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/utils
@@ -32,10 +35,42 @@ jobs:
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/group
             mv -f RawUpdater.kt app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt
           fi
+
+      - name: Fix strings.xml files
+        run: |
+          python3 -c "
+          import os
+          import re
+          def fix_file(path):
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              content = content.replace('\\&apos;', '&apos;')
+              def replace_non_positional(match):
+                  tag_attr = match.group(1)
+                  tag_content = match.group(2)
+                  if 'translatable=\"false\"' in tag_attr:
+                      return match.group(0)
+                  pattern = r'(?<!%)(%[a-zA-Z])'
+                  placeholders = re.findall(pattern, tag_content)
+                  if len(placeholders) > 1:
+                      new_content = tag_content
+                      for i, p in enumerate(placeholders):
+                          new_content = new_content.replace(p, f'%{i+1}undefined', 1)
+                      return f'{tag_attr}>{new_content}</string>'
+                  return match.group(0)
+              content = re.sub(r'(<string[^>]*?)>(.*?)</string>', replace_non_positional, content, flags=re.DOTALL)
+              with open(path, 'w', encoding='utf-8') as f:
+                  f.write(content)
+          for root, dirs, files in os.walk('.'):
+              for file in files:
+                  if file == 'strings.xml':
+                      fix_file(os.path.join(root, file))
+          "
+
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply fixes and update project structure" || echo "No changes to commit"
+          git commit -m "Apply fixes and sanitize strings.xml" || echo "No changes to commit"
           git push
