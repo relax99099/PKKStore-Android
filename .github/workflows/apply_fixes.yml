@@ -39,7 +39,7 @@ jobs:
 
       - name: Fix strings.xml files
         run: |
-          python3 -c "
+          cat << 'EOF' > fix_strings.py
           import os
           import re
 
@@ -48,9 +48,7 @@ jobs:
               with open(path, 'r', encoding='utf-8') as f:
                   content = f.read()
               
-              # Fix invalid escape sequences (e.g., \' in some contexts, or \ followed by something invalid)
-              # Android strings only support specific escapes like \n, \t, \', \", \\, \uXXXX
-              # Common error: \&apos;
+              # Fix invalid escape sequences
               content = content.replace('\\&apos;', '&apos;')
               
               def replace_non_positional(match):
@@ -60,32 +58,21 @@ jobs:
                   if 'translatable="false"' in tag_attr:
                       return match.group(0)
                   
-                  # Find all placeholders like %s, %d, %f, etc.
                   pattern = r'(?<!%)(%[a-zA-Z])'
                   placeholders = re.findall(pattern, tag_content)
                   
                   if len(placeholders) > 1:
-                      # Check if they already have positions like %1$s
                       if not re.search(r'%\d+\$', tag_content):
                           new_content = tag_content
-                          # This is a bit naive but should work for simple cases
-                          # Replacing placeholders one by one with positional ones
                           for i, p in enumerate(placeholders):
-                              # Replace only the first occurrence of the specific placeholder type
-                              # Note: this might be wrong if there are multiple different types
-                              # but it is better than nothing.
-                              # Actually, let's just use %1$s, %2$s, etc. but we need to know the type.
-                              # For now, let's just append the position.
-                              placeholder_type = p[1]
-                              new_content = new_content.replace(p, f'%{i+1}$s', 1) # Force to string for safety
+                              new_content = new_content.replace(p, f'%{i+1}$s', 1)
                           return f'{tag_attr}>{new_content}</string>'
                   
                   return match.group(0)
 
               content = re.sub(r'(<string[^>]*?)>(.*?)</string>', replace_non_positional, content, flags=re.DOTALL)
               
-              # Final pass for unicode escape errors: find all \ that are not followed by n, t, ', ", \, u
-              # and just remove the extra backslash
+              # Final pass for unicode escape errors
               content = re.sub(r'\\(?![nt'"\\u])', '', content)
 
               with open(path, 'w', encoding='utf-8') as f:
@@ -95,7 +82,8 @@ jobs:
               for file in files:
                   if file == 'strings.xml':
                       fix_file(os.path.join(root, file))
-          "
+          EOF
+          python3 fix_strings.py
 
       - name: Commit and push
         run: |
