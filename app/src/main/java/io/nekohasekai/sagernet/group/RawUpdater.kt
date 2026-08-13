@@ -69,8 +69,12 @@ object RawUpdater : GroupUpdater() {
                 setURL(subscription.link)
                 setUserAgent(subscription.customUserAgent.takeIf { it.isNotBlank() } ?: USER_AGENT)
             }.execute()
-            proxies = parseRaw(Util.getStringBox(response.contentString))
+            val responseBody = Util.getStringBox(response.contentString)
+            proxies = parseRaw(responseBody)
                 ?: error(app.getString(R.string.no_proxies_found))
+            
+            // Log if we found any proxies to ensure parsing is working
+            println("Found ${proxies.size} proxies in subscription")
 
             subscription.subscriptionUserinfo =
                 Util.getStringBox(response.getHeader("Subscription-Userinfo"))
