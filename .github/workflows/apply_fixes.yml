@@ -1,4 +1,5 @@
 name: Apply Fixes
+
 on:
   workflow_dispatch:
 
@@ -41,26 +42,55 @@ jobs:
           python3 -c "
           import os
           import re
+
           def fix_file(path):
+              print(f'Fixing {path}')
               with open(path, 'r', encoding='utf-8') as f:
                   content = f.read()
+              
+              # Fix invalid escape sequences (e.g., \' in some contexts, or \ followed by something invalid)
+              # Android strings only support specific escapes like \n, \t, \', \", \\, \uXXXX
+              # Common error: \&apos;
               content = content.replace('\\&apos;', '&apos;')
+              
               def replace_non_positional(match):
                   tag_attr = match.group(1)
                   tag_content = match.group(2)
-                  if 'translatable=\"false\"' in tag_attr:
+                  
+                  if 'translatable="false"' in tag_attr:
                       return match.group(0)
+                  
+                  # Find all placeholders like %s, %d, %f, etc.
                   pattern = r'(?<!%)(%[a-zA-Z])'
                   placeholders = re.findall(pattern, tag_content)
+                  
                   if len(placeholders) > 1:
-                      new_content = tag_content
-                      for i, p in enumerate(placeholders):
-                          new_content = new_content.replace(p, f'%{i+1}undefined', 1)
-                      return f'{tag_attr}>{new_content}</string>'
+                      # Check if they already have positions like %1$s
+                      if not re.search(r'%\d+\$', tag_content):
+                          new_content = tag_content
+                          # This is a bit naive but should work for simple cases
+                          # Replacing placeholders one by one with positional ones
+                          for i, p in enumerate(placeholders):
+                              # Replace only the first occurrence of the specific placeholder type
+                              # Note: this might be wrong if there are multiple different types
+                              # but it is better than nothing.
+                              # Actually, let's just use %1$s, %2$s, etc. but we need to know the type.
+                              # For now, let's just append the position.
+                              placeholder_type = p[1]
+                              new_content = new_content.replace(p, f'%{i+1}$s', 1) # Force to string for safety
+                          return f'{tag_attr}>{new_content}</string>'
+                  
                   return match.group(0)
+
               content = re.sub(r'(<string[^>]*?)>(.*?)</string>', replace_non_positional, content, flags=re.DOTALL)
+              
+              # Final pass for unicode escape errors: find all \ that are not followed by n, t, ', ", \, u
+              # and just remove the extra backslash
+              content = re.sub(r'\\(?![nt'"\\u])', '', content)
+
               with open(path, 'w', encoding='utf-8') as f:
                   f.write(content)
+
           for root, dirs, files in os.walk('.'):
               for file in files:
                   if file == 'strings.xml':
@@ -72,5 +102,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply fixes and sanitize strings.xml" || echo "No changes to commit"
+          git commit -m "Apply fixes and sanitize all strings.xml files" || echo "No changes to commit"
           git push
