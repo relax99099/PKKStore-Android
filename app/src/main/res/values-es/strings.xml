@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <resources> 
     <string name="app_desc">La cadena de herramientas proxy universal para Android, escrita en Kotlin.</string>
     <string name="project">Proyecto</string> 
@@ -19,10 +19,10 @@
     <string name="quick_disable">Deshabilitar</string>
     <string name="tile_title">Conmutador</string> 
     <string name="menu_traffic">Tráfico</string> 
-    <!-- externel --> 
+     
     <string name="action_copy">Copiar</string> 
     <string name="action_open">Abrir</string> 
-    <!-- group --> 
+     
     <string name="group_name">Nombre del grupo</string> 
     <string name="group_update">Actualizar</string> 
     <string name="group_subscription_link">Enlace de suscripción</string> 
@@ -40,11 +40,11 @@
     <string name="group_show_diff">Diferencia</string> 
     <string name="group_diff">Diferencia (%s)</string> 
     <string name="group_delete_confirm_prompt">¿Seguro que quieres eliminar este grupo?</string> 
-    <string name="group_added">Añadido: \n%s</string> 
-    <string name="group_changed">Actualizado: \n%s</string> 
-    <string name="group_deleted">Eliminado: \n%s</string> 
-    <string name="group_duplicate">Duplicado: \n%s</string> 
-    <!-- misc --> 
+    <string name="group_added">Añadido: \\n%s</string> 
+    <string name="group_changed">Actualizado: \\n%s</string> 
+    <string name="group_deleted">Eliminado: \\n%s</string> 
+    <string name="group_duplicate">Duplicado: \\n%s</string> 
+     
     <string name="service_mode">Modo de servicio</string> 
     <string name="service_mode_proxy">Solo proxy</string> 
     <string name="service_mode_vpn" translatable="false">VPN</string> 
@@ -71,7 +71,7 @@
     <string name="allow_insecure">Permitir inseguro</string> 
     <string name="allow_insecure_sum">Desactiva la comprobación de certificados. Cuando está activada, esta configuración es tan segura como el texto sin formato</string> 
     <string name="traffic" translatable="false">%1$s↑ %2$s↓</string> 
-    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\nDirecto： %3$s↑ %4$s↓</string> 
+    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\\nDirecto： %3$s↑ %4$s↓</string> 
     <string name="speed">%s/s</string> 
     <string name="connection_test_testing">Probando…</string> 
     <string name="connection_test_available">Éxito: el protocolo de enlace HTTPS tomó %dms</string> 
@@ -91,7 +91,7 @@
     <string name="require_transproxy">Activar transproxy entrante</string> 
     <string name="transproxy_mode">Modo transproxy</string> 
     <string name="connection_test_url">URL de prueba de conexión</string> 
-    <!-- proxy category --> 
+     
     <string name="profile_name">Nombre de perfil</string> 
     <string name="server_address">Servidor</string> 
     <string name="server_port">Puerto remoto</string> 
@@ -124,7 +124,7 @@
     <string name="extra_headers">Encabezados adicionales</string> 
     <string name="config_type">Tipo de configuración</string> 
     <string name="edit_config">Editar configuración</string> 
-    <!-- feature category --> 
+     
     <string name="ipv6">Ruta IPv6</string> 
     <string name="prefer">Preferir</string> 
     <string name="only">Solo</string> 
@@ -174,7 +174,7 @@
     <string name="auto_connect_summary">Activa el proxy en el inicio/actualización de la aplicación si se estaba ejecutando antes</string> 
     <string name="direct_boot_aware">Permitir alternar en la pantalla de bloqueo</string> 
     <string name="direct_boot_aware_summary">La información de su perfil seleccionado estará menos protegida</string> 
-    <!-- notification category --> 
+     
     <string name="service_vpn">Servicio VPN</string> 
     <string name="service_proxy">Servicio de proxy</string> 
     <string name="forward_success">Proxy iniciado.</string> 
@@ -185,11 +185,11 @@
     <string name="vpn_error">%s</string> 
     <string name="vpn_permission_denied">Permiso denegado para crear un servicio VPN</string> 
     <string name="reboot_required">No se pudo iniciar el servicio VPN. Es posible que deba reiniciar su dispositivo.</string> 
-    <!-- alert category --> 
+     
     <string name="profile_empty">Por favor seleccione un perfil</string> 
     <string name="connect">Conectar</string> 
     <string name="clipboard_empty">El portapapeles está vacío</string> 
-    <!-- menu category --> 
+     
     <string name="settings">Ajustes</string> 
     <string name="edit">Editar</string> 
     <string name="share">Compartir</string> 
@@ -219,8 +219,8 @@
     <string name="action_import_msg">¡Importación exitosa!</string> 
     <string name="action_import_err">No se pudo importar.</string> 
     <string name="file_manager_missing">Su dispositivo carece de un selector de archivos estándar de Android, instale uno, como Material Files.</string> 
-    <!-- share --> 
-    <!-- profile --> 
+     
+     
     <string name="profile_config">Configuración de perfil</string> 
     <string name="delete">Eliminar</string> 
     <string name="delete_confirm_prompt">¿Está seguro de que desea eliminar este perfil?</string> 
@@ -238,12 +238,12 @@
     <string name="undo">Deshacer</string>
     <string name="insecure">Inseguro</string>
     <string name="deprecated">Obsoleto</string> 
-    <!-- tasker --> 
-    <!-- status --> 
+     
+     
     <string name="connecting">Conectando…</string> 
     <string name="vpn_connected">Conectado, toque para verificar la conexión</string> 
     <string name="not_connected">No conectado</string> 
-    <!-- subscriptions --> 
+     
     <string name="subscriptions">Suscripciones</string> 
     <string name="cleartext_http_warning">El tráfico HTTP de texto claro no es seguro</string> 
     <string name="error_title">Error</string> 
@@ -256,7 +256,7 @@
     <string name="donate_info">Amo el dinero</string> 
     <string name="ignore_battery_optimizations">Ignorar optimizaciones de batería</string> 
     <string name="ignore_battery_optimizations_sum">Eliminar algunas restricciones</string> 
-    <!-- plugin --> 
+     
     <string name="plugin">Complemento</string> 
     <string name="plugin_configure">Configurar…</string> 
     <string name="plugin_disabled">Desactivado</string> 
@@ -419,7 +419,7 @@
     <string name="pcap" translatable="false">Pcap</string>
     <string name="pcap_notice">Los archivos Pcap se guardarán en %s</string>
     <string name="naive_insecure_concurrency">Concurrencia insegura</string> 
-    <string name="naive_insecure_concurrency_summary">Usa N conexiones de túnel concurrentes para ser más robusto en malas condiciones de red. Más conexiones hacen que la tunelización sea más fácil de detectar y menos segura. Este proyecto se esfuerza por lograr la mayor seguridad contra el análisis del tráfico. Usarlo de manera insegura anula su propósito. \n\nSi debe usar esto, pruebe N=2 primero para ver si resuelve sus problemas. Se recomienda enfáticamente no usar más de 4 conexiones aquí.</string> 
+    <string name="naive_insecure_concurrency_summary">Usa N conexiones de túnel concurrentes para ser más robusto en malas condiciones de red. Más conexiones hacen que la tunelización sea más fácil de detectar y menos segura. Este proyecto se esfuerza por lograr la mayor seguridad contra el análisis del tráfico. Usarlo de manera insegura anula su propósito. \\n\\nSi debe usar esto, pruebe N=2 primero para ver si resuelve sus problemas. Se recomienda enfáticamente no usar más de 4 conexiones aquí.</string> 
  
     <string name="stun_test">Descubrimiento de comportamiento NAT</string> 
     <string name="stun_test_summary">Determine el comportamiento de asignación de NAT del cliente y el comportamiento de filtrado de NAT definido en RFC 3478 mediante STUN.</string> 
@@ -449,4 +449,4 @@
  
     <string name="connection_test_delete_unavailable">Borrado no disponible</string> 
 
-</resources> 
+</resources>

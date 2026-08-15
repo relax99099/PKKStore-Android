@@ -22,10 +22,10 @@
     <string name="tile_title">سوییچر</string>
     <string name="menu_traffic">ترافیک</string>
     <string name="menu_dashboard">sing-box تنظیمات</string>
-    <!-- externel -->
+    
     <string name="action_copy">کپی</string>
     <string name="action_open">باز کردن</string>
-    <!-- group -->
+    
     <string name="group_name">نام گروه</string>
     <string name="group_update">به‌روزرسانی گروه</string>
     <string name="group_subscription_link">لینک اشتراک</string>
@@ -44,11 +44,11 @@
     <string name="group_show_diff">تفاوت‌ها</string>
     <string name="group_diff">تفاوت‌ها (%s)</string>
     <string name="group_delete_confirm_prompt">آیا مطمئن هستید که می‌خواهید این گروه را حذف کنید؟</string>
-    <string name="group_added">اضافه شده: \n%s</string>
-    <string name="group_changed">به‌روز شد \n%s</string>
-    <string name="group_deleted">حذف شد: \n%s</string>
-    <string name="group_duplicate">تکراری: \n%s</string>
-    <!-- misc -->
+    <string name="group_added">اضافه شده: \\n%s</string>
+    <string name="group_changed">به‌روز شد \\n%s</string>
+    <string name="group_deleted">حذف شد: \\n%s</string>
+    <string name="group_duplicate">تکراری: \\n%s</string>
+    
     <string name="service_mode">حالت سرویس</string>
     <string name="service_mode_proxy">فقط به حالت پراکسی</string>
     <string name="service_mode_vpn" translatable="false">VPN</string>
@@ -75,7 +75,7 @@
     <string name="allow_insecure">اتصال محافظت نشده</string>
     <string name="allow_insecure_sum">اگر بررسی گواهی‌ها غیرفعال باشد، اتصال بدون رمزنگاری خواهد بود.</string>
     <string name="traffic" translatable="false">%1$s↑ %2$s↓</string>
-    <string name="speed_detail">سرعت： %1$s↑ %2$s↓\nمستقیم： %3$s↑ %4$s↓</string>
+    <string name="speed_detail">سرعت： %1$s↑ %2$s↓\\nمستقیم： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">در حال آزمایش</string>
     <string name="connection_test_available">اتصال موفق! سرعت برقراری ارتباط HTTPS: %dms</string>
@@ -95,7 +95,7 @@
     <string name="require_transproxy">فعال کردن Transproxy ورودی</string>
     <string name="transproxy_mode">حالت Transproxy</string>
     <string name="connection_test_url">آزمایش اتصال به لینک</string>
-    <!-- proxy category -->
+    
     <string name="profile_name">نام</string>
     <string name="server_address">آدرس سرور</string>
     <string name="server_port">پورت سرور</string>
@@ -128,7 +128,7 @@
     <string name="extra_headers">سرآیندهای اضافی</string>
     <string name="config_type">نوع پیکربندی</string>
     <string name="edit_config">ویرایش پیکربندی</string>
-    <!-- feature category -->
+    
     <string name="ipv6">مسیریابی IP نسخه 6</string>
     <string name="prefer">ترجیح</string>
     <string name="only">فقط</string>
@@ -180,7 +180,7 @@
     <string name="auto_connect_summary">فعال کردن پراکسی در هنگام راه‌اندازی/به‌روزرسانی برنامه اگر قبلاً در حال اجرا بوده است</string>
     <string name="direct_boot_aware">امکان تغییر وضعیت پراکسی در صفحه قفل</string>
     <string name="direct_boot_aware_summary">اطلاعات پراکسی انتخابی شما، کمتر محافظت می‌شود.</string>
-    <!-- notification category -->
+    
     <string name="service_vpn">VPN سراسری</string>
     <string name="service_proxy">پراکسی</string>
     <string name="forward_success">پراکسی راه‌اندازی شد.</string>
@@ -191,11 +191,11 @@
     <string name="vpn_error">%s</string>
     <string name="vpn_permission_denied">اجازه ایجاد سرویس VPN داده نشد.</string>
     <string name="reboot_required">راه‌اندازی VPN ناموفق بود، بهتر است یک‌بار دستگاهتان را خاموش و راه‌اندازی مجدد کنید.</string>
-    <!-- alert category -->
+    
     <string name="profile_empty">لطفاً یک پراکسی را انتخاب کنید.</string>
     <string name="connect">اتصال</string>
     <string name="clipboard_empty">بریده‌دان خالی است.</string>
-    <!-- menu category -->
+    
     <string name="settings">تنظیمات</string>
     <string name="edit">ویرایش</string>
     <string name="share">اشتراک‌گذاری</string>
@@ -239,8 +239,8 @@
     <string name="action_import_err">وارد نشد.</string>
     <string name="file_manager_missing">لطفاً دستگاه شما فاقد انتخابگر فایل استاندارد Android است
  یکی مانند Material Files را نصب کنید.</string>
-    <!-- share -->
-    <!-- profile -->
+    
+    
     <string name="profile_config">پیکربندی پراکسی</string>
     <string name="delete">حذف</string>
     <string name="delete_confirm_prompt">آیا مطمئن هستید که می‌خواهید این پراکسی را حذف کنید؟</string>
@@ -258,12 +258,12 @@
     <string name="undo">برگشت</string>
     <string name="insecure">ناامن</string>
     <string name="deprecated">منسوخ</string>
-    <!-- tasker -->
-    <!-- status -->
+    
+    
     <string name="connecting">در حال اتصال...</string>
     <string name="vpn_connected">متصل شد! برای بررسی اتصال، اینجا کلیک کنید.</string>
     <string name="not_connected">وصل نیست</string>
-    <!-- subscriptions -->
+    
     <string name="subscriptions">اشتراک‌ها</string>
     <string name="cleartext_http_warning">ترافیک HTTP شفاف ناامن است</string>
     <string name="error_title">خطا</string>
@@ -276,7 +276,7 @@
     <string name="donate_info">عاشق پول هستم!</string>
     <string name="ignore_battery_optimizations">بهینه‌سازی باتری را برای این برنامه غیرفعال کنید</string>
     <string name="ignore_battery_optimizations_sum">چند محدودیت برداشته می‌شود</string>
-    <!-- plugin -->
+    
     <string name="plugin">افزونه</string>
     <string name="plugin_configure">پیکربندی...</string>
     <string name="plugin_disabled">غیرفعال</string>
@@ -442,7 +442,7 @@
     <string name="pcap" translatable="false">Pcap</string>
     <string name="pcap_notice">فایل‌های Pcap در %s ذخیره می‌شوند.</string>
     <string name="naive_insecure_concurrency">همزمانی ناامن</string>
-    <string name="naive_insecure_concurrency_summary">از N اتصال تونل همزمان برای قوی‌تر بودن در شرایط بد شبکه استفاده کنید. اتصالات بیشتر، اتصال به تونل را آسان‌تر و ایمن‌تر می کند. این پروژه برای افزایش امنیت در برابر شنود ترافیک تلاش می‌کند. استفاده ناامن، هدف پروژه نیست. \n\nاگر می‌خواهید از این استفاده کنید، ابتدا N=2 را امتحان کنید تا ببینید آیا مشکلات شما حل می‌شود یا خیر. اکیداً توصیه می‌شود از بیش از 4 اتصال در اینجا استفاده نکنید.</string>
+    <string name="naive_insecure_concurrency_summary">از N اتصال تونل همزمان برای قوی‌تر بودن در شرایط بد شبکه استفاده کنید. اتصالات بیشتر، اتصال به تونل را آسان‌تر و ایمن‌تر می کند. این پروژه برای افزایش امنیت در برابر شنود ترافیک تلاش می‌کند. استفاده ناامن، هدف پروژه نیست. \\n\\nاگر می‌خواهید از این استفاده کنید، ابتدا N=2 را امتحان کنید تا ببینید آیا مشکلات شما حل می‌شود یا خیر. اکیداً توصیه می‌شود از بیش از 4 اتصال در اینجا استفاده نکنید.</string>
 
     <string name="stun_test">کشف رفتار NAT</string>
     <string name="stun_test_summary">تعیین رفتار NAT و رفتار فیلتر NAT تعریف‌شده در RFC 3478 با استفاده از STUN.</string>
@@ -502,7 +502,7 @@
     <string name="need_restart">برای اجرای تغییرات، برنامه را دوباره راه‌اندازی کنید</string>
     <string name="use_selector">استفاده از انتخاب‌گر</string>
     <string name="front_proxy">پراکسی جلویی</string>
-    <string name="landing_proxy" >پراکسی در حال فرود</string>
+    <string name="landing_proxy">پراکسی در حال فرود</string>
     <string name="action_shadowtls" translatable="false">ShadowTLS</string>
     <string name="protocol_version">نسخه پروتکل</string>
     <string name="share_subscription">اشتراک‌گذاری گروه اشتراکی</string>

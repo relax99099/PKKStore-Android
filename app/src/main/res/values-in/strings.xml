@@ -35,7 +35,7 @@
     <string name="connection_test_testing">Mengetes…</string>
     <string name="speed">%s/s</string>
     <string name="speed_detail">Proksi： %1$s↑ %2$s↓
-\nDirek： %3$s↑ %4$s↓</string>
+\\nDirek： %3$s↑ %4$s↓</string>
     <string name="traffic">%1$s↑ %2$s↓</string>
     <string name="allow_insecure_sum">Nonaktifkan pengecekan sertifikat. Saat diaktifkan, konfigurasi ini seaman teks biasa</string>
     <string name="allow_insecure">Izinkan Koneksi Tidak Aman</string>
@@ -59,13 +59,13 @@
     <string name="service_mode_proxy">Hanya proxy</string>
     <string name="service_mode">Mode Layanan</string>
     <string name="group_duplicate">Duplikasi:
-\n%s</string>
+\\n%s</string>
     <string name="group_deleted">Dihapus:
-\n%s</string>
+\\n%s</string>
     <string name="group_changed">Diperbarui:
-\n%s</string>
+\\n%s</string>
     <string name="group_added">Ditambahkan:
-\n%s</string>
+\\n%s</string>
     <string name="group_delete_confirm_prompt">Anda yakin ingin menghapus grup ini\?</string>
     <string name="group_diff">Diff (%s)</string>
     <string name="group_show_diff">Diff</string>

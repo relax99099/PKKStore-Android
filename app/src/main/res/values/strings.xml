@@ -22,10 +22,10 @@
     <string name="tile_title">Switcher</string>
     <string name="menu_traffic">Traffic</string>
     <string name="menu_dashboard">sing-box Dashboard</string>
-    <!-- externel -->
+    
     <string name="action_copy">Copy</string>
     <string name="action_open">Open</string>
-    <!-- group -->
+    
     <string name="group_name">Group name</string>
     <string name="group_update">Update</string>
     <string name="group_subscription_link">Subscription Link</string>
@@ -44,11 +44,11 @@
     <string name="group_show_diff">Diff</string>
     <string name="group_diff">Diff (%s)</string>
     <string name="group_delete_confirm_prompt">Are you sure you want to remove this group?</string>
-    <string name="group_added">Added: \n%s</string>
-    <string name="group_changed">Updated: \n%s</string>
-    <string name="group_deleted">Deleted: \n%s</string>
-    <string name="group_duplicate">Duplicate: \n%s</string>
-    <!-- misc -->
+    <string name="group_added">Added: \\n%s</string>
+    <string name="group_changed">Updated: \\n%s</string>
+    <string name="group_deleted">Deleted: \\n%s</string>
+    <string name="group_duplicate">Duplicate: \\n%s</string>
+    
     <string name="service_mode">Service Mode</string>
     <string name="service_mode_proxy">Proxy only</string>
     <string name="service_mode_vpn" translatable="false">VPN</string>
@@ -77,7 +77,7 @@
     <string name="allow_insecure_sum">Disable certificate checking. When enabled, this configuration
         is as secure as plaintext</string>
     <string name="traffic" translatable="false">%1$s↑ %2$s↓</string>
-    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\nDirect： %3$s↑ %4$s↓</string>
+    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\\nDirect： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">Testing…</string>
     <string name="connection_test_available">Success: HTTPS handshake took %dms</string>
@@ -99,7 +99,7 @@
     <string name="require_transproxy">Enable Transproxy Inbound</string>
     <string name="transproxy_mode">Transproxy Mode</string>
     <string name="connection_test_url">Connection Test URL</string>
-    <!-- proxy category -->
+    
     <string name="profile_name">Profile Name</string>
     <string name="server_address">Server</string>
     <string name="server_port">Remote Port</string>
@@ -132,7 +132,7 @@
     <string name="extra_headers">Extra Headers</string>
     <string name="config_type">Config Type</string>
     <string name="edit_config">Edit Config</string>
-    <!-- feature category -->
+    
     <string name="ipv6">IPv6 Route</string>
     <string name="prefer">Prefer</string>
     <string name="only">Only</string>
@@ -187,7 +187,7 @@
     <string name="direct_boot_aware">Allow Toggling in Lock Screen</string>
     <string name="direct_boot_aware_summary">Your selected profile information will be less
         protected</string>
-    <!-- notification category -->
+    
     <string name="service_vpn">VPN Service</string>
     <string name="service_proxy">Proxy Service</string>
     <string name="forward_success">Proxy started.</string>
@@ -199,11 +199,11 @@
     <string name="vpn_permission_denied">Permission denied to create a VPN service</string>
     <string name="reboot_required">Failed to start VPN service. You might need to reboot your
         device.</string>
-    <!-- alert category -->
+    
     <string name="profile_empty">Please select a profile</string>
     <string name="connect">Connect</string>
     <string name="clipboard_empty">Clipboard is empty</string>
-    <!-- menu category -->
+    
     <string name="settings">Settings</string>
     <string name="edit">Edit</string>
     <string name="share">Share</string>
@@ -248,8 +248,8 @@
     <string name="action_import_err">Failed to import.</string>
     <string name="file_manager_missing">Your device lacks an Android standard file selector, please
         install one, such as Material Files.</string>
-    <!-- share -->
-    <!-- profile -->
+    
+    
     <string name="profile_config">Profile config</string>
     <string name="delete">Remove</string>
     <string name="delete_confirm_prompt">Are you sure you want to remove this profile?</string>
@@ -267,12 +267,12 @@
     <string name="undo">Undo</string>
     <string name="insecure">Insecure</string>
     <string name="deprecated">Deprecated</string>
-    <!-- tasker -->
-    <!-- status -->
+    
+    
     <string name="connecting">Connecting…</string>
     <string name="vpn_connected">Connected, tap to check connection</string>
     <string name="not_connected">Not connected</string>
-    <!-- subscriptions -->
+    
     <string name="subscriptions">Subscriptions</string>
     <string name="cleartext_http_warning">Cleartext HTTP traffic is insecure</string>
     <string name="error_title">Error</string>
@@ -285,7 +285,7 @@
     <string name="donate_info">I love money</string>
     <string name="ignore_battery_optimizations">Ignore battery optimizations</string>
     <string name="ignore_battery_optimizations_sum">Remove some restrictions</string>
-    <!-- plugin -->
+    
     <string name="plugin">Plugin</string>
     <string name="plugin_configure">Configure…</string>
     <string name="plugin_disabled">Disabled</string>
@@ -470,11 +470,11 @@
     <string name="naive_insecure_concurrency_summary">Use N concurrent tunnel connections to be more
         robust under bad network conditions. More connections make the tunneling easier to detect
         and less secure. This project strives for the strongest security against traffic analysis.
-        Using it in an insecure way defeats its purpose. \n\nIf you must use this, try N=2 first to
+        Using it in an insecure way defeats its purpose. \\n\\nIf you must use this, try N=2 first to
         see if it solves your issues. Strongly recommend against using more than 4 connections here.</string>
 
     <string name="stun_test">NAT behaviour discovery</string>
-    <string name="stun_test_summary">Determine the client&apos;s NAT mapping behaviour and the NAT
+    <string name="stun_test_summary">Determine the client's NAT mapping behaviour and the NAT
         filtering behaviour defined in RFC 3478 using STUN.</string>
     <string name="start">Start</string>
     <string name="stun_attest_loading">This may take a few minutes…</string>
@@ -559,7 +559,7 @@
     <string name="ech_config">ECH Config</string>
     <string name="http_upgrade_host">HTTPUpgrade Host</string>
     <string name="http_upgrade_path">HTTPUpgrade Path</string>
-    <string name="update_current_subscription">Update current Group&apos;s subscription</string>
+    <string name="update_current_subscription">Update current Group's subscription</string>
     <string name="group_not_subscription">Group type is not subscription</string>
     <string name="allow_insecure_on_request_sum">Disable certificate checking when updating
         subscriptions</string>
@@ -572,11 +572,11 @@
     <string name="check_update_preview">Check for preview version updates</string>
     <string name="check_update_release">Check for release version updates</string>
     <string name="update_dialog_title">New version available</string>
-    <string name="update_dialog_message">Current version: %1$s\nAvailable version: %2$s\nDo you want to download it?</string>
+    <string name="update_dialog_message">Current version: %1$s\\nAvailable version: %2$s\\nDo you want to download it?</string>
     <string name="check_update_no">Check successful, but no updates.</string>
     <string name="reset_settings">Restore default settings</string>
     <string name="reset_settings_message">Restore default settings, but data such as nodes and groups will be retained. To completely clear data, clear application data directly in the system settings.</string>
     <string name="minimize">Minimize</string>
-    <string name="app_list_permission_denied">Unable to read installed apps.\nThis is usually because the system has restricted app read permissions.\nPlease grant permissions in the system settings.</string>
+    <string name="app_list_permission_denied">Unable to read installed apps.\\nThis is usually because the system has restricted app read permissions.\\nPlease grant permissions in the system settings.</string>
     <string name="open_app_settings">Open System Settings</string>
 </resources>
