@@ -1,8 +1,6 @@
 name: Apply Fixes
-
 on:
   workflow_dispatch:
-
 jobs:
   apply:
     runs-on: ubuntu-latest
@@ -11,7 +9,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Move files
         run: |
           # Move strings.xml files
@@ -21,12 +18,11 @@ jobs:
           fi
           for f in strings_values-*.xml; do
             if [ -f "$f" ]; then
-              dir=$(echo $f | sed 's/strings_//' | sed 's/\.xml//')
-              mkdir -p app/src/main/res/$dir
-              mv -f "$f" "app/src/main/res/$dir/strings.xml"
+              locale=$(echo $f | sed 's/strings_values-//' | sed 's/\.xml//')
+              mkdir -p app/src/main/res/values-$locale
+              mv -f "$f" "app/src/main/res/values-$locale/strings.xml"
             fi
           done
-
           # Move other files
           if [ -f Theme.kt ]; then
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/utils
@@ -36,67 +32,83 @@ jobs:
             mkdir -p app/src/main/java/io/nekohasekai/sagernet/group
             mv -f RawUpdater.kt app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt
           fi
-
       - name: Fix strings.xml files
         run: |
           cat << 'EOF' > fix_strings.py
           import os
           import re
+          import xml.etree.ElementTree as ET
 
           def fix_file(path):
               print(f'Fixing {path}')
-              with open(path, 'r', encoding='utf-8') as f:
-                  content = f.read()
-              
-              # Fix invalid escape sequences
-              content = content.replace('\\&apos;', '&apos;')
-              
-              def replace_non_positional(match):
-                  tag_attr = match.group(1)
-                  tag_content = match.group(2)
-                  
-                  if 'translatable="false"' in tag_attr:
+              try:
+                  with open(path, 'r', encoding='utf-8') as f:
+                      content = f.read()
+
+                  # 1. Fix unescaped ampersands
+                  content = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', '&amp;', content)
+
+                  # 2. Fix invalid backslash escapes
+                  def fix_backslash(match):
+                      s = match.group(0)
+                      if re.match(r'\\(?![nt"\'\\u])', s):
+                          return s
+                      return '\\\\' + s[1:]
+                  content = re.sub(r'\\.', fix_backslash, content)
+
+                  # 3. Fix non-positional placeholders
+                  def fix_placeholders(match):
+                      tag_attr = match.group(1)
+                      tag_content = match.group(2)
+                      if 'translatable="false"' in tag_attr:
+                          return match.group(0)
+                      
+                      pattern = r'(?<!%)(%[a-zA-Z])'
+                      placeholders = re.findall(pattern, tag_content)
+                      if len(placeholders) > 1:
+                          if not re.search(r'%\d+\$', tag_content):
+                              new_content = tag_content
+                              for i, p in enumerate(placeholders):
+                                  new_content = new_content.replace(p, f'%{i+1}${p[1]}', 1)
+                              return f'<string{tag_attr}>{new_content}</string>'
                       return match.group(0)
-                  
-                  pattern = r'(?<!%)(%[a-zA-Z])'
-                  placeholders = re.findall(pattern, tag_content)
-                  
-                  if len(placeholders) > 1:
-                      if not re.search(r'%\d+\$', tag_content):
-                          new_content = tag_content
-                          for i, p in enumerate(placeholders):
-                              new_content = new_content.replace(p, f'%{i+1}$s', 1)
-                          return f'{tag_attr}>{new_content}</string>'
-                  
-                  return match.group(0)
 
-              content = re.sub(r'(<string[^>]*?)>(.*?)</string>', replace_non_positional, content, flags=re.DOTALL)
-              
-              # Final pass for unicode escape errors: more robust replacement
-              # Find backslashes that are not followed by valid escape characters
-              valid_escapes = 'nt\' + "'" + '"u'
-              def escape_fixer(m):
-                  s = m.group(0)
-                  if len(s) > 1 and s[1] in valid_escapes:
-                      return s
-                  return s[1:] if len(s) > 1 else ''
+                  content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_placeholders, content, flags=re.DOTALL)
 
-              content = re.sub(r'\\.', escape_fixer, content)
+                  # 4. Remove duplicate string entries
+                  try:
+                      root = ET.fromstring(content)
+                      seen = set()
+                      to_remove = []
+                      for child in root.findall('string'):
+                          name = child.get('name')
+                          if name in seen:
+                              to_remove.append(child)
+                          else:
+                              seen.add(name)
+                      for child in to_remove:
+                          root.remove(child)
+                      content = ET.tostring(root, encoding='unicode')
+                      if not content.startswith('<?xml'):
+                          content = '<?xml version="1.0" encoding="utf-8"?>\n' + content
+                  except Exception as e:
+                      print(f'Error parsing XML in {path}: {e}')
 
-              with open(path, 'w', encoding='utf-8') as f:
-                  f.write(content)
+                  with open(path, 'w', encoding='utf-8') as f:
+                      f.write(content)
+              except Exception as e:
+                  print(f'Failed to fix {path}: {e}')
 
-          for root, dirs, files in os.walk('.'):
+          for root, dirs, files in os.walk('app/src/main/res'):
               for file in files:
                   if file == 'strings.xml':
                       fix_file(os.path.join(root, file))
           EOF
           python3 fix_strings.py
-
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply fixes and sanitize all strings.xml files" || echo "No changes to commit"
+          git commit -m "Apply rebranding and robust parsing fixes" || echo "No changes to commit"
           git push
