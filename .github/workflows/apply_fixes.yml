@@ -9,106 +9,73 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Move files
+      - name: Fix and Rebrand
         run: |
-          # Move strings.xml files
-          if [ -f strings_values.xml ]; then
-            mkdir -p app/src/main/res/values
-            mv -f strings_values.xml app/src/main/res/values/strings.xml
-          fi
-          for f in strings_values-*.xml; do
-            if [ -f "$f" ]; then
-              locale=$(echo $f | sed 's/strings_values-//' | sed 's/\.xml//')
-              mkdir -p app/src/main/res/values-$locale
-              mv -f "$f" "app/src/main/res/values-$locale/strings.xml"
-            fi
-          done
-          # Move other files
-          if [ -f Theme.kt ]; then
-            mkdir -p app/src/main/java/io/nekohasekai/sagernet/utils
-            mv -f Theme.kt app/src/main/java/io/nekohasekai/sagernet/utils/Theme.kt
-          fi
-          if [ -f RawUpdater.kt ]; then
-            mkdir -p app/src/main/java/io/nekohasekai/sagernet/group
-            mv -f RawUpdater.kt app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt
-          fi
-      - name: Fix strings.xml files
-        run: |
-          cat << 'EOF' > fix_strings.py
+          cat << 'EOF' > fix_all.py
           import os
           import re
-          import xml.etree.ElementTree as ET
 
           def fix_file(path):
-              print(f'Fixing {path}')
               try:
                   with open(path, 'r', encoding='utf-8') as f:
                       content = f.read()
-
-                  # 1. Fix unescaped ampersands
-                  content = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', '&amp;', content)
-
-                  # 2. Fix invalid backslash escapes
-                  def fix_backslash(match):
-                      s = match.group(0)
-                      if re.match(r'\\(?![nt"\'\\u])', s):
-                          return s
-                      return '\\\\' + s[1:]
-                  content = re.sub(r'\\.', fix_backslash, content)
-
-                  # 3. Fix non-positional placeholders
-                  def fix_placeholders(match):
-                      tag_attr = match.group(1)
-                      tag_content = match.group(2)
-                      if 'translatable="false"' in tag_attr:
-                          return match.group(0)
+                  
+                  # 1. Rebrand NekoBox to PKKStore
+                  content = content.replace('NekoBox', 'PKKStore')
+                  
+                  # 2. Fix Android XML issues if it's a strings.xml file
+                  if path.endswith('strings.xml'):
+                      # Fix unescaped ampersands
+                      content = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', '&amp;', content)
                       
-                      pattern = r'(?<!%)(%[a-zA-Z])'
-                      placeholders = re.findall(pattern, tag_content)
-                      if len(placeholders) > 1:
-                          if not re.search(r'%\d+\$', tag_content):
-                              new_content = tag_content
-                              for i, p in enumerate(placeholders):
-                                  new_content = new_content.replace(p, f'%{i+1}${p[1]}', 1)
-                              return f'<string{tag_attr}>{new_content}</string>'
-                      return match.group(0)
-
-                  content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_placeholders, content, flags=re.DOTALL)
-
-                  # 4. Remove duplicate string entries
-                  try:
-                      root = ET.fromstring(content)
-                      seen = set()
-                      to_remove = []
-                      for child in root.findall('string'):
-                          name = child.get('name')
-                          if name in seen:
-                              to_remove.append(child)
-                          else:
-                              seen.add(name)
-                      for child in to_remove:
-                          root.remove(child)
-                      content = ET.tostring(root, encoding='unicode')
-                      if not content.startswith('<?xml'):
-                          content = '<?xml version="1.0" encoding="utf-8"?>\n' + content
-                  except Exception as e:
-                      print(f'Error parsing XML in {path}: {e}')
+                      # Fix unescaped apostrophes
+                      def fix_apostrophe(match):
+                          tag_start, attr, text, tag_end = match.groups()
+                          if 'translatable="false"' in attr:
+                              return match.group(0)
+                          fixed_text = re.sub(r"(?<!\\)'", r"\'", text)
+                          return f'<{tag_start}{attr}>{fixed_text}{tag_end}'
+                      content = re.sub(r'<(string)([^>]*)>(.*?)(</string>)', fix_apostrophe, content, flags=re.DOTALL)
+                      
+                      # Fix invalid backslashes
+                      def fix_backslash(match):
+                          attr, text = match.groups()
+                          fixed_text = re.sub(r'\\(?![ntr\'\"\\u])', r'\\\\\', text)
+                          return f'<string{attr}>{fixed_text}</string>'
+                      content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_backslash, content, flags=re.DOTALL)
+                      
+                      # Fix non-positional placeholders
+                      def fix_placeholders(match):
+                          attr, text = match.groups()
+                          if 'translatable="false"' in attr:
+                              return match.group(0)
+                          placeholders = re.findall(r'(?<!%)(%[a-zA-Z])', text)
+                          if len(placeholders) > 1:
+                              if not re.search(r'%\d+\$', text):
+                                  new_content = text
+                                  for i, p in enumerate(placeholders):
+                                      new_content = new_content.replace(p, f'%{i+1}${p[1]}', 1)
+                                  return f'<string{attr}>{new_content}</string>'
+                          return match.group(0)
+                      content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_placeholders, content, flags=re.DOTALL)
 
                   with open(path, 'w', encoding='utf-8') as f:
                       f.write(content)
               except Exception as e:
-                  print(f'Failed to fix {path}: {e}')
+                  print(f"Error fixing {path}: {e}")
 
-          for root, dirs, files in os.walk('app/src/main/res'):
+          for root, dirs, files in os.walk('.'):
+              if '.git' in dirs:
+                  dirs.remove('.git')
               for file in files:
-                  if file == 'strings.xml':
+                  if file.endswith(('.kt', '.java', '.xml', '.properties', '.md', '.txt', '.kts')):
                       fix_file(os.path.join(root, file))
           EOF
-          python3 fix_strings.py
+          python3 fix_all.py
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply rebranding and robust parsing fixes" || echo "No changes to commit"
+          git commit -m "Apply comprehensive rebranding and resource fixes" || echo "No changes to commit"
           git push
