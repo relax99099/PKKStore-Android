@@ -31,11 +31,11 @@
     <string name="group_show_diff">變化</string>
     <string name="group_delete_confirm_prompt">您真的希望刪除這個群組嗎？</string>
     <string name="group_added">新增：
-\\n%s</string>
+\n%s</string>
     <string name="group_changed">更新：
-\\n%s</string>
+\n%s</string>
     <string name="group_deleted">刪除：
-\\n%s</string>
+\n%s</string>
     
     <string name="service_mode">執行模式</string>
     <string name="service_mode_proxy">代理</string>
@@ -55,7 +55,7 @@
     <string name="speed_interval">速度通知更新間隔</string>
     <string name="traffic">%1$s↑ %2$s↓</string>
     <string name="speed_detail">代理： %1$s↑ %2$s↓
-\\n直連： %3$s↑ %4$s↓</string>
+\n直連： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">正在測試…</string>
     <string name="connection_test_available">成功：HTTPS 握手花費 %dms</string>
@@ -198,7 +198,7 @@
     <string name="cag_misc">其他設定</string>
     <string name="port_transproxy">透明代理連接埠</string>
     <string name="group_duplicate">重複：
-\\n%s</string>
+\n%s</string>
     <string name="group_diff">差異（%s）</string>
     <string name="tile_title">切換器</string>
     <string name="group_default">未分組</string>
@@ -396,8 +396,8 @@
     <string name="naive_insecure_concurrency">不安全並發</string>
     <string name="stun_test">NAT 行為尋找</string>
     <string name="naive_insecure_concurrency_summary">使用N個並發的隧道能使網路條件較差时更加可用。但數量越多，越易被偵測，安全性越低。由於本項目致力於面對流量分析的安全性，以不安全的方式使用違背了其初忠。
-\\n
-\\n如一定要使用，請先嘗試 N=2，觀察其是否解決了您的問題。強烈反對於此使用多於4個隧道。</string>
+\n
+\n如一定要使用，請先嘗試 N=2，觀察其是否解決了您的問題。強烈反對於此使用多於4個隧道。</string>
     <string name="stun_attest_loading">這可能需要數分鐘…</string>
     <string name="stun_test_summary">使用 STUN 確定用戶端的 NAT 映射行為和 RFC 5780 中定義的 NAT 篩選行為。</string>
     <string name="start">開始</string>

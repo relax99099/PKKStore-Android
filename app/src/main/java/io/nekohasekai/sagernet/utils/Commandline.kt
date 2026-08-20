@@ -22,7 +22,7 @@ import java.util.*
  *
  * Based on: https://github.com/apache/ant/blob/588ce1f/src/main/org/apache/tools/ant/types/Commandline.java
  *
- * Adds support for escape character '\'.
+ * Adds support for escape character \'\'.
  */
 object Commandline {
 
@@ -39,11 +39,11 @@ object Commandline {
         // path containing one or more elements
         val result = StringBuilder()
         for (arg in args) {
-            if (result.isNotEmpty()) result.append(' ')
+            if (result.isNotEmpty()) result.append(\' \')
             arg.indices.map { arg[it] }.forEach {
                 when (it) {
-                    ' ', '\\', '"', '\'' -> {
-                        result.append('\\')  // intentionally no break
+                    \' \', \'\\', \'"\', \'\'\' -> {
+                        result.append(\'\\')  // intentionally no break
                         result.append(it)
                     }
                     else -> result.append(it)
@@ -61,7 +61,7 @@ object Commandline {
      * by spaces and quoted by quoting rules.
      */
     fun toString(args: Array<String>) =
-        toString(args.asIterable()) // thanks to Java, arrays aren't iterable
+        toString(args.asIterable()) // thanks to Java, arrays aren\'t iterable
 
     /**
      * Crack a command line.

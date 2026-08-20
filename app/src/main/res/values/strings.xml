@@ -44,10 +44,10 @@
     <string name="group_show_diff">Diff</string>
     <string name="group_diff">Diff (%s)</string>
     <string name="group_delete_confirm_prompt">Are you sure you want to remove this group?</string>
-    <string name="group_added">Added: \\n%s</string>
-    <string name="group_changed">Updated: \\n%s</string>
-    <string name="group_deleted">Deleted: \\n%s</string>
-    <string name="group_duplicate">Duplicate: \\n%s</string>
+    <string name="group_added">Added: \n%s</string>
+    <string name="group_changed">Updated: \n%s</string>
+    <string name="group_deleted">Deleted: \n%s</string>
+    <string name="group_duplicate">Duplicate: \n%s</string>
     
     <string name="service_mode">Service Mode</string>
     <string name="service_mode_proxy">Proxy only</string>
@@ -77,7 +77,7 @@
     <string name="allow_insecure_sum">Disable certificate checking. When enabled, this configuration
         is as secure as plaintext</string>
     <string name="traffic" translatable="false">%1$s↑ %2$s↓</string>
-    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\\nDirect： %3$s↑ %4$s↓</string>
+    <string name="speed_detail">Proxy： %1$s↑ %2$s↓\nDirect： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">Testing…</string>
     <string name="connection_test_available">Success: HTTPS handshake took %dms</string>
@@ -470,11 +470,11 @@
     <string name="naive_insecure_concurrency_summary">Use N concurrent tunnel connections to be more
         robust under bad network conditions. More connections make the tunneling easier to detect
         and less secure. This project strives for the strongest security against traffic analysis.
-        Using it in an insecure way defeats its purpose. \\n\\nIf you must use this, try N=2 first to
+        Using it in an insecure way defeats its purpose. \n\nIf you must use this, try N=2 first to
         see if it solves your issues. Strongly recommend against using more than 4 connections here.</string>
 
     <string name="stun_test">NAT behaviour discovery</string>
-    <string name="stun_test_summary">Determine the client's NAT mapping behaviour and the NAT
+    <string name="stun_test_summary">Determine the client\'s NAT mapping behaviour and the NAT
         filtering behaviour defined in RFC 3478 using STUN.</string>
     <string name="start">Start</string>
     <string name="stun_attest_loading">This may take a few minutes…</string>
@@ -559,7 +559,7 @@
     <string name="ech_config">ECH Config</string>
     <string name="http_upgrade_host">HTTPUpgrade Host</string>
     <string name="http_upgrade_path">HTTPUpgrade Path</string>
-    <string name="update_current_subscription">Update current Group's subscription</string>
+    <string name="update_current_subscription">Update current Group\'s subscription</string>
     <string name="group_not_subscription">Group type is not subscription</string>
     <string name="allow_insecure_on_request_sum">Disable certificate checking when updating
         subscriptions</string>
@@ -572,11 +572,11 @@
     <string name="check_update_preview">Check for preview version updates</string>
     <string name="check_update_release">Check for release version updates</string>
     <string name="update_dialog_title">New version available</string>
-    <string name="update_dialog_message">Current version: %1$s\\nAvailable version: %2$s\\nDo you want to download it?</string>
+    <string name="update_dialog_message">Current version: %1$s\nAvailable version: %2$s\nDo you want to download it?</string>
     <string name="check_update_no">Check successful, but no updates.</string>
     <string name="reset_settings">Restore default settings</string>
     <string name="reset_settings_message">Restore default settings, but data such as nodes and groups will be retained. To completely clear data, clear application data directly in the system settings.</string>
     <string name="minimize">Minimize</string>
-    <string name="app_list_permission_denied">Unable to read installed apps.\\nThis is usually because the system has restricted app read permissions.\\nPlease grant permissions in the system settings.</string>
+    <string name="app_list_permission_denied">Unable to read installed apps.\nThis is usually because the system has restricted app read permissions.\nPlease grant permissions in the system settings.</string>
     <string name="open_app_settings">Open System Settings</string>
 </resources>

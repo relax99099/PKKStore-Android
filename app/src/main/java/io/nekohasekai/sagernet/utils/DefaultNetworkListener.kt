@@ -92,7 +92,7 @@ object DefaultNetworkListener {
 
         override fun onCapabilitiesChanged(
             network: Network, networkCapabilities: NetworkCapabilities
-        ) { // it's a good idea to refresh capabilities
+        ) { // it\'s a good idea to refresh capabilities
             runBlocking { networkActor.send(NetworkMessage.Update(network)) }
         }
 
@@ -115,7 +115,7 @@ object DefaultNetworkListener {
      * Unfortunately registerDefaultNetworkCallback is going to return VPN interface since Android P DP1:
      * https://android.googlesource.com/platform/frameworks/base/+/dda156ab0c5d66ad82bdcf76cda07cbc0a9c8a2e
      *
-     * This makes doing a requestNetwork with REQUEST necessary so that we don't get ALL possible networks that
+     * This makes doing a requestNetwork with REQUEST necessary so that we don\'t get ALL possible networks that
      * satisfies default network capabilities but only THE default network. Unfortunately, we need to have
      * android.permission.CHANGE_NETWORK_STATE to be able to call requestNetwork.
      *

@@ -30,11 +30,11 @@ public class JavaUtil {
 
     // The encoded character of each character escape.
     // This array functions as the keys of a sorted map, from encoded characters to decoded characters.
-    static final char[] ENCODED_ESCAPES = {'\"', '\'', '\\', 'b', 'f', 'n', 'r', 't'};
+    static final char[] ENCODED_ESCAPES = {\'\"\', \'\'\', \'\\', \'b\', \'f\', \'n\', \'r\', \'t\'};
 
     // The decoded character of each character escape.
     // This array functions as the values of a sorted map, from encoded characters to decoded characters.
-    static final char[] DECODED_ESCAPES = {'\"', '\'', '\\', '\b', '\f', '\n', '\r', '\t'};
+    static final char[] DECODED_ESCAPES = {\'\"\', \'\'\', \'\\', \'\b\', \'\f\', \'\n\', \'\r\', \'\t\'};
 
     // A pattern that matches an escape.
     // What follows the escape indicator is captured by group 1=character 2=octal 3=Unicode.

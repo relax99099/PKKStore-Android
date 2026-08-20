@@ -49,7 +49,7 @@
     <string name="connection_test_testing">Тэставанне…</string>
     <string name="speed">%s/s</string>
     <string name="speed_detail">Проксі : %1$s↑ %2$s↓
-\\nПрамая : %3$s↑ %4$s↓</string>
+\nПрамая : %3$s↑ %4$s↓</string>
     <string name="allow_insecure_sum">Адключыць праверку сертыфікатаў. Калі ўключана, гэтая канфігурацыя такая ж бяспечная, як і адкрыты тэкст</string>
     <string name="allow_insecure">Дазволіць небяспечна</string>
     <string name="security_settings">Налады бяспекі</string>
@@ -73,13 +73,13 @@
     <string name="service_mode_proxy">Толькі проксі</string>
     <string name="service_mode">Рэжым абслугоўвання</string>
     <string name="group_duplicate">Дублікат:
-\\n%s</string>
+\n%s</string>
     <string name="group_deleted">Выдалена:
-\\n%s</string>
+\n%s</string>
     <string name="group_changed">Абноўлена:
-\\n%s</string>
+\n%s</string>
     <string name="group_added">Дададзена:
-\\n%s</string>
+\n%s</string>
     <string name="group_delete_confirm_prompt">Вы ўпэўненыя, што хочаце выдаліць гэтую групу\?</string>
     <string name="group_diff">Розніца (%s)</string>
     <string name="group_show_diff">Розніца</string>

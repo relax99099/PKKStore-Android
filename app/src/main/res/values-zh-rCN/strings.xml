@@ -32,11 +32,11 @@
     <string name="group_show_diff">变化</string>
     <string name="group_delete_confirm_prompt">您确定要删除这个分组吗\?</string>
     <string name="group_added">新增:
-        \\n%s</string>
+        \n%s</string>
     <string name="group_changed">更新:
-        \\n%s</string>
+        \n%s</string>
     <string name="group_deleted">删除:
-        \\n%s</string>
+        \n%s</string>
     
     <string name="service_mode">运行模式</string>
     <string name="service_mode_proxy">仅代理</string>
@@ -56,7 +56,7 @@
     <string name="speed_interval">速度通知更新间隔</string>
     <string name="traffic">%1$s↑ %2$s↓</string>
     <string name="speed_detail">代理： %1$s↑ %2$s↓
-        \\n直连： %3$s↑ %4$s↓</string>
+        \n直连： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">测试中…</string>
     <string name="connection_test_available">连接成功: HTTPS 握手耗时 %dms</string>
@@ -192,7 +192,7 @@
     <string name="grpc_service_name">gRPC 服务名称</string>
     <string name="alpn">应用层协议协商</string>
     <string name="group_duplicate">重复:
-        \\n%s</string>
+        \n%s</string>
     <string name="deduplication">去重</string>
     <string name="version_x">版本 (%s)</string>
     <string name="show_stop">显示停止按钮</string>
@@ -407,8 +407,8 @@
     <string name="route_opt_block_analysis">屏蔽跟踪器</string>
     <string name="naive_insecure_concurrency">不安全并发</string>
     <string name="naive_insecure_concurrency_summary">使用N个并发的隧道连接，在恶劣的网络条件下更加强大。更多的连接使隧道更容易被发现，安全性更低。这个项目力求对流量分析有最强的安全性。以不安全的方式使用它就违背了它的目的。
-        \\n
-        \\n如果你必须使用它，先试试N=2，看看是否能解决你的问题。强烈建议不要在这里使用超过4个连接。</string>
+        \n
+        \n如果你必须使用它，先试试N=2，看看是否能解决你的问题。强烈建议不要在这里使用超过4个连接。</string>
     <string name="tools_network">网络</string>
     <string name="backup">备份</string>
     <string name="backup_groups_and_configurations">分组和配置</string>
@@ -492,11 +492,11 @@
     <string name="check_update_preview">检查预览版更新</string>
     <string name="check_update_release">检查正式版更新</string>
     <string name="update_dialog_title">发现新版本</string>
-    <string name="update_dialog_message">当前版本：%1$s\\n可升级版本：%2$s\\n是否前往下载？</string>
+    <string name="update_dialog_message">当前版本：%1$s\n可升级版本：%2$s\n是否前往下载？</string>
     <string name="check_update_no">检查成功，但没有更新。</string>
     <string name="reset_settings">恢复默认设置</string>
     <string name="reset_settings_message">恢复默认设置，但节点、分组等数据将保留。如需完全清除数据，请在系统设置中直接清除应用数据。</string>
     <string name="minimize">最小化</string>
-    <string name="app_list_permission_denied">无法读取已安装的应用。\\n这通常是由于系统限制了应用的读取权限（例如某些中国厂商系统）。\\n请在系统设置中授予权限。</string>
+    <string name="app_list_permission_denied">无法读取已安装的应用。\n这通常是由于系统限制了应用的读取权限（例如某些中国厂商系统）。\n请在系统设置中授予权限。</string>
     <string name="open_app_settings">打开系统设置</string>
 </resources>

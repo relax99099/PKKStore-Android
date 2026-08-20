@@ -139,7 +139,7 @@ object ProfileManager {
         }
     }
 
-    // postUpdate: post to listeners, don't change the DB
+    // postUpdate: post to listeners, don\'t change the DB
 
     suspend fun postUpdate(profileId: Long, noTraffic: Boolean = false) {
         postUpdate(getProfile(profileId) ?: return, noTraffic)

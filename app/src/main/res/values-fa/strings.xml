@@ -44,10 +44,10 @@
     <string name="group_show_diff">تفاوت‌ها</string>
     <string name="group_diff">تفاوت‌ها (%s)</string>
     <string name="group_delete_confirm_prompt">آیا مطمئن هستید که می‌خواهید این گروه را حذف کنید؟</string>
-    <string name="group_added">اضافه شده: \\n%s</string>
-    <string name="group_changed">به‌روز شد \\n%s</string>
-    <string name="group_deleted">حذف شد: \\n%s</string>
-    <string name="group_duplicate">تکراری: \\n%s</string>
+    <string name="group_added">اضافه شده: \n%s</string>
+    <string name="group_changed">به‌روز شد \n%s</string>
+    <string name="group_deleted">حذف شد: \n%s</string>
+    <string name="group_duplicate">تکراری: \n%s</string>
     
     <string name="service_mode">حالت سرویس</string>
     <string name="service_mode_proxy">فقط به حالت پراکسی</string>
@@ -75,7 +75,7 @@
     <string name="allow_insecure">اتصال محافظت نشده</string>
     <string name="allow_insecure_sum">اگر بررسی گواهی‌ها غیرفعال باشد، اتصال بدون رمزنگاری خواهد بود.</string>
     <string name="traffic" translatable="false">%1$s↑ %2$s↓</string>
-    <string name="speed_detail">سرعت： %1$s↑ %2$s↓\\nمستقیم： %3$s↑ %4$s↓</string>
+    <string name="speed_detail">سرعت： %1$s↑ %2$s↓\nمستقیم： %3$s↑ %4$s↓</string>
     <string name="speed">%s/s</string>
     <string name="connection_test_testing">در حال آزمایش</string>
     <string name="connection_test_available">اتصال موفق! سرعت برقراری ارتباط HTTPS: %dms</string>
@@ -442,7 +442,7 @@
     <string name="pcap" translatable="false">Pcap</string>
     <string name="pcap_notice">فایل‌های Pcap در %s ذخیره می‌شوند.</string>
     <string name="naive_insecure_concurrency">همزمانی ناامن</string>
-    <string name="naive_insecure_concurrency_summary">از N اتصال تونل همزمان برای قوی‌تر بودن در شرایط بد شبکه استفاده کنید. اتصالات بیشتر، اتصال به تونل را آسان‌تر و ایمن‌تر می کند. این پروژه برای افزایش امنیت در برابر شنود ترافیک تلاش می‌کند. استفاده ناامن، هدف پروژه نیست. \\n\\nاگر می‌خواهید از این استفاده کنید، ابتدا N=2 را امتحان کنید تا ببینید آیا مشکلات شما حل می‌شود یا خیر. اکیداً توصیه می‌شود از بیش از 4 اتصال در اینجا استفاده نکنید.</string>
+    <string name="naive_insecure_concurrency_summary">از N اتصال تونل همزمان برای قوی‌تر بودن در شرایط بد شبکه استفاده کنید. اتصالات بیشتر، اتصال به تونل را آسان‌تر و ایمن‌تر می کند. این پروژه برای افزایش امنیت در برابر شنود ترافیک تلاش می‌کند. استفاده ناامن، هدف پروژه نیست. \n\nاگر می‌خواهید از این استفاده کنید، ابتدا N=2 را امتحان کنید تا ببینید آیا مشکلات شما حل می‌شود یا خیر. اکیداً توصیه می‌شود از بیش از 4 اتصال در اینجا استفاده نکنید.</string>
 
     <string name="stun_test">کشف رفتار NAT</string>
     <string name="stun_test_summary">تعیین رفتار NAT و رفتار فیلتر NAT تعریف‌شده در RFC 3478 با استفاده از STUN.</string>

@@ -37,13 +37,13 @@
     <string name="port_transproxy">منفذ ترانسبروكسى</string>
     <string name="service_mode">وضع الخدمة</string>
     <string name="group_duplicate">ينسخ:
-\\n%s</string>
+\n%s</string>
     <string name="group_deleted">تم الحذف:
-\\n%s</string>
+\n%s</string>
     <string name="group_changed">محدث:
-\\n%s</string>
+\n%s</string>
     <string name="group_added">تمت الإضافة:
-\\n%s</string>
+\n%s</string>
     <string name="group_delete_confirm_prompt">هل أنت متأكد أنك تريد إزالة هذه المجموعة؟</string>
     <string name="group_diff">الفارق (%s)</string>
     <string name="group_show_diff">الفارق</string>
@@ -91,9 +91,9 @@
     <string name="connection_test_testing">اختبارات…</string>
     <string name="speed">%s/s</string>
     <string name="speed_detail">بروکسی:
-\\n\\t%1$s↑ %2$s↓
-\\nمباشر:
-\\n\\t%3$s↑ %4$s↓</string>
+\n\\t%1$s↑ %2$s↓
+\nمباشر:
+\n\\t%3$s↑ %4$s↓</string>
     <string name="traffic">%1$s↑ %2$s↓</string>
     <string name="allow_insecure_sum">تعطيل فحص الشهادة. عند التمكين ، يكون هذا التكوين آمنًا مثل النص العادي</string>
     <string name="allow_insecure">السماح بعدم الأمان</string>

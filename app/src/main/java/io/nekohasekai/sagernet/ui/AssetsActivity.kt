@@ -101,8 +101,8 @@ class AssetsActivity : ThemedActivity() {
                 cursor.moveToFirst()
                 cursor.getColumnIndexOrThrow(OpenableColumns.DISPLAY_NAME).let(cursor::getString)
             }?.takeIf { it.isNotBlank() } ?: file.pathSegments.last()
-                .substringAfterLast('/')
-                .substringAfter(':')
+                .substringAfterLast(\'/\')
+                .substringAfter(\':\')
 
             if (!fileName.endsWith(".db")) {
                 alert(getString(R.string.route_not_asset, fileName)).show()
