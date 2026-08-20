@@ -69,8 +69,8 @@ fun parseV2Ray(link: String): StandardV2RayBean {
 
         var protocol = url.username
         bean.type = protocol
-        bean.alterId = url.password.substringAfterLast('-').toInt()
-        bean.uuid = url.password.substringBeforeLast('-')
+        bean.alterId = url.password.substringAfterLast(\'-\').toInt()
+        bean.uuid = url.password.substringBeforeLast(\'-\')
 
         if (protocol.endsWith("+tls")) {
             bean.security = "tls"
@@ -266,12 +266,12 @@ private fun tryResolveVmess4Kitsunebi(server: String): VMessBean {
     }
     result = NGUtil.decode(result)
 
-    val arr1 = result.split('@')
+    val arr1 = result.split(\'@\')
     if (arr1.count() != 2) {
         throw IllegalStateException("invalid kitsunebi format")
     }
-    val arr21 = arr1[0].split(':')
-    val arr22 = arr1[1].split(':')
+    val arr21 = arr1[0].split(\':\')
+    val arr22 = arr1[1].split(\':\')
     if (arr21.count() != 2) {
         throw IllegalStateException("invalid kitsunebi format")
     }
@@ -305,7 +305,7 @@ private fun tryResolveVmess4Kitsunebi(server: String): VMessBean {
     }
 }
 
-// SagerNet's
+// SagerNet\'s
 // Do not support some format and then throw exception
 fun parseV2RayN(link: String): VMessBean {
     val result = link.substringAfter("vmess://").decodeBase64UrlSafe()
@@ -681,6 +681,6 @@ fun buildSingBoxOutboundStandardV2RayBean(bean: StandardV2RayBean): Outbound {
             }
         }
 
-        else -> throw IllegalStateException("can't reach")
+        else -> throw IllegalStateException("can\'t reach")
     }
 }

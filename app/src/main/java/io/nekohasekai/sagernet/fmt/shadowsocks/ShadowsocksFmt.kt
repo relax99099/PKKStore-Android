@@ -19,7 +19,7 @@ fun parseShadowsocks(url: String): ShadowsocksBean {
             "invalid ss-android link $url"
         )
 
-        if (link.username.isBlank()) { // fix justmysocks's shit link
+        if (link.username.isBlank()) { // fix justmysocks\'s shit link
             link = (("https://" + url.substringAfter("ss://")
                 .substringBefore("#")
                 .decodeBase64UrlSafe()).toHttpUrlOrNull()

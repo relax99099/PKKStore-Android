@@ -81,9 +81,9 @@ object NGUtil {
      */
     fun decode(text: String): String {
         tryDecodeBase64(text)?.let { return it }
-        if (text.endsWith('=')) {
+        if (text.endsWith(\'=\')) {
             // try again for some loosely formatted base64
-            tryDecodeBase64(text.trimEnd('='))?.let { return it }
+            tryDecodeBase64(text.trimEnd(\'=\'))?.let { return it }
         }
         return ""
     }
@@ -133,14 +133,14 @@ object NGUtil {
 
             // "::ffff:192.168.173.22"
             // "[::ffff:192.168.173.22]:80"
-            if (addr.startsWith("::ffff:") && '.' in addr) {
+            if (addr.startsWith("::ffff:") && \'.\' in addr) {
                 addr = addr.drop(7)
-            } else if (addr.startsWith("[::ffff:") && '.' in addr) {
+            } else if (addr.startsWith("[::ffff:") && \'.\' in addr) {
                 addr = addr.drop(8).replace("]", "")
             }
 
             // addr = addr.toLowerCase()
-            val octets = addr.split('.').toTypedArray()
+            val octets = addr.split(\'.\').toTypedArray()
             if (octets.size == 4) {
                 if(octets[3].indexOf(":") > 0) {
                     addr = addr.substring(0, addr.indexOf(":"))
