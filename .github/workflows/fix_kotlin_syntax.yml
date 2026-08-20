@@ -1,0 +1,54 @@
+name: Fix Kotlin Syntax
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fix Kotlin Syntax
+        run: |
+          cat << 'EOF' > fix_syntax.py
+          import os
+          import re
+
+          def fix_file(path):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      content = f.read()
+                  
+                  # Replace \' with ' in Kotlin and Java files
+                  # This is safe because ' does not need to be escaped in Kotlin strings
+                  # and character literals must use '
+                  new_content = content.replace("\\'", "'")
+                  
+                  if new_content != content:
+                      with open(path, "w", encoding="utf-8") as f:
+                          f.write(new_content)
+                      print(f"Fixed: {path}")
+              except Exception as e:
+                  print(f"Error fixing {path}: {e}")
+
+          for root, dirs, files in os.walk("app/src/main/java"):
+              for file in files:
+                  if file.endswith(".kt") or file.endswith(".java"):
+                      fix_file(os.path.join(root, file))
+          EOF
+          python3 fix_syntax.py
+          rm fix_syntax.py
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Fix Kotlin syntax errors by removing incorrect escapes" || exit 0
+          git push origin main
