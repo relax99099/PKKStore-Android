@@ -91,7 +91,7 @@ class GuardedProcessPool(private val onFatal: suspend (IOException) -> Unit) : C
                     process.destroy()                       // kill the process
                     if (Build.VERSION.SDK_INT >= 26) {
                         if (withTimeoutOrNull(1000) { exitChannel.receive() } != null) return@withContext
-                        process.destroyForcibly()           // Force to kill the process if it\'s still alive
+                        process.destroyForcibly()           // Force to kill the process if it's still alive
                     }
                     exitChannel.receive()
                 }                                           // otherwise process already exited, nothing to be done

@@ -6,7 +6,7 @@ class TrafficUpdater(
 ) {
 
     class TrafficLooperData(
-        // Don\'t associate proxyEntity
+        // Don't associate proxyEntity
         var tag: String,
         var tx: Long = 0,
         var rx: Long = 0,

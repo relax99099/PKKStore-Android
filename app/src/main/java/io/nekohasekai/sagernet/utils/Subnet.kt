@@ -7,7 +7,7 @@ import java.util.*
 class Subnet(val address: InetAddress, val prefixSize: Int) : Comparable<Subnet> {
     companion object {
         fun fromString(value: String, lengthCheck: Int = -1): Subnet? {
-            val parts = value.split(\'/\', limit = 2)
+            val parts = value.split('/', limit = 2)
             val addr = parts[0].parseNumericAddress() ?: return null
             check(lengthCheck < 0 || addr.address.size == lengthCheck)
             return if (parts.size == 2) try {
@@ -60,7 +60,7 @@ class Subnet(val address: InetAddress, val prefixSize: Int) : Comparable<Subnet>
     }, prefixSize)
 
     override fun toString(): String =
-        if (prefixSize == addressLength) address.hostAddress else address.hostAddress + \'/\' + prefixSize
+        if (prefixSize == addressLength) address.hostAddress else address.hostAddress + '/' + prefixSize
 
     private fun Byte.unsigned() = toInt() and 0xFF
     override fun compareTo(other: Subnet): Int {

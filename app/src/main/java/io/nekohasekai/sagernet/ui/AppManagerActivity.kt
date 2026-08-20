@@ -310,7 +310,7 @@ class AppManagerActivity : ThemedActivity() {
                 val proxiedAppString =
                     SagerNet.clipboard.primaryClip?.getItemAt(0)?.text?.toString()
                 if (!proxiedAppString.isNullOrEmpty()) {
-                    val i = proxiedAppString.indexOf(\'\n\')
+                    val i = proxiedAppString.indexOf('\n')
                     try {
                         val (enabled, apps) = if (i < 0) {
                             proxiedAppString to ""
