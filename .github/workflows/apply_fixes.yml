@@ -9,73 +9,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Fix and Rebrand
+      - name: Rebrand
         run: |
-          cat << 'EOF' > fix_all.py
-          import os
-          import re
-
-          def fix_file(path):
-              try:
-                  with open(path, 'r', encoding='utf-8') as f:
-                      content = f.read()
-                  
-                  # 1. Rebrand NekoBox to PKKStore
-                  content = content.replace('NekoBox', 'PKKStore')
-                  
-                  # 2. Fix Android XML issues if it's a strings.xml file
-                  if path.endswith('strings.xml'):
-                      # Fix unescaped ampersands
-                      content = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', '&amp;', content)
-                      
-                      # Fix unescaped apostrophes
-                      def fix_apostrophe(match):
-                          tag_start, attr, text, tag_end = match.groups()
-                          if 'translatable="false"' in attr:
-                              return match.group(0)
-                          fixed_text = re.sub(r"(?<!\\)'", r"\'", text)
-                          return f'<{tag_start}{attr}>{fixed_text}{tag_end}'
-                      content = re.sub(r'<(string)([^>]*)>(.*?)(</string>)', fix_apostrophe, content, flags=re.DOTALL)
-                      
-                      # Fix invalid backslashes
-                      def fix_backslash(match):
-                          attr, text = match.groups()
-                          fixed_text = re.sub(r'\\(?![ntr\'\"\\u])', r'\\\\\', text)
-                          return f'<string{attr}>{fixed_text}</string>'
-                      content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_backslash, content, flags=re.DOTALL)
-                      
-                      # Fix non-positional placeholders
-                      def fix_placeholders(match):
-                          attr, text = match.groups()
-                          if 'translatable="false"' in attr:
-                              return match.group(0)
-                          placeholders = re.findall(r'(?<!%)(%[a-zA-Z])', text)
-                          if len(placeholders) > 1:
-                              if not re.search(r'%\d+\$', text):
-                                  new_content = text
-                                  for i, p in enumerate(placeholders):
-                                      new_content = new_content.replace(p, f'%{i+1}${p[1]}', 1)
-                                  return f'<string{attr}>{new_content}</string>'
-                          return match.group(0)
-                      content = re.sub(r'<string([^>]*)>(.*?)</string>', fix_placeholders, content, flags=re.DOTALL)
-
-                  with open(path, 'w', encoding='utf-8') as f:
-                      f.write(content)
-              except Exception as e:
-                  print(f"Error fixing {path}: {e}")
-
-          for root, dirs, files in os.walk('.'):
-              if '.git' in dirs:
-                  dirs.remove('.git')
-              for file in files:
-                  if file.endswith(('.kt', '.java', '.xml', '.properties', '.md', '.txt', '.kts')):
-                      fix_file(os.path.join(root, file))
-          EOF
-          python3 fix_all.py
+          find . -type f -name "*" -not -path "./.git/*" -exec sed -i 's/NekoBox/PKKStore/g' {} +
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Apply comprehensive rebranding and resource fixes" || echo "No changes to commit"
+          git commit -m "Rebrand to PKKStore" || echo "No changes to commit"
           git push
