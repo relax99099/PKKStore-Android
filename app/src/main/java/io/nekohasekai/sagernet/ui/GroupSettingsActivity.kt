@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -17,20 +17,20 @@ import androidx.core.view.ViewCompat
 import androidx.preference.*
 import com.github.shadowsocks.plugin.Empty
 import com.github.shadowsocks.plugin.fragment.AlertDialogFragment
-import io.nekohasekai.sagernet.GroupType
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.database.*
-import io.nekohasekai.sagernet.database.preference.OnPreferenceDataStoreChangeListener
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.applyDefaultValues
-import io.nekohasekai.sagernet.ktx.onMainDispatcher
-import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
-import io.nekohasekai.sagernet.widget.ListListener
-import io.nekohasekai.sagernet.widget.OutboundPreference
+import pkg.pkkstore.GroupType
+import pkg.pkkstore.Key
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.database.*
+import pkg.pkkstore.database.preference.OnPreferenceDataStoreChangeListener
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.applyDefaultValues
+import pkg.pkkstore.ktx.onMainDispatcher
+import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import pkg.pkkstore.widget.ListListener
+import pkg.pkkstore.widget.OutboundPreference
 import kotlinx.parcelize.Parcelize
-import moe.matsuri.nb4a.ui.SimpleMenuPreference
+import pkg.pkkstore.ui.SimpleMenuPreference
 
 @Suppress("UNCHECKED_CAST")
 class GroupSettingsActivity(

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.content.Context
 import android.net.Uri
@@ -7,9 +7,9 @@ import androidx.core.content.res.TypedArrayUtils
 import androidx.core.widget.addTextChangedListener
 import androidx.preference.EditTextPreference
 import com.google.android.material.textfield.TextInputLayout
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ktx.readableMessage
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ktx.readableMessage
 import okhttp3.HttpUrl.Companion.toHttpUrl
 
 class LinkOrContentPreference

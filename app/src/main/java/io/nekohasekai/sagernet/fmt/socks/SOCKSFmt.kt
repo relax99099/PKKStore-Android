@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.fmt.socks
+package pkg.pkkstore.fmt.socks
 
-import io.nekohasekai.sagernet.ktx.decodeBase64UrlSafe
-import io.nekohasekai.sagernet.ktx.toLink
-import io.nekohasekai.sagernet.ktx.unUrlSafe
-import io.nekohasekai.sagernet.ktx.urlSafe
-import moe.matsuri.nb4a.SingBoxOptions
-import moe.matsuri.nb4a.utils.NGUtil
-import moe.matsuri.nb4a.utils.Util
+import pkg.pkkstore.ktx.decodeBase64UrlSafe
+import pkg.pkkstore.ktx.toLink
+import pkg.pkkstore.ktx.unUrlSafe
+import pkg.pkkstore.ktx.urlSafe
+import pkg.pkkstore.SingBoxOptions
+import pkg.pkkstore.utils.NGUtil
+import pkg.pkkstore.utils.Util
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 

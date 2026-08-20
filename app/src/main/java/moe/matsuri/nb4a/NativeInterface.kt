@@ -1,4 +1,4 @@
-package moe.matsuri.nb4a
+package pkg.pkkstore
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -6,14 +6,14 @@ import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.Build.VERSION_CODES
 import androidx.annotation.RequiresApi
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.bg.ServiceNotification
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.SagerDatabase
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
-import io.nekohasekai.sagernet.utils.PackageCache
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.bg.ServiceNotification
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.SagerDatabase
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import pkg.pkkstore.utils.PackageCache
 import libcore.BoxPlatformInterface
 import libcore.Libcore
 import libcore.NB4AInterface

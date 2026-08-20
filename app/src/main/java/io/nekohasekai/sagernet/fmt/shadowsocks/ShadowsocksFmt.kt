@@ -1,8 +1,8 @@
-package io.nekohasekai.sagernet.fmt.shadowsocks
+package pkg.pkkstore.fmt.shadowsocks
 
-import io.nekohasekai.sagernet.ktx.*
-import moe.matsuri.nb4a.SingBoxOptions
-import moe.matsuri.nb4a.utils.Util
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.SingBoxOptions
+import pkg.pkkstore.utils.Util
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.json.JSONObject
 

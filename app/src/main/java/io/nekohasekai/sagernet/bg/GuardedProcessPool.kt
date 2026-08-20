@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+package pkg.pkkstore.bg
 
 import android.os.Build
 import android.os.SystemClock
@@ -6,9 +6,9 @@ import android.system.ErrnoException
 import android.system.Os
 import android.system.OsConstants
 import androidx.annotation.MainThread
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.utils.Commandline
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.utils.Commandline
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import libcore.Libcore

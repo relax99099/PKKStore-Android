@@ -1,7 +1,7 @@
-package io.nekohasekai.sagernet.fmt
+package pkg.pkkstore.fmt
 
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
 
 enum class PluginEntry(
     val pluginId: String,
@@ -12,7 +12,7 @@ enum class PluginEntry(
     TrojanGo(
         "trojan-go-plugin",
         SagerNet.application.getString(R.string.action_trojan_go),
-        "io.nekohasekai.sagernet.plugin.trojan_go"
+        "pkg.pkkstore.plugin.trojan_go"
     ),
     MieruProxy(
         "mieru-plugin",

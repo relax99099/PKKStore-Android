@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+package pkg.pkkstore.bg
 
 import android.app.Service
 import android.content.Context
@@ -6,24 +6,24 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.*
 import android.widget.Toast
-import io.nekohasekai.sagernet.Action
-import io.nekohasekai.sagernet.BootReceiver
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.aidl.ISagerNetService
-import io.nekohasekai.sagernet.aidl.ISagerNetServiceCallback
-import io.nekohasekai.sagernet.bg.proto.ProxyInstance
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.SagerDatabase
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.plugin.PluginManager
-import io.nekohasekai.sagernet.utils.DefaultNetworkListener
+import pkg.pkkstore.Action
+import pkg.pkkstore.BootReceiver
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.aidl.ISagerNetService
+import pkg.pkkstore.aidl.ISagerNetServiceCallback
+import pkg.pkkstore.bg.proto.ProxyInstance
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.SagerDatabase
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.plugin.PluginManager
+import pkg.pkkstore.utils.DefaultNetworkListener
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import libcore.Libcore
-import moe.matsuri.nb4a.Protocols
-import moe.matsuri.nb4a.utils.Util
+import pkg.pkkstore.Protocols
+import pkg.pkkstore.utils.Util
 import java.net.UnknownHostException
 
 class BaseService {

@@ -1,4 +1,4 @@
-package moe.matsuri.nb4a.proxy
+package pkg.pkkstore.proxy
 
 import androidx.preference.PreferenceFragmentCompat
 

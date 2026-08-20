@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ktx
+package pkg.pkkstore.ktx
 
 import libcore.Libcore
 import java.io.InputStream

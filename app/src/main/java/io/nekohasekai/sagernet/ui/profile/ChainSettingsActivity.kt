@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui.profile
+package pkg.pkkstore.ui.profile
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -18,16 +18,16 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.ProfileManager
-import io.nekohasekai.sagernet.database.ProxyEntity
-import io.nekohasekai.sagernet.databinding.LayoutAddEntityBinding
-import io.nekohasekai.sagernet.databinding.LayoutProfileBinding
-import io.nekohasekai.sagernet.fmt.internal.ChainBean
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.ui.ProfileSelectActivity
-import moe.matsuri.nb4a.Protocols.getProtocolColor
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.ProfileManager
+import pkg.pkkstore.database.ProxyEntity
+import pkg.pkkstore.databinding.LayoutAddEntityBinding
+import pkg.pkkstore.databinding.LayoutProfileBinding
+import pkg.pkkstore.fmt.internal.ChainBean
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.ui.ProfileSelectActivity
+import pkg.pkkstore.Protocols.getProtocolColor
 
 class ChainSettingsActivity : ProfileSettingsActivity<ChainBean>(R.layout.layout_chain_settings) {
 

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ktx
+package pkg.pkkstore.ktx
 
 import androidx.preference.PreferenceDataStore
 import kotlin.reflect.KProperty

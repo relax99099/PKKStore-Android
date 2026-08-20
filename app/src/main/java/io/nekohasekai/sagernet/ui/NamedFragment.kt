@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import androidx.fragment.app.Fragment
 

@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.databinding.LayoutToolsBinding
+import pkg.pkkstore.R
+import pkg.pkkstore.databinding.LayoutToolsBinding
 
 class ToolsFragment : ToolbarFragment(R.layout.layout_tools) {
 

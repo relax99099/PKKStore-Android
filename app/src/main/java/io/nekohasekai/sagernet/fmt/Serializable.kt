@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt
+package pkg.pkkstore.fmt
 
 import android.os.Parcel
 import android.os.Parcelable

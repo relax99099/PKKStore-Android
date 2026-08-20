@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet
+package pkg.pkkstore
 
 import android.annotation.SuppressLint
 import android.app.*
@@ -17,21 +17,21 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import go.Seq
-import io.nekohasekai.sagernet.bg.SagerConnection
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.isOss
-import io.nekohasekai.sagernet.ktx.isPreview
-import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
-import io.nekohasekai.sagernet.ui.MainActivity
-import io.nekohasekai.sagernet.utils.*
+import pkg.pkkstore.bg.SagerConnection
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.isOss
+import pkg.pkkstore.ktx.isPreview
+import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import pkg.pkkstore.ui.MainActivity
+import pkg.pkkstore.utils.*
 import kotlinx.coroutines.DEBUG_PROPERTY_NAME
 import kotlinx.coroutines.DEBUG_PROPERTY_VALUE_ON
 import libcore.Libcore
-import moe.matsuri.nb4a.NativeInterface
-import moe.matsuri.nb4a.net.LocalResolverImpl
-import moe.matsuri.nb4a.utils.JavaUtil
-import moe.matsuri.nb4a.utils.cleanWebview
+import pkg.pkkstore.NativeInterface
+import pkg.pkkstore.net.LocalResolverImpl
+import pkg.pkkstore.utils.JavaUtil
+import pkg.pkkstore.utils.cleanWebview
 import java.io.File
 import androidx.work.Configuration as WorkConfiguration
 

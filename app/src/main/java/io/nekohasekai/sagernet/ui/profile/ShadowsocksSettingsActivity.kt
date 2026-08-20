@@ -1,15 +1,15 @@
-package io.nekohasekai.sagernet.ui.profile
+package pkg.pkkstore.ui.profile
 
 import android.os.Bundle
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.preference.EditTextPreferenceModifiers
-import io.nekohasekai.sagernet.fmt.shadowsocks.ShadowsocksBean
-import moe.matsuri.nb4a.proxy.PreferenceBinding
-import moe.matsuri.nb4a.proxy.PreferenceBindingManager
-import moe.matsuri.nb4a.proxy.Type
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.preference.EditTextPreferenceModifiers
+import pkg.pkkstore.fmt.shadowsocks.ShadowsocksBean
+import pkg.pkkstore.proxy.PreferenceBinding
+import pkg.pkkstore.proxy.PreferenceBindingManager
+import pkg.pkkstore.proxy.Type
 
 class ShadowsocksSettingsActivity : ProfileSettingsActivity<ShadowsocksBean>() {
 

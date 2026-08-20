@@ -1,15 +1,15 @@
-package moe.matsuri.nb4a.ui
+package pkg.pkkstore.ui
 
 import android.content.Context
 import android.content.Intent
 import android.util.AttributeSet
 import androidx.preference.Preference
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ui.profile.ConfigEditActivity
+import pkg.pkkstore.Key
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ui.profile.ConfigEditActivity
 
 class EditConfigPreference : Preference {
 
@@ -51,7 +51,7 @@ class EditConfigPreference : Preference {
         return if (config.isBlank()) {
             return app.resources.getString(androidx.preference.R.string.not_set)
         } else {
-            app.resources.getString(R.string.lines, config.split(\'\n\').size)
+            app.resources.getString(R.string.lines, config.split('\n').size)
         }
     }
 

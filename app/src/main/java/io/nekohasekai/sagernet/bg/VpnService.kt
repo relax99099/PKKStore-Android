@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+package pkg.pkkstore.bg
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -9,13 +9,13 @@ import android.net.ProxyInfo
 import android.os.Build
 import android.os.ParcelFileDescriptor
 import android.os.PowerManager
-import io.nekohasekai.sagernet.*
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.fmt.LOCALHOST
-import io.nekohasekai.sagernet.fmt.hysteria.HysteriaBean
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.ui.VpnRequestActivity
-import io.nekohasekai.sagernet.utils.Subnet
+import pkg.pkkstore.*
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.fmt.LOCALHOST
+import pkg.pkkstore.fmt.hysteria.HysteriaBean
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.ui.VpnRequestActivity
+import pkg.pkkstore.utils.Subnet
 import android.net.VpnService as BaseVpnService
 
 class VpnService : BaseVpnService(),

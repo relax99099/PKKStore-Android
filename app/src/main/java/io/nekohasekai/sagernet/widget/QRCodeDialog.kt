@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -16,18 +16,18 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.readableMessage
-import io.nekohasekai.sagernet.ui.MainActivity
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.readableMessage
+import pkg.pkkstore.ui.MainActivity
 import java.nio.charset.StandardCharsets
 import kotlin.math.roundToInt
 
 class QRCodeDialog() : DialogFragment() {
 
     companion object {
-        private const val KEY_URL = "io.nekohasekai.sagernet.QRCodeDialog.KEY_URL"
-        private const val KEY_NAME = "io.nekohasekai.sagernet.QRCodeDialog.KEY_NAME"
+        private const val KEY_URL = "pkg.pkkstore.QRCodeDialog.KEY_URL"
+        private const val KEY_NAME = "pkg.pkkstore.QRCodeDialog.KEY_NAME"
         private val iso88591 = StandardCharsets.ISO_8859_1.newEncoder()
     }
 

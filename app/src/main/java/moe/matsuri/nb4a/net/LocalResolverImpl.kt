@@ -1,13 +1,13 @@
-package moe.matsuri.nb4a.net
+package pkg.pkkstore.net
 
 import android.net.DnsResolver
 import android.os.Build
 import android.os.CancellationSignal
 import android.system.ErrnoException
 import androidx.annotation.RequiresApi
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.runOnIoDispatcher
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.runOnIoDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 import libcore.ExchangeContext

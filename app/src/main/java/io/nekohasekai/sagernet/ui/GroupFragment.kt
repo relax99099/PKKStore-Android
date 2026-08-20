@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,20 +15,20 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.GroupType
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.database.*
-import io.nekohasekai.sagernet.databinding.LayoutGroupItemBinding
-import io.nekohasekai.sagernet.fmt.toUniversalLink
-import io.nekohasekai.sagernet.group.GroupUpdater
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.widget.ListListener
-import io.nekohasekai.sagernet.widget.QRCodeDialog
-import io.nekohasekai.sagernet.widget.UndoSnackbarManager
+import pkg.pkkstore.GroupType
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.database.*
+import pkg.pkkstore.databinding.LayoutGroupItemBinding
+import pkg.pkkstore.fmt.toUniversalLink
+import pkg.pkkstore.group.GroupUpdater
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.widget.ListListener
+import pkg.pkkstore.widget.QRCodeDialog
+import pkg.pkkstore.widget.UndoSnackbarManager
 import kotlinx.coroutines.delay
-import moe.matsuri.nb4a.utils.Util
-import moe.matsuri.nb4a.utils.toBytesString
+import pkg.pkkstore.utils.Util
+import pkg.pkkstore.utils.toBytesString
 import java.lang.NumberFormatException
 import java.util.*
 

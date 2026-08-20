@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package moe.matsuri.nb4a.ui
+package pkg.pkkstore.ui
 
 import android.content.Context
 import android.util.AttributeSet
@@ -25,8 +25,8 @@ import android.widget.Spinner
 import androidx.core.content.ContextCompat
 import androidx.preference.DropDownPreference
 import androidx.preference.PreferenceViewHolder
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.getColorAttr
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.getColorAttr
 
 /**
  * Bend [DropDownPreference] to support

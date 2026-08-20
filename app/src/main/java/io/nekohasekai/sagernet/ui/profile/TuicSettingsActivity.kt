@@ -1,14 +1,14 @@
-package io.nekohasekai.sagernet.ui.profile
+package pkg.pkkstore.ui.profile
 
 import android.os.Bundle
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.fmt.tuic.TuicBean
-import io.nekohasekai.sagernet.ktx.applyDefaultValues
+import pkg.pkkstore.Key
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.fmt.tuic.TuicBean
+import pkg.pkkstore.ktx.applyDefaultValues
 
 class TuicSettingsActivity : ProfileSettingsActivity<TuicBean>() {
 

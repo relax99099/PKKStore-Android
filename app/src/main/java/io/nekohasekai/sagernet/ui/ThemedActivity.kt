@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.content.res.Configuration
 import android.os.Build
@@ -12,8 +12,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.utils.Theme
+import pkg.pkkstore.R
+import pkg.pkkstore.utils.Theme
 
 abstract class ThemedActivity : AppCompatActivity {
     constructor() : super()

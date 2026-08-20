@@ -1,11 +1,11 @@
-package moe.matsuri.nb4a.proxy.anytls
+package pkg.pkkstore.proxy.anytls
 
-import io.nekohasekai.sagernet.ktx.blankAsNull
-import io.nekohasekai.sagernet.ktx.linkBuilder
-import io.nekohasekai.sagernet.ktx.toLink
-import io.nekohasekai.sagernet.ktx.urlSafe
-import moe.matsuri.nb4a.SingBoxOptions
-import moe.matsuri.nb4a.utils.listByLineOrComma
+import pkg.pkkstore.ktx.blankAsNull
+import pkg.pkkstore.ktx.linkBuilder
+import pkg.pkkstore.ktx.toLink
+import pkg.pkkstore.ktx.urlSafe
+import pkg.pkkstore.SingBoxOptions
+import pkg.pkkstore.utils.listByLineOrComma
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 
 fun buildSingBoxOutboundAnyTLSBean(bean: AnyTLSBean): SingBoxOptions.Outbound_AnyTLSOptions {

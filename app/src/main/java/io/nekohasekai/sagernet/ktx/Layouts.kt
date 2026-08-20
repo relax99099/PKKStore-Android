@@ -1,10 +1,10 @@
-package io.nekohasekai.sagernet.ktx
+package pkg.pkkstore.ktx
 
 import android.graphics.Rect
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ui.MainActivity
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ui.MainActivity
 
 class FixedLinearLayoutManager(val recyclerView: RecyclerView) :
     LinearLayoutManager(recyclerView.context, RecyclerView.VERTICAL, false) {

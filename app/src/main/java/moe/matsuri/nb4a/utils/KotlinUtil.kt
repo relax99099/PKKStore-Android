@@ -1,11 +1,11 @@
-package moe.matsuri.nb4a.utils
+package pkg.pkkstore.utils
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.appcompat.content.res.AppCompatResources
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.ktx.Logs
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.ktx.Logs
 import java.io.File
 
 // SagerNet Class

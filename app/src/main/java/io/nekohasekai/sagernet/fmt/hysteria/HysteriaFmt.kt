@@ -1,10 +1,10 @@
-package io.nekohasekai.sagernet.fmt.hysteria
+package pkg.pkkstore.fmt.hysteria
 
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.fmt.LOCALHOST
-import io.nekohasekai.sagernet.ktx.*
-import moe.matsuri.nb4a.SingBoxOptions
-import moe.matsuri.nb4a.utils.listByLineOrComma
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.fmt.LOCALHOST
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.SingBoxOptions
+import pkg.pkkstore.utils.listByLineOrComma
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.json.JSONObject
 import java.io.File

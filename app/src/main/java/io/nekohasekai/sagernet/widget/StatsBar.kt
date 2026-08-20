@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,11 +11,11 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.whenStarted
 import com.google.android.material.bottomappbar.BottomAppBar
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.bg.BaseService
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.ui.MainActivity
+import pkg.pkkstore.R
+import pkg.pkkstore.bg.BaseService
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.ui.MainActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

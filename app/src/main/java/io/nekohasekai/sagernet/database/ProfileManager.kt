@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.database
+package pkg.pkkstore.database
 
 import android.database.sqlite.SQLiteCantOpenDatabaseException
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.aidl.TrafficData
-import io.nekohasekai.sagernet.fmt.AbstractBean
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ktx.applyDefaultValues
+import pkg.pkkstore.R
+import pkg.pkkstore.aidl.TrafficData
+import pkg.pkkstore.fmt.AbstractBean
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ktx.applyDefaultValues
 import java.io.IOException
 import java.sql.SQLException
 import java.util.*

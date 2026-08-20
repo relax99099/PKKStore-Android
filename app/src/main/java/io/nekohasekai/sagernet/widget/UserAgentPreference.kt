@@ -1,11 +1,11 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.res.TypedArrayUtils
 import androidx.preference.EditTextPreference
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.USER_AGENT
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.USER_AGENT
 
 class UserAgentPreference
 @JvmOverloads constructor(

@@ -1,8 +1,8 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import com.google.android.material.snackbar.Snackbar
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ui.ThemedActivity
+import pkg.pkkstore.R
+import pkg.pkkstore.ui.ThemedActivity
 
 /**
  * @param activity ThemedActivity.

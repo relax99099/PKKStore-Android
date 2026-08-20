@@ -1,6 +1,6 @@
 @file:SuppressLint("SoonBlockedPrivateApi")
 
-package io.nekohasekai.sagernet.ktx
+package pkg.pkkstore.ktx
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -29,21 +29,21 @@ import androidx.preference.Preference
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import com.jakewharton.processphoenix.ProcessPhoenix
-import io.nekohasekai.sagernet.BuildConfig
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.aidl.ISagerNetService
-import io.nekohasekai.sagernet.bg.BaseService
-import io.nekohasekai.sagernet.bg.SagerConnection
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ui.MainActivity
-import io.nekohasekai.sagernet.ui.ThemedActivity
+import pkg.pkkstore.BuildConfig
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.aidl.ISagerNetService
+import pkg.pkkstore.bg.BaseService
+import pkg.pkkstore.bg.SagerConnection
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ui.MainActivity
+import pkg.pkkstore.ui.ThemedActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
-import moe.matsuri.nb4a.utils.NGUtil
+import pkg.pkkstore.utils.NGUtil
 import java.io.FileDescriptor
 import java.net.HttpURLConnection
 import java.net.InetAddress

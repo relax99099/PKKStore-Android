@@ -1,16 +1,16 @@
-package io.nekohasekai.sagernet.utils
+package pkg.pkkstore.utils
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.util.Log
 import com.jakewharton.processphoenix.ProcessPhoenix
-import io.nekohasekai.sagernet.BuildConfig
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.database.preference.PublicDatabase
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ui.BlankActivity
+import pkg.pkkstore.BuildConfig
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.database.preference.PublicDatabase
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ui.BlankActivity
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader

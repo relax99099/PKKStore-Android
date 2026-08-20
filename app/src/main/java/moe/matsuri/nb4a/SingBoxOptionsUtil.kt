@@ -1,7 +1,7 @@
-package moe.matsuri.nb4a
+package pkg.pkkstore
 
-import io.nekohasekai.sagernet.database.DataStore
-import moe.matsuri.nb4a.SingBoxOptions.RuleSet
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.SingBoxOptions.RuleSet
 
 object SingBoxOptionsUtil {
 

@@ -1,10 +1,10 @@
 @file:Suppress("SpellCheckingInspection")
 
-package io.nekohasekai.sagernet.ktx
+package pkg.pkkstore.ktx
 
-import io.nekohasekai.sagernet.BuildConfig
-import io.nekohasekai.sagernet.fmt.AbstractBean
-import moe.matsuri.nb4a.utils.NGUtil
+import pkg.pkkstore.BuildConfig
+import pkg.pkkstore.fmt.AbstractBean
+import pkg.pkkstore.utils.NGUtil
 import okhttp3.HttpUrl
 import java.net.InetSocketAddress
 import java.net.Socket

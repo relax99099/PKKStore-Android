@@ -1,11 +1,11 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.os.Bundle
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.ProfileManager
-import io.nekohasekai.sagernet.ktx.runOnMainDispatcher
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.ProfileManager
+import pkg.pkkstore.ktx.runOnMainDispatcher
 
 class SwitchActivity : ThemedActivity(R.layout.layout_empty),
     ConfigurationFragment.SelectCallback {

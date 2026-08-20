@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.database.preference
+package pkg.pkkstore.database.preference
 
 import androidx.preference.PreferenceDataStore
 

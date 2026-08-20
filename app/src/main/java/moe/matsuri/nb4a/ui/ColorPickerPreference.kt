@@ -1,4 +1,4 @@
-package moe.matsuri.nb4a.ui
+package pkg.pkkstore.ui
 
 import android.content.Context
 import android.content.res.Resources
@@ -18,8 +18,8 @@ import androidx.core.view.setPadding
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.getColorAttr
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.getColorAttr
 import kotlin.math.roundToInt
 
 class ColorPickerPreference

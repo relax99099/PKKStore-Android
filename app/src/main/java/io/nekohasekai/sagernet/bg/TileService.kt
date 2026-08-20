@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.bg
+package pkg.pkkstore.bg
 
 import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
 import androidx.annotation.RequiresApi
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.aidl.ISagerNetService
-import io.nekohasekai.sagernet.database.SagerDatabase
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.aidl.ISagerNetService
+import pkg.pkkstore.database.SagerDatabase
 import android.service.quicksettings.TileService as BaseTileService
 
 @RequiresApi(24)
