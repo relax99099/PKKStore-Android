@@ -1,6 +1,8 @@
 name: Apply Fixes
+
 on:
   workflow_dispatch:
+
 jobs:
   apply:
     runs-on: ubuntu-latest
@@ -9,13 +11,60 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Rebrand
+      
+      - name: Fix and Rebrand
         run: |
-          find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's/NekoBox/PKKStore/g' {} +
+          cat << 'EOF' > fix_all_strings.py
+          import os
+          import re
+
+          def fix_content(content):
+              # 1. Escape unescaped single quotes
+              content = re.sub(r"(?<!\\)'", r"\'", content)
+              
+              # 2. Fix double-escaped newlines \\n -> \n
+              content = content.replace("\\\\n", "\\n")
+              
+              # 3. Replace NekoBox with PKKStore
+              content = content.replace("NekoBox", "PKKStore")
+              
+              return content
+
+          def process_file(file_path):
+              try:
+                  with open(file_path, 'r', encoding='utf-8') as f:
+                      content = f.read()
+                  
+                  fixed_content = fix_content(content)
+                  
+                  if fixed_content != content:
+                      with open(file_path, 'w', encoding='utf-8') as f:
+                          f.write(fixed_content)
+                      print(f"Fixed {file_path}")
+              except Exception as e:
+                  print(f"Error processing {file_path}: {e}")
+
+          def main():
+              for root, dirs, files in os.walk('.'):
+                  if '.git' in dirs:
+                      dirs.remove('.git')
+                  if '.github' in dirs:
+                      dirs.remove('.github')
+                      
+                  for file in files:
+                      if file.endswith('.xml') or file.endswith('.kt') or file.endswith('.java') or file.endswith('.md') or file.endswith('.kts') or file == 'nb4a.properties':
+                          process_file(os.path.join(root, file))
+
+          if __name__ == "__main__":
+              main()
+          EOF
+          python3 fix_all_strings.py
+          rm fix_all_strings.py
+      
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Rebrand to PKKStore" || echo "No changes to commit"
+          git commit -m "Rebrand and fix string resources" || echo "No changes to commit"
           git push
