@@ -1,5 +1,4 @@
 name: Fix Kotlin and Rebuild
-
 on:
   workflow_dispatch:
 
@@ -7,25 +6,38 @@ jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: Restore Kotlin files
+
+      - name: Restore Kotlin files from Upstream
         run: |
-          # Restore all .kt files from a known good commit (before backslash mess)
-          # Commit 793fb29 was "Add files via upload" by relax99099, should be clean of my automated fixes
-          git checkout 793fb29 -- "*.kt"
+          UPSTREAM_URL="https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/master"
           
-          # Also check if libcore/nb4a.go needs to be kept
-          # I fixed it in fda6dbc, so let's restore that one specifically if needed
-          git checkout fda6dbc -- libcore/nb4a.go
+          files=(
+            "app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt"
+            "app/src/main/java/io/nekohasekai/sagernet/utils/Subnet.kt"
+            "app/src/main/java/moe/matsuri/nb4a/ui/EditConfigPreference.kt"
+          )
           
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          for file in "${files[@]}"; do
+            echo "Restoring $file from upstream..."
+            curl -sSL "$UPSTREAM_URL/$file" -o "$file"
+          done
+          
+          # Re-apply rebranding
+          # Note: The original package name is io.nekohasekai.sagernet or moe.matsuri.nb4a
+          # We want to change it to pkg.pkkstore
+          find . -type f -name "*.kt" -exec sed -i 's/io\.nekohasekai\.sagernet/pkg.pkkstore/g' {} +
+          find . -type f -name "*.kt" -exec sed -i 's/moe\.matsuri\.nb4a/pkg.pkkstore/g' {} +
+          find . -type f -name "*.kt" -exec sed -i 's/NekoBox/PKKStore/g' {} +
+          
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Restore Kotlin files to valid state" || echo "No changes to commit"
-          git push origin main
+          git commit -m "Restore Kotlin files from upstream and re-apply rebranding" || echo "No changes to commit"
+          git push
 
   trigger-build:
     needs: fix
