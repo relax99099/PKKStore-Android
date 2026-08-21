@@ -1,0 +1,87 @@
+name: Revert Package and Fix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  revert-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Revert Package and Fix Syntax
+        run: |
+          python3 -c "
+          import os
+          import re
+
+          def fix_file(path):
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              # Revert package names
+              content = content.replace('package pkg.pkkstore', 'package io.nekohasekai.sagernet')
+              content = content.replace('import pkg.pkkstore', 'import io.nekohasekai.sagernet')
+              
+              # Fix Commandline.kt syntax errors
+              if 'Commandline.kt' in path:
+                  # Fix the corrupted 'when' branch
+                  content = content.replace(\"' ', '\\\\', '\"', '\\'' ->\", \"' ', '\\\\\\\\', '\"', '\\\\'' ->\")
+                  content = content.replace(\"result.append('\\\\')  // intentionally no break\", \"result.append('\\\\\\\\')  // intentionally no break\")
+                  # Ensure the escape is correct
+                  content = re.sub(r\"' ', '\\\', '\"', '\\''\", \"' ', '\\\\\\\\', '\"', '\\\\''\", content)
+                  content = content.replace(\"result.append('\\\\')\", \"result.append('\\\\\\\\')\")
+              
+              # Fix NGUtil.kt syntax errors
+              if 'NGUtil.kt' in path:
+                  # Ensure it is '.' and not corrupted
+                  content = content.replace(\"split('\\\\'.')\", \"split('.')\")
+                  content = content.replace(\"split('.')\", \"split('.')\") # Just in case
+              
+              with open(path, 'w', encoding='utf-8') as f:
+                  f.write(content)
+
+          for root, dirs, files in os.walk('app/src/main/java'):
+              for file in files:
+                  if file.endswith('.kt') or file.endswith('.java'):
+                      fix_file(os.path.join(root, file))
+          
+          # Also fix buildSrc if needed
+          for root, dirs, files in os.walk('buildSrc/src/main/kotlin'):
+              for file in files:
+                  if file.endswith('.kt'):
+                      fix_file(os.path.join(root, file))
+          "
+
+      - name: Fix Commandline.kt specifically
+        run: |
+          # Use a more direct approach for Commandline.kt
+          PATH_CL="app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt"
+          if [ -f "$PATH_CL" ]; then
+            sed -i "s/' ', '\\\\', '\"', '\\\\''/' ', '\\\\\\\\', '\"', '\\\\''/g" "$PATH_CL"
+            sed -i "s/result.append('\\\\')/result.append('\\\\\\\\')/g" "$PATH_CL"
+          fi
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m \"Revert internal package names to fix build and KSP issues\" || echo \"No changes to commit\"
+          git push
+      
+      - name: Trigger Build
+        run: |
+          curl -X POST \
+            -H \"Authorization: token ${{ secrets.GITHUB_TOKEN }}\" \
+            -H \"Accept: application/vnd.github.v3+json\" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
+            -d '{\"ref\":\"main\"}'
