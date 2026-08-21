@@ -29,8 +29,8 @@
     <string name="document">وثيقة</string>
     <string name="theme">موضوع</string>
     <string name="menu_about">حول</string>
-    <string name="group_status_proxies_subscription">%1$d البروکسیز | تم التحديث في %2$s</string>
-    <string name="group_updated">%1$s: تم تحديث %2$d البروکسیز</string>
+    <string name="group_status_proxies_subscription">%d البروکسیز | تم التحديث في %s</string>
+    <string name="group_updated">%s: تم تحديث %d البروکسیز</string>
     <string name="port_http">منفذ بروکسی HTTP</string>
     <string name="port_proxy">منفذ بروکسی SOCKS5</string>
     <string name="service_mode_proxy">البروکسی فقط</string>
@@ -91,16 +91,16 @@
     <string name="connection_test_testing">اختبارات…</string>
     <string name="speed">%s/s</string>
     <string name="speed_detail">بروکسی:
-\n\\t%1$s↑ %2$s↓
+\n\t%1$s↑ %2$s↓
 \nمباشر:
-\n\\t%3$s↑ %4$s↓</string>
+\n\t%3$s↑ %4$s↓</string>
     <string name="traffic">%1$s↑ %2$s↓</string>
     <string name="allow_insecure_sum">تعطيل فحص الشهادة. عند التمكين ، يكون هذا التكوين آمنًا مثل النص العادي</string>
     <string name="allow_insecure">السماح بعدم الأمان</string>
     <string name="security_settings">اعدادات الامان</string>
     <string name="show_direct_speed_sum">أظهر سرعة المرور بدون وكيل في الإشعار أيضًا</string>
     <string name="show_direct_speed">عرض السرعة المباشرة</string>
-    <string name="show_stop_sum">إذا كنت لا تريد استخدام \\\"اللوحة السريعة\\\" كمفتاح التبديل</string>
+    <string name="show_stop_sum">إذا كنت لا تريد استخدام \"اللوحة السريعة\" كمفتاح التبديل</string>
     <string name="allow_access_sum">ربط خوادم الإدخال إلى 0.0.0.0</string>
     <string name="show_stop">إظهار زر الإيقاف</string>
     <string name="cag_misc">إعدادات متنوعة</string>
@@ -230,7 +230,7 @@
     <string name="profile_import">استيراد ملف التعريف</string>
     <string name="subscription_import_message">هل تريد تأكيد رغبتك في استيراد اشتراك %s؟ إذا كنت قادمًا من مصدر غير موثوق به، فقد يؤدي القيام بذلك إلى تسريب عنوان IP الخاص بك وهذا السلوك.</string>
     <string name="subscription_import">اشتراك الاستيراد</string>
-    <string name="subscription_traffic">%1$s مستخدمة / %2$s متبقية</string>
+    <string name="subscription_traffic">%s مستخدمة / %s متبقية</string>
     <string name="subscription_used">%s مستخدمة</string>
     <string name="group_filter">التكرير</string>
     <string name="subscription_update_message">جاري تحديث %s …</string>
@@ -245,7 +245,7 @@
     <string name="install_from_play_store">التثبيت من متجر Play</string>
     <string name="action_download">تحميل</string>
     <string name="action_learn_more">يتعلم أكثر</string>
-    <string name="profile_requiring_plugin">يتطلب ملف التعريف %1$s تثبيت المكون الإضافي %2$s، لكن لم يتم العثور عليه.</string>
+    <string name="profile_requiring_plugin">يتطلب ملف التعريف %s تثبيت المكون الإضافي %s، لكن لم يتم العثور عليه.</string>
     <string name="missing_plugin">في عداد المفقودين المكونات في</string>
     <string name="confirm">أكد</string>
     <string name="subscription_user_agent">وكيل المستخدم</string>
@@ -330,18 +330,18 @@
     <plurals name="added">
         <item quantity="zero">مضاف</item>
         <item quantity="one">%d تمت إضافة البروکسیز</item>
-        <item quantity="two" />
-        <item quantity="few" />
-        <item quantity="many" />
-        <item quantity="other" />
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="removed">
         <item quantity="zero">محذوف</item>
         <item quantity="one">%d العناصر التي تمت إزالتها</item>
-        <item quantity="two" />
-        <item quantity="few" />
-        <item quantity="many" />
-        <item quantity="other" />
+        <item quantity="two"/>
+        <item quantity="few"/>
+        <item quantity="many"/>
+        <item quantity="other"/>
     </plurals>
     <string name="add_profile_methods_manual_settings">الإعدادات اليدوية</string>
     <string name="experimental_settings">تجريبي</string>
@@ -360,7 +360,7 @@
     <string name="tcp_connections">%d اتصالات TCP</string>
     <string name="shadowsocks_plugin_v2ray">V2Ray (مكون أندرويد الإضافي Shadowsocks)</string>
     <string name="shadowsocks_plugin_simple_obfs">Simple Obfs (مكون أندرويد الإضافي Shadowsocks)</string>
-    <string name="plugin_exists_but_on_shit_system">يتطلب الملف التعریف %1$s المكوّن الإضافي %2$s، لكن بائع المعدات المملوكة لك (عادةً عمالقة المراقبة وصانع البرامج الضارة) تلاعب بجهاز أندرويد، مما يجعل المكون الإضافي غير قابل للاستخدام.</string>
+    <string name="plugin_exists_but_on_shit_system">يتطلب الملف التعریف %s المكوّن الإضافي %s، لكن بائع المعدات المملوكة لك (عادةً عمالقة المراقبة وصانع البرامج الضارة) تلاعب بجهاز أندرويد، مما يجعل المكون الإضافي غير قابل للاستخدام.</string>
     <string name="group_order_by_delay">عن طريق التأخير</string>
     <string name="group_order_by_name">بالاسم</string>
     <string name="group_order_origin">أصل</string>
