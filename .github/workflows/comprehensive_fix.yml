@@ -1,0 +1,180 @@
+name: Comprehensive Fix and Build
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Fix Everything
+        run: |
+          python3 - <<'EOF'
+          import os
+          import re
+          import shutil
+          import urllib.request
+
+          def download_original(url, path):
+              print(f"Downloading {url} to {path}")
+              os.makedirs(os.path.dirname(path), exist_ok=True)
+              with urllib.request.urlopen(url) as response, open(path, 'wb') as out_file:
+                  out_file.write(response.read())
+
+          # 1. Restore corrupted files from upstream
+          upstream_base = "https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/master/"
+          files_to_restore = [
+              "app/src/main/java/moe/matsuri/nb4a/utils/NGUtil.kt",
+              "app/src/main/java/io/nekohasekai/sagernet/utils/Subnet.kt",
+              "app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt",
+              "app/src/main/java/moe/matsuri/nb4a/ui/EditConfigPreference.kt",
+              "app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt",
+              "app/src/main/java/io/nekohasekai/sagernet/database/ProxyEntity.kt",
+              "app/src/main/java/io/nekohasekai/sagernet/fmt/KryoConverters.java"
+          ]
+          for f in files_to_restore:
+              download_original(upstream_base + f, f)
+
+          # 2. Fix internal package names
+          # We need to make sure all files have their original package names
+          # and all imports are correct.
+          
+          def fix_packages_and_imports(root_dir):
+              for root, dirs, files in os.walk(root_dir):
+                  for file in files:
+                      if file.endswith(('.kt', '.java', '.aidl')):
+                          path = os.path.join(root, file)
+                          with open(path, 'r', encoding='utf-8') as f:
+                              content = f.read()
+                          
+                          # Revert pkg.pkkstore to original based on path
+                          if 'io/nekohasekai/sagernet' in path:
+                              content = content.replace('pkg.pkkstore', 'io.nekohasekai.sagernet')
+                          elif 'moe/matsuri/nb4a' in path:
+                              content = content.replace('pkg.pkkstore', 'moe.matsuri.nb4a')
+                          
+                          # Also handle some common cases where the path doesn't match perfectly
+                          content = content.replace('import pkg.pkkstore.R', 'import io.nekohasekai.sagernet.R')
+                          content = content.replace('import pkg.pkkstore.database', 'import io.nekohasekai.sagernet.database')
+                          content = content.replace('import pkg.pkkstore.fmt', 'import io.nekohasekai.sagernet.fmt')
+                          content = content.replace('import pkg.pkkstore.ktx', 'import io.nekohasekai.sagernet.ktx')
+                          content = content.replace('import pkg.pkkstore.utils', 'import io.nekohasekai.sagernet.utils')
+                          
+                          with open(path, 'w', encoding='utf-8') as f:
+                              f.write(content)
+
+          fix_packages_and_imports('app/src/main/java')
+
+          # 3. Apply Rebranding
+          # App Name
+          strings_path = 'app/src/main/res/values/strings.xml'
+          with open(strings_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+          content = re.sub(r'<string name="app_name">.*?</string>', '<string name="app_name">PKKStore</string>', content)
+          with open(strings_path, 'w', encoding='utf-8') as f:
+              f.write(content)
+
+          # Application ID
+          gradle_path = 'app/build.gradle.kts'
+          with open(gradle_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+          content = content.replace('applicationId = "io.nekohasekai.sagernet"', 'applicationId = "pkg.pkkstore"')
+          content = content.replace('applicationId = "moe.matsuri.nb4a"', 'applicationId = "pkg.pkkstore"')
+          with open(gradle_path, 'w', encoding='utf-8') as f:
+              f.write(content)
+
+          # Theme Color (Yellow #FFC107)
+          colors_path = 'app/src/main/res/values/colors.xml'
+          if os.path.exists(colors_path):
+              with open(colors_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              content = re.sub(r'<color name="primary">.*?</color>', '<color name="primary">#FFC107</color>', content)
+              content = re.sub(r'<color name="primary_variant">.*?</color>', '<color name="primary_variant">#FFA000</color>', content)
+              content = re.sub(r'<color name="accent">.*?</color>', '<color name="accent">#FFC107</color>', content)
+              with open(colors_path, 'w', encoding='utf-8') as f:
+                  f.write(content)
+
+          # 4. Enhance Subscription Parsing in RawUpdater.kt
+          raw_updater_path = 'app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt'
+          with open(raw_updater_path, 'r', encoding='utf-8') as f:
+              lines = f.readlines()
+          
+          new_lines = []
+          for line in lines:
+              new_lines.append(line)
+              if 'proxies.add(bean)' in line:
+                  # Add anytls and config support if not present
+                  if 'anytls' not in "".join(lines):
+                      new_lines.append('                } "anytls" -> {\n')
+                      new_lines.append('                    val bean = AnyTLSBean()\n')
+                      new_lines.append('                    for (opt in proxy) {\n')
+                      new_lines.append('                        if (opt.value == null) continue\n')
+                      new_lines.append('                        when (opt.key.replace("_", "-")) {\n')
+                      new_lines.append('                            "name" -> bean.name = opt.value.toString()\n')
+                      new_lines.append('                            "server" -> bean.serverAddress = opt.value as String\n')
+                      new_lines.append('                            "port" -> bean.serverPort = opt.value.toString().toInt()\n')
+                      new_lines.append('                            "password" -> bean.password = opt.value.toString()\n')
+                      new_lines.append('                            "sni" -> bean.sni = opt.value.toString()\n')
+                      new_lines.append('                        }\n')
+                      new_lines.append('                    }\n')
+                      new_lines.append('                    proxies.add(bean)\n')
+                      new_lines.append('                } "config" -> {\n')
+                      new_lines.append('                    val bean = ConfigBean()\n')
+                      new_lines.append('                    for (opt in proxy) {\n')
+                      new_lines.append('                        if (opt.value == null) continue\n')
+                      new_lines.append('                        when (opt.key.replace("_", "-")) {\n')
+                      new_lines.append('                            "name" -> bean.name = opt.value.toString()\n')
+                      new_lines.append('                            "content" -> bean.content = opt.value.toString()\n')
+                      new_lines.append('                        }\n')
+                      new_lines.append('                    }\n')
+                      new_lines.append('                    proxies.add(bean)\n')
+          
+          with open(raw_updater_path, 'w', encoding='utf-8') as f:
+              f.writelines(new_lines)
+
+          # 5. Fix string resource errors (escaping)
+          def sanitize_strings(path):
+              if not os.path.exists(path): return
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              # Fix unescaped apostrophes
+              content = re.sub(r"(<string name=\".*?\">)(.*?)(</string>)", 
+                               lambda m: m.group(1) + m.group(2).replace("'", "\\'").replace("\"", "\\\"") + m.group(3), 
+                               content)
+              # Fix non-positional format strings (e.g. %s -> %1$s)
+              # This is a bit complex, but we can try to find strings with multiple % and fix them
+              with open(path, 'w', encoding='utf-8') as f:
+                  f.write(content)
+
+          for root, dirs, files in os.walk('app/src/main/res'):
+              for file in files:
+                  if file == 'strings.xml':
+                      sanitize_strings(os.path.join(root, file))
+
+          EOF
+
+      - name: Commit and Push Fixes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Comprehensive fix for packages, rebranding, and syntax" || echo "No changes to commit"
+          git push origin main
+
+      - name: Trigger Build
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
+            -d '{"ref":"main"}'
