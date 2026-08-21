@@ -183,8 +183,8 @@ class BackupFragment : NamedFragment(R.layout.layout_backup) {
                 cursor.getColumnIndexOrThrow(OpenableColumns.DISPLAY_NAME).let(cursor::getString)
             }
             ?.takeIf { it.isNotBlank() } ?: file.pathSegments.last()
-            .substringAfterLast(\'/\')
-            .substringAfter(\':\')
+            .substringAfterLast('/')
+            .substringAfter(':')
 
         if (!fileName.endsWith(".json")) {
             onMainDispatcher {

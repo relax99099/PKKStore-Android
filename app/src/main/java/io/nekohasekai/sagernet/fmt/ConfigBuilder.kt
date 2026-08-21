@@ -365,7 +365,7 @@ fun buildConfig(
                         is AnyTLSBean ->
                             buildSingBoxOutboundAnyTLSBean(bean)
 
-                        else -> throw IllegalStateException("can\'t reach")
+                        else -> throw IllegalStateException("can't reach")
                     }
 
                     // internal mux
@@ -391,7 +391,7 @@ fun buildConfig(
 
                     // domain_strategy
                     pastEntity?.requireBean()?.apply {
-                        // don\'t loopback
+                        // don't loopback
                         if (defaultServerDomainStrategy != "" && !serverAddress.isIpAddress()) {
                             domainListDNSDirectForce.add("full:$serverAddress")
                         }
@@ -409,7 +409,7 @@ fun buildConfig(
                 bean.finalAddress = bean.serverAddress
                 bean.finalPort = bean.serverPort
                 if (bean.canMapping() && proxyEntity.needExternal()) {
-                    // With ss protect, don\'t use mapping
+                    // With ss protect, don't use mapping
                     var needExternal = true
                     if (index == profileList.lastIndex) {
                         val pluginId = when (bean) {

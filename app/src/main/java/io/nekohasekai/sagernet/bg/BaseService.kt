@@ -374,7 +374,7 @@ class BaseService {
                     data.changeState(State.Connected)
 
                     lateInit()
-                } catch (_: CancellationException) { // if the job was cancelled, it is canceller\'s responsibility to call stopRunner
+                } catch (_: CancellationException) { // if the job was cancelled, it is canceller's responsibility to call stopRunner
                 } catch (_: UnknownHostException) {
                     stopRunner(false, getString(R.string.invalid_server))
                 } catch (e: PluginManager.PluginNotFoundException) {

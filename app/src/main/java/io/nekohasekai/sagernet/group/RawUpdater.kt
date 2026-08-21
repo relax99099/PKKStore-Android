@@ -725,15 +725,15 @@ object RawUpdater : GroupUpdater() {
 
     fun parseWireGuard(conf: String): List<WireGuardBean> {
         val ini = Ini(StringReader(conf))
-        val iface = ini["Interface"] ?: error("Missing \'Interface\' selection")
+        val iface = ini["Interface"] ?: error("Missing 'Interface' selection")
         val bean = WireGuardBean().applyDefaultValues()
         val localAddresses = iface.getAll("Address")
-        if (localAddresses.isNullOrEmpty()) error("Empty address in \'Interface\' selection")
+        if (localAddresses.isNullOrEmpty()) error("Empty address in 'Interface' selection")
         bean.localAddress = localAddresses.flatMap { it.split(",") }.joinToString("\n")
         bean.privateKey = iface["PrivateKey"]
         bean.mtu = iface["MTU"]?.toIntOrNull()
         val peers = ini.getAll("Peer")
-        if (peers.isNullOrEmpty()) error("Missing \'Peer\' selections")
+        if (peers.isNullOrEmpty()) error("Missing 'Peer' selections")
         val beans = mutableListOf<WireGuardBean>()
         for (peer in peers) {
             val endpoint = peer["Endpoint"]

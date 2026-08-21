@@ -283,7 +283,7 @@ class AppListActivity : ThemedActivity() {
                 val proxiedAppString =
                     SagerNet.clipboard.primaryClip?.getItemAt(0)?.text?.toString()
                 if (!proxiedAppString.isNullOrEmpty()) {
-                    val i = proxiedAppString.indexOf(\'\n\')
+                    val i = proxiedAppString.indexOf('\n')
                     try {
                         val apps = if (i < 0) "" else proxiedAppString.substring(i + 1)
                         DataStore.routePackages = apps
