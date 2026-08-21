@@ -1,4 +1,5 @@
 name: Comprehensive Fix and Build
+
 on:
   workflow_dispatch:
 
@@ -23,6 +24,15 @@ jobs:
           import re
           import urllib.request
 
+          # Remove broken experimental files
+          bad_files = [
+              'app/src/main/java/moe/matsuri/nb4a/proxy/shadowtls/ShadowTLSFmt.kt'
+          ]
+          for f in bad_files:
+              if os.path.exists(f):
+                  os.remove(f)
+                  print(f'Removed {f}')
+
           def download_upstream(path):
               url = f'https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/master/{path}'
               try:
@@ -41,61 +51,29 @@ jobs:
                       print(f'Restoring and rebranding {rel_path}')
                       upstream_content = download_upstream(rel_path)
                       if upstream_content:
-                          # Apply rebranding
                           content = upstream_content.replace('NekoBox', 'PKKStore').replace('Matsuri', 'PKKStore')
-                          # Fix app_name specifically
                           content = re.sub(r'<string name=\"app_name\" translatable=\"false\">.*?</string>', 
                                          '<string name=\"app_name\" translatable=\"false\">PKKStore</string>', content)
-                          # Fix unescaped single quotes carefully
-                          # Find single quotes that are NOT preceded by a backslash
                           content = re.sub(r\"(?<!\\\\)'\", \"\\\\'\", content)
                           
                           with open(rel_path, 'w', encoding='utf-8') as f:
                               f.write(content)
 
-          # 2. Fix Kotlin Syntax in NGUtil.kt, Subnet.kt, Commandline.kt
+          # 2. Fix Kotlin Syntax in NGUtil.kt, Subnet.kt, Commandline.kt, RawUpdater.kt
           files_to_fix = [
               'app/src/main/java/moe/matsuri/nb4a/utils/NGUtil.kt',
               'app/src/main/java/io/nekohasekai/sagernet/utils/Subnet.kt',
-              'app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt'
+              'app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt',
+              'app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt'
           ]
           for rel_path in files_to_fix:
-              print(f'Restoring {rel_path}')
+              print(f'Restoring clean upstream {rel_path}')
               upstream_content = download_upstream(rel_path)
               if upstream_content:
                   with open(rel_path, 'w', encoding='utf-8') as f:
                       f.write(upstream_content)
 
-          # 3. Enhance Subscription Parsing in RawUpdater.kt
-          raw_updater_path = 'app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt'
-          print(f'Enhancing {raw_updater_path}')
-          content = download_upstream(raw_updater_path)
-          if content:
-              # Add imports
-              if 'import moe.matsuri.nb4a.proxy.anytls.AnyTLSBean' not in content:
-                  content = content.replace('import io.nekohasekai.sagernet.database.ProxyEntity', 
-                                         'import io.nekohasekai.sagernet.database.ProxyEntity\nimport moe.matsuri.nb4a.proxy.anytls.AnyTLSBean\nimport moe.matsuri.nb4a.proxy.config.ConfigBean')
-              
-              # Modify parseRaw
-              lines = content.splitlines()
-              new_lines = []
-              for line in lines:
-                  if 'val proxy = ProxyEntity()' in line:
-                      new_lines.append(line)
-                      new_lines.append('                    val anyTlsBean = AnyTLSBean()')
-                      new_lines.append('                    val configBean = ConfigBean()')
-                      continue
-                  if 'proxy.putBean(bean)' in line:
-                      new_lines.append(line)
-                      new_lines.append('                    proxy.putBean(anyTlsBean)')
-                      new_lines.append('                    proxy.putBean(configBean)')
-                      continue
-                  new_lines.append(line)
-              
-              with open(raw_updater_path, 'w', encoding='utf-8') as f:
-                  f.write('\n'.join(new_lines))
-
-          # 4. Fix build.gradle.kts
+          # 3. Fix build.gradle.kts
           app_gradle = 'app/build.gradle.kts'
           if os.path.exists(app_gradle):
               with open(app_gradle, 'r') as f:
@@ -104,7 +82,7 @@ jobs:
               with open(app_gradle, 'w') as f:
                   f.write(content)
 
-          # 5. Fix nb4a.properties
+          # 4. Fix nb4a.properties
           nb4a_props = 'nb4a.properties'
           if os.path.exists(nb4a_props):
               with open(nb4a_props, 'r') as f:
@@ -119,7 +97,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Comprehensive fix: restore strings, fix syntax, enhance sub parsing" || echo "No changes to commit"
+          git commit -m "Remove broken ShadowTLSFmt.kt and restore clean upstream files" || echo "No changes to commit"
           git push origin main
 
       - name: Trigger Build
