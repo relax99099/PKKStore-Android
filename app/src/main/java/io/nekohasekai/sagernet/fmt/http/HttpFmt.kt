@@ -1,8 +1,8 @@
-package io.nekohasekai.sagernet.fmt.http
+package pkg.pkkstore.fmt.http
 
-import io.nekohasekai.sagernet.fmt.v2ray.isTLS
-import io.nekohasekai.sagernet.fmt.v2ray.setTLS
-import io.nekohasekai.sagernet.ktx.urlSafe
+import pkg.pkkstore.fmt.v2ray.isTLS
+import pkg.pkkstore.fmt.v2ray.setTLS
+import pkg.pkkstore.ktx.urlSafe
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 

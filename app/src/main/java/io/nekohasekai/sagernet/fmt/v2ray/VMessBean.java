@@ -1,10 +1,10 @@
-package io.nekohasekai.sagernet.fmt.v2ray;
+package pkg.pkkstore.fmt.v2ray;
 
 import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.KryoConverters;
+import pkg.pkkstore.fmt.KryoConverters;
 import moe.matsuri.nb4a.utils.JavaUtil;
 
 public class VMessBean extends StandardV2RayBean {

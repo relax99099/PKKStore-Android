@@ -1,7 +1,7 @@
-package io.nekohasekai.sagernet
+package pkg.pkkstore
 
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.SingBoxOptions.RuleSet
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.SingBoxOptions.RuleSet
 
 object SingBoxOptionsUtil {
 

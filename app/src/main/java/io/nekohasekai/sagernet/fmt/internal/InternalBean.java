@@ -1,6 +1,6 @@
-package io.nekohasekai.sagernet.fmt.internal;
+package pkg.pkkstore.fmt.internal;
 
-import io.nekohasekai.sagernet.fmt.AbstractBean;
+import pkg.pkkstore.fmt.AbstractBean;
 
 public abstract class InternalBean extends AbstractBean {
 

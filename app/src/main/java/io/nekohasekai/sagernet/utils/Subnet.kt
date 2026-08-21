@@ -1,6 +1,6 @@
-package io.nekohasekai.sagernet.utils
+package pkg.pkkstore.utils
 
-import io.nekohasekai.sagernet.ktx.parseNumericAddress
+import pkg.pkkstore.ktx.parseNumericAddress
 import java.net.InetAddress
 import java.util.*
 

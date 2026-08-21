@@ -1,9 +1,9 @@
-package io.nekohasekai.sagernet.database
+package pkg.pkkstore.database
 
 import android.os.Parcelable
 import androidx.room.*
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.app
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.app
 import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "rules")

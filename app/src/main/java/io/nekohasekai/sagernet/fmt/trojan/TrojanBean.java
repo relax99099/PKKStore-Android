@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.trojan;
+package pkg.pkkstore.fmt.trojan;
 
 import androidx.annotation.NonNull;
 
@@ -7,8 +7,8 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.KryoConverters;
-import io.nekohasekai.sagernet.fmt.v2ray.StandardV2RayBean;
+import pkg.pkkstore.fmt.KryoConverters;
+import pkg.pkkstore.fmt.v2ray.StandardV2RayBean;
 
 public class TrojanBean extends StandardV2RayBean {
 

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.plugin
+package pkg.pkkstore.plugin
 
 import android.content.Intent
 import android.content.pm.PackageInfo
@@ -7,9 +7,9 @@ import android.content.pm.ProviderInfo
 import android.net.Uri
 import android.os.Build
 import android.widget.Toast
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.plugin.PluginManager.loadString
-import io.nekohasekai.sagernet.utils.PackageCache
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.plugin.PluginManager.loadString
+import pkg.pkkstore.utils.PackageCache
 
 object Plugins {
     const val AUTHORITIES_PREFIX_SEKAI_EXE = "moe.matsuri.nb4a.plugin."

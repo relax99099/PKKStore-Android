@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.database;
+package pkg.pkkstore.database;
 
 import androidx.annotation.NonNull;
 
@@ -8,7 +8,7 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.nekohasekai.sagernet.fmt.Serializable;
+import pkg.pkkstore.fmt.Serializable;
 
 public class SubscriptionBean extends Serializable {
 

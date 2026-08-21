@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt;
+package pkg.pkkstore.fmt;
 
 import androidx.room.TypeConverter;
 
@@ -9,24 +9,24 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-import io.nekohasekai.sagernet.database.SubscriptionBean;
-import io.nekohasekai.sagernet.fmt.http.HttpBean;
-import io.nekohasekai.sagernet.fmt.hysteria.HysteriaBean;
-import io.nekohasekai.sagernet.fmt.internal.ChainBean;
-import io.nekohasekai.sagernet.fmt.mieru.MieruBean;
-import io.nekohasekai.sagernet.fmt.naive.NaiveBean;
-import io.nekohasekai.sagernet.fmt.shadowsocks.ShadowsocksBean;
+import pkg.pkkstore.database.SubscriptionBean;
+import pkg.pkkstore.fmt.http.HttpBean;
+import pkg.pkkstore.fmt.hysteria.HysteriaBean;
+import pkg.pkkstore.fmt.internal.ChainBean;
+import pkg.pkkstore.fmt.mieru.MieruBean;
+import pkg.pkkstore.fmt.naive.NaiveBean;
+import pkg.pkkstore.fmt.shadowsocks.ShadowsocksBean;
 import moe.matsuri.nb4a.proxy.anytls.AnyTLSBean;
 import moe.matsuri.nb4a.proxy.shadowtls.ShadowTLSBean;
-import io.nekohasekai.sagernet.fmt.socks.SOCKSBean;
-import io.nekohasekai.sagernet.fmt.ssh.SSHBean;
-import io.nekohasekai.sagernet.fmt.trojan.TrojanBean;
-import io.nekohasekai.sagernet.fmt.trojan_go.TrojanGoBean;
-import io.nekohasekai.sagernet.fmt.tuic.TuicBean;
-import io.nekohasekai.sagernet.fmt.v2ray.VMessBean;
-import io.nekohasekai.sagernet.fmt.wireguard.WireGuardBean;
-import io.nekohasekai.sagernet.ktx.KryosKt;
-import io.nekohasekai.sagernet.ktx.Logs;
+import pkg.pkkstore.fmt.socks.SOCKSBean;
+import pkg.pkkstore.fmt.ssh.SSHBean;
+import pkg.pkkstore.fmt.trojan.TrojanBean;
+import pkg.pkkstore.fmt.trojan_go.TrojanGoBean;
+import pkg.pkkstore.fmt.tuic.TuicBean;
+import pkg.pkkstore.fmt.v2ray.VMessBean;
+import pkg.pkkstore.fmt.wireguard.WireGuardBean;
+import pkg.pkkstore.ktx.KryosKt;
+import pkg.pkkstore.ktx.Logs;
 import moe.matsuri.nb4a.proxy.config.ConfigBean;
 import moe.matsuri.nb4a.proxy.neko.NekoBean;
 import moe.matsuri.nb4a.utils.JavaUtil;

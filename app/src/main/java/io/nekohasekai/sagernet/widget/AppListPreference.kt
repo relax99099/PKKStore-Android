@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.Preference
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.utils.PackageCache
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.utils.PackageCache
 
 class AppListPreference : Preference {
 

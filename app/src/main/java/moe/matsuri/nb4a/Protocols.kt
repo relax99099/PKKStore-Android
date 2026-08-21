@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet
+package pkg.pkkstore
 
 import android.content.Context
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.ProxyEntity.Companion.TYPE_NEKO
-import io.nekohasekai.sagernet.fmt.AbstractBean
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ktx.getColorAttr
-import io.nekohasekai.sagernet.proxy.config.ConfigBean
+import pkg.pkkstore.R
+import pkg.pkkstore.database.ProxyEntity.Companion.TYPE_NEKO
+import pkg.pkkstore.fmt.AbstractBean
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ktx.getColorAttr
+import pkg.pkkstore.proxy.config.ConfigBean
 
 // Settings for all protocols, built-in or plugin
 object Protocols {

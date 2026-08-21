@@ -1,6 +1,6 @@
-package io.nekohasekai.sagernet.ui.profile
+package pkg.pkkstore.ui.profile
 
-import io.nekohasekai.sagernet.fmt.v2ray.VMessBean
+import pkg.pkkstore.fmt.v2ray.VMessBean
 
 class VMessSettingsActivity : StandardV2RaySettingsActivity() {
 

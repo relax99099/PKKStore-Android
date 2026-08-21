@@ -1,11 +1,11 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.content.Context
 import android.util.AttributeSet
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.ProfileManager
-import io.nekohasekai.sagernet.ui.SimpleMenuPreference
+import pkg.pkkstore.R
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.ProfileManager
+import pkg.pkkstore.ui.SimpleMenuPreference
 
 class OutboundPreference
 @JvmOverloads constructor(

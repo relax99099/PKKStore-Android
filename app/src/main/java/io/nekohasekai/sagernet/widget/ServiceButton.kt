@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.widget
+package pkg.pkkstore.widget
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -15,8 +15,8 @@ import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.progressindicator.BaseProgressIndicator
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.bg.BaseService
+import pkg.pkkstore.R
+import pkg.pkkstore.bg.BaseService
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import java.util.*

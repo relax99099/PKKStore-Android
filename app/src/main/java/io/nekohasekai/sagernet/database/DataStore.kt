@@ -1,25 +1,25 @@
-package io.nekohasekai.sagernet.database
+package pkg.pkkstore.database
 
 import android.os.Binder
 import androidx.preference.PreferenceDataStore
-import io.nekohasekai.sagernet.CONNECTION_TEST_URL
-import io.nekohasekai.sagernet.GroupType
-import io.nekohasekai.sagernet.IPv6Mode
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.TunImplementation
-import io.nekohasekai.sagernet.bg.BaseService
-import io.nekohasekai.sagernet.bg.VpnService
-import io.nekohasekai.sagernet.database.preference.OnPreferenceDataStoreChangeListener
-import io.nekohasekai.sagernet.database.preference.PublicDatabase
-import io.nekohasekai.sagernet.database.preference.RoomPreferenceDataStore
-import io.nekohasekai.sagernet.ktx.boolean
-import io.nekohasekai.sagernet.ktx.int
-import io.nekohasekai.sagernet.ktx.long
-import io.nekohasekai.sagernet.ktx.parsePort
-import io.nekohasekai.sagernet.ktx.string
-import io.nekohasekai.sagernet.ktx.stringToInt
-import io.nekohasekai.sagernet.ktx.stringToIntIfExists
-import io.nekohasekai.sagernet.TempDatabase
+import pkg.pkkstore.CONNECTION_TEST_URL
+import pkg.pkkstore.GroupType
+import pkg.pkkstore.IPv6Mode
+import pkg.pkkstore.Key
+import pkg.pkkstore.TunImplementation
+import pkg.pkkstore.bg.BaseService
+import pkg.pkkstore.bg.VpnService
+import pkg.pkkstore.database.preference.OnPreferenceDataStoreChangeListener
+import pkg.pkkstore.database.preference.PublicDatabase
+import pkg.pkkstore.database.preference.RoomPreferenceDataStore
+import pkg.pkkstore.ktx.boolean
+import pkg.pkkstore.ktx.int
+import pkg.pkkstore.ktx.long
+import pkg.pkkstore.ktx.parsePort
+import pkg.pkkstore.ktx.string
+import pkg.pkkstore.ktx.stringToInt
+import pkg.pkkstore.ktx.stringToIntIfExists
+import pkg.pkkstore.TempDatabase
 
 object DataStore : OnPreferenceDataStoreChangeListener {
 

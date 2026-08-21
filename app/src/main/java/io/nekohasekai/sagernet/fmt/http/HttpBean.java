@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.http;
+package pkg.pkkstore.fmt.http;
 
 import androidx.annotation.NonNull;
 
@@ -7,8 +7,8 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.KryoConverters;
-import io.nekohasekai.sagernet.fmt.v2ray.StandardV2RayBean;
+import pkg.pkkstore.fmt.KryoConverters;
+import pkg.pkkstore.fmt.v2ray.StandardV2RayBean;
 
 public class HttpBean extends StandardV2RayBean {
 

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.internal;
+package pkg.pkkstore.fmt.internal;
 
 import androidx.annotation.NonNull;
 
@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.nekohasekai.sagernet.fmt.KryoConverters;
+import pkg.pkkstore.fmt.KryoConverters;
 import moe.matsuri.nb4a.utils.JavaUtil;
 
 public class ChainBean extends InternalBean {

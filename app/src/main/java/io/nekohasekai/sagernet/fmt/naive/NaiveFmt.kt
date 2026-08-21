@@ -1,8 +1,8 @@
-package io.nekohasekai.sagernet.fmt.naive
+package pkg.pkkstore.fmt.naive
 
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.fmt.LOCALHOST
-import io.nekohasekai.sagernet.ktx.*
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.fmt.LOCALHOST
+import pkg.pkkstore.ktx.*
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.json.JSONObject
 

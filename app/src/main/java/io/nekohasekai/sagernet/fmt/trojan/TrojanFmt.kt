@@ -1,6 +1,6 @@
-package io.nekohasekai.sagernet.fmt.trojan
+package pkg.pkkstore.fmt.trojan
 
-import io.nekohasekai.sagernet.fmt.v2ray.parseDuckSoft
+import pkg.pkkstore.fmt.v2ray.parseDuckSoft
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 
 fun parseTrojan(server: String): TrojanBean {

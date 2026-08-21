@@ -1,8 +1,8 @@
-package io.nekohasekai.sagernet.fmt.wireguard
+package pkg.pkkstore.fmt.wireguard
 
-import io.nekohasekai.sagernet.SingBoxOptions
-import io.nekohasekai.sagernet.utils.Util
-import io.nekohasekai.sagernet.utils.listByLineOrComma
+import pkg.pkkstore.SingBoxOptions
+import pkg.pkkstore.utils.Util
+import pkg.pkkstore.utils.listByLineOrComma
 
 fun genReserved(anyStr: String): String {
     try {

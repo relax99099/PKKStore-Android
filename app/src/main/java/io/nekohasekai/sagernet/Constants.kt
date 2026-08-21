@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet
+package pkg.pkkstore
 
 const val CONNECTION_TEST_URL = "http://cp.cloudflare.com/"
 
@@ -178,10 +178,10 @@ object GroupOrder {
 }
 
 object Action {
-    const val SERVICE = "io.nekohasekai.sagernet.SERVICE"
-    const val CLOSE = "io.nekohasekai.sagernet.CLOSE"
-    const val RELOAD = "io.nekohasekai.sagernet.RELOAD"
+    const val SERVICE = "pkg.pkkstore.SERVICE"
+    const val CLOSE = "pkg.pkkstore.CLOSE"
+    const val RELOAD = "pkg.pkkstore.RELOAD"
 
-    // const val SWITCH_WAKE_LOCK = "io.nekohasekai.sagernet.SWITCH_WAKELOCK"
+    // const val SWITCH_WAKE_LOCK = "pkg.pkkstore.SWITCH_WAKELOCK"
     const val RESET_UPSTREAM_CONNECTIONS = "moe.nb4a.RESET_UPSTREAM_CONNECTIONS"
 }

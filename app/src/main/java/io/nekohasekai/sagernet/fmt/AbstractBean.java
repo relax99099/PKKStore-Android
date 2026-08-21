@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt;
+package pkg.pkkstore.fmt;
 
 import androidx.annotation.NonNull;
 
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 
-import io.nekohasekai.sagernet.ktx.NetsKt;
+import pkg.pkkstore.ktx.NetsKt;
 import moe.matsuri.nb4a.utils.JavaUtil;
 
 public abstract class AbstractBean extends Serializable {

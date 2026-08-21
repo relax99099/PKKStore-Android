@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.database;
+package pkg.pkkstore.database;
 
 import android.os.Parcel;
 

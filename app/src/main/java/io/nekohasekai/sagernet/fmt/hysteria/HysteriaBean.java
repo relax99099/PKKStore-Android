@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.hysteria;
+package pkg.pkkstore.fmt.hysteria;
 
 import androidx.annotation.NonNull;
 
@@ -7,9 +7,9 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.AbstractBean;
-import io.nekohasekai.sagernet.fmt.KryoConverters;
-import io.nekohasekai.sagernet.ktx.NetsKt;
+import pkg.pkkstore.fmt.AbstractBean;
+import pkg.pkkstore.fmt.KryoConverters;
+import pkg.pkkstore.ktx.NetsKt;
 import kotlin.text.StringsKt;
 
 public class HysteriaBean extends AbstractBean {

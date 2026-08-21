@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+package pkg.pkkstore.bg
 
 import android.app.PendingIntent
 import android.app.Service
@@ -12,18 +12,18 @@ import android.text.format.Formatter
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import io.nekohasekai.sagernet.Action
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.aidl.SpeedDisplayData
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.ProxyEntity
-import io.nekohasekai.sagernet.database.SagerDatabase
-import io.nekohasekai.sagernet.ktx.app
-import io.nekohasekai.sagernet.ktx.getColorAttr
-import io.nekohasekai.sagernet.ktx.runOnMainDispatcher
-import io.nekohasekai.sagernet.ui.SwitchActivity
-import io.nekohasekai.sagernet.utils.Theme
+import pkg.pkkstore.Action
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.aidl.SpeedDisplayData
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.ProxyEntity
+import pkg.pkkstore.database.SagerDatabase
+import pkg.pkkstore.ktx.app
+import pkg.pkkstore.ktx.getColorAttr
+import pkg.pkkstore.ktx.runOnMainDispatcher
+import pkg.pkkstore.ui.SwitchActivity
+import pkg.pkkstore.utils.Theme
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 

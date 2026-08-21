@@ -8,8 +8,8 @@ import com.google.gson.JsonObject;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.KryoConverters;
-import io.nekohasekai.sagernet.fmt.internal.InternalBean;
+import pkg.pkkstore.fmt.KryoConverters;
+import pkg.pkkstore.fmt.internal.InternalBean;
 import moe.matsuri.nb4a.utils.JavaUtil;
 
 public class ConfigBean extends InternalBean {

@@ -1,16 +1,16 @@
-package io.nekohasekai.sagernet.proxy.anytls
+package pkg.pkkstore.proxy.anytls
 
 import android.os.Bundle
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.database.preference.EditTextPreferenceModifiers
-import io.nekohasekai.sagernet.ktx.applyDefaultValues
-import io.nekohasekai.sagernet.ui.profile.ProfileSettingsActivity
-import io.nekohasekai.sagernet.proxy.PreferenceBinding
-import io.nekohasekai.sagernet.proxy.PreferenceBindingManager
-import io.nekohasekai.sagernet.proxy.Type
+import pkg.pkkstore.Key
+import pkg.pkkstore.R
+import pkg.pkkstore.database.preference.EditTextPreferenceModifiers
+import pkg.pkkstore.ktx.applyDefaultValues
+import pkg.pkkstore.ui.profile.ProfileSettingsActivity
+import pkg.pkkstore.proxy.PreferenceBinding
+import pkg.pkkstore.proxy.PreferenceBindingManager
+import pkg.pkkstore.proxy.Type
 
 class AnyTLSSettingsActivity : ProfileSettingsActivity<AnyTLSBean>() {
     override fun createEntity() = AnyTLSBean().applyDefaultValues()

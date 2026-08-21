@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui.profile
+package pkg.pkkstore.ui.profile
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -29,17 +29,17 @@ import androidx.preference.PreferenceFragmentCompat
 import com.github.shadowsocks.plugin.Empty
 import com.github.shadowsocks.plugin.fragment.AlertDialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.*
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.GroupManager
-import io.nekohasekai.sagernet.database.ProfileManager
-import io.nekohasekai.sagernet.database.SagerDatabase
-import io.nekohasekai.sagernet.database.preference.OnPreferenceDataStoreChangeListener
-import io.nekohasekai.sagernet.databinding.LayoutGroupItemBinding
-import io.nekohasekai.sagernet.fmt.AbstractBean
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.ui.ThemedActivity
-import io.nekohasekai.sagernet.widget.ListListener
+import pkg.pkkstore.*
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.GroupManager
+import pkg.pkkstore.database.ProfileManager
+import pkg.pkkstore.database.SagerDatabase
+import pkg.pkkstore.database.preference.OnPreferenceDataStoreChangeListener
+import pkg.pkkstore.databinding.LayoutGroupItemBinding
+import pkg.pkkstore.fmt.AbstractBean
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.ui.ThemedActivity
+import pkg.pkkstore.widget.ListListener
 import kotlinx.parcelize.Parcelize
 import kotlin.properties.Delegates
 

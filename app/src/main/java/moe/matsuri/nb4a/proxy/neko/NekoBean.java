@@ -8,9 +8,9 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
-import io.nekohasekai.sagernet.fmt.AbstractBean;
-import io.nekohasekai.sagernet.fmt.KryoConverters;
-import io.nekohasekai.sagernet.ktx.Logs;
+import pkg.pkkstore.fmt.AbstractBean;
+import pkg.pkkstore.fmt.KryoConverters;
+import pkg.pkkstore.ktx.Logs;
 
 public class NekoBean extends AbstractBean {
 

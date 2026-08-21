@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.naive;
+package pkg.pkkstore.fmt.naive;
 
 import androidx.annotation.NonNull;
 
@@ -7,8 +7,8 @@ import com.esotericsoftware.kryo.io.ByteBufferOutput;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.nekohasekai.sagernet.fmt.AbstractBean;
-import io.nekohasekai.sagernet.fmt.KryoConverters;
+import pkg.pkkstore.fmt.AbstractBean;
+import pkg.pkkstore.fmt.KryoConverters;
 
 public class NaiveBean extends AbstractBean {
 

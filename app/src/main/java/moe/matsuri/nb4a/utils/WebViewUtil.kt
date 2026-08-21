@@ -1,11 +1,11 @@
-package io.nekohasekai.sagernet.utils
+package pkg.pkkstore.utils
 
 import android.os.Build
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
-import io.nekohasekai.sagernet.ktx.Logs
+import pkg.pkkstore.ktx.Logs
 import java.io.ByteArrayInputStream
 import java.io.InputStream
 

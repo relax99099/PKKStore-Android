@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.utils
+package pkg.pkkstore.utils
 
 import java.util.*
 

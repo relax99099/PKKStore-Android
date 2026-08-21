@@ -1,10 +1,10 @@
-package io.nekohasekai.sagernet.fmt.v2ray;
+package pkg.pkkstore.fmt.v2ray;
 
 import com.esotericsoftware.kryo.io.ByteBufferInput;
 import com.esotericsoftware.kryo.io.ByteBufferOutput;
 
-import io.nekohasekai.sagernet.fmt.AbstractBean;
-import io.nekohasekai.sagernet.fmt.trojan.TrojanBean;
+import pkg.pkkstore.fmt.AbstractBean;
+import pkg.pkkstore.fmt.trojan.TrojanBean;
 import moe.matsuri.nb4a.utils.JavaUtil;
 
 public abstract class StandardV2RayBean extends AbstractBean {

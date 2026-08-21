@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.content.Intent
 import android.os.Build
@@ -9,14 +9,14 @@ import android.widget.EditText
 import androidx.core.app.ActivityCompat
 import androidx.preference.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.Key
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.database.DataStore
-import io.nekohasekai.sagernet.database.preference.EditTextPreferenceModifiers
-import io.nekohasekai.sagernet.ktx.*
-import io.nekohasekai.sagernet.utils.Theme
-import io.nekohasekai.sagernet.ui.*
+import pkg.pkkstore.Key
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.database.DataStore
+import pkg.pkkstore.database.preference.EditTextPreferenceModifiers
+import pkg.pkkstore.ktx.*
+import pkg.pkkstore.utils.Theme
+import pkg.pkkstore.ui.*
 
 class SettingsPreferenceFragment : PreferenceFragmentCompat() {
 

@@ -1,12 +1,12 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.content.Context
 import android.widget.TextView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.ktx.Logs
-import io.nekohasekai.sagernet.ktx.readableMessage
-import io.nekohasekai.sagernet.ktx.runOnMainDispatcher
+import pkg.pkkstore.R
+import pkg.pkkstore.ktx.Logs
+import pkg.pkkstore.ktx.readableMessage
+import pkg.pkkstore.ktx.runOnMainDispatcher
 
 object Dialogs {
     fun logExceptionAndShow(context: Context, e: Exception, callback: Runnable) {

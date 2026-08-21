@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt.gson;
+package pkg.pkkstore.fmt.gson;
 
 import androidx.room.TypeConverter;
 

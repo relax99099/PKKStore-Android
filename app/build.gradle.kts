@@ -27,7 +27,7 @@ android {
         viewBinding = true
         aidl = true
     }
-    namespace = "io.nekohasekai.sagernet"
+    namespace = "pkg.pkkstore"
     packaging {
         jniLibs {
             useLegacyPackaging = true

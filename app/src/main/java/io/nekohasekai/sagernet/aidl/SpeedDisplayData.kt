@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.aidl
+package pkg.pkkstore.aidl
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

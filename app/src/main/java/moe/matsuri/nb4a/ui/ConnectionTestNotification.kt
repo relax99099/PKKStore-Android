@@ -1,10 +1,10 @@
-package io.nekohasekai.sagernet.ui
+package pkg.pkkstore.ui
 
 import android.content.Context
 import androidx.core.app.NotificationCompat
-import io.nekohasekai.sagernet.R
-import io.nekohasekai.sagernet.SagerNet
-import io.nekohasekai.sagernet.ktx.Logs
+import pkg.pkkstore.R
+import pkg.pkkstore.SagerNet
+import pkg.pkkstore.ktx.Logs
 
 class ConnectionTestNotification(val context: Context, val title: String) {
     private val channelId = "connection-test"
