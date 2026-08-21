@@ -1,0 +1,74 @@
+name: Fix Corruption and Build
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fix Kotlin Syntax
+        run: |
+          cat << 'EOF' > fix_kt.py
+          import os
+          import re
+
+          def fix_file(path):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      content = f.read()
+                  
+                  original_content = content
+                  
+                  # Fix escaped single quotes in Kotlin/Java files
+                  # Replace \' with ' unless it's '\'' (which is a valid Char literal for single quote)
+                  # We use a negative lookahead/lookbehind to avoid matching '\''
+                  # But a simpler way is to replace all \' with ' and then fix back '\'' if needed.
+                  # Actually, in most cases in this project, \' is a corruption.
+                  
+                  # Replace \' with '
+                  content = content.replace("\\'", "'")
+                  
+                  # Fix back legitimate '\'' if they were broken
+                  content = content.replace("'''", "'\\''")
+                  
+                  if content != original_content:
+                      with open(path, "w", encoding="utf-8") as f:
+                          f.write(content)
+                      print(f"Fixed: {path}")
+              except Exception as e:
+                  print(f"Error fixing {path}: {e}")
+
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith(".kt") or file.endswith(".java"):
+                      fix_file(os.path.join(root, file))
+          EOF
+          python3 fix_kt.py
+          rm fix_kt.py
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Fix Kotlin syntax corruption (escaped single quotes)" || echo "No changes to commit"
+          git push origin main
+
+  trigger-build:
+    needs: fix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Build Workflow
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
+            -d '{"ref":"main"}'
