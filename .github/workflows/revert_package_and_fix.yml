@@ -12,62 +12,27 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
       - name: Revert Package and Fix Syntax
         run: |
-          python3 -c "
-          import os
-          import re
-
-          def fix_file(path):
-              with open(path, 'r', encoding='utf-8') as f:
-                  content = f.read()
-              
-              # Revert package names
-              content = content.replace('package pkg.pkkstore', 'package io.nekohasekai.sagernet')
-              content = content.replace('import pkg.pkkstore', 'import io.nekohasekai.sagernet')
-              
-              # Fix Commandline.kt syntax errors
-              if 'Commandline.kt' in path:
-                  # Fix the corrupted 'when' branch
-                  content = content.replace(\"' ', '\\\\', '\"', '\\'' ->\", \"' ', '\\\\\\\\', '\"', '\\\\'' ->\")
-                  content = content.replace(\"result.append('\\\\')  // intentionally no break\", \"result.append('\\\\\\\\')  // intentionally no break\")
-                  # Ensure the escape is correct
-                  content = re.sub(r\"' ', '\\\', '\"', '\\''\", \"' ', '\\\\\\\\', '\"', '\\\\''\", content)
-                  content = content.replace(\"result.append('\\\\')\", \"result.append('\\\\\\\\')\")
-              
-              # Fix NGUtil.kt syntax errors
-              if 'NGUtil.kt' in path:
-                  # Ensure it is '.' and not corrupted
-                  content = content.replace(\"split('\\\\'.')\", \"split('.')\")
-                  content = content.replace(\"split('.')\", \"split('.')\") # Just in case
-              
-              with open(path, 'w', encoding='utf-8') as f:
-                  f.write(content)
-
-          for root, dirs, files in os.walk('app/src/main/java'):
-              for file in files:
-                  if file.endswith('.kt') or file.endswith('.java'):
-                      fix_file(os.path.join(root, file))
+          # Revert package names in all .kt and .java files
+          find app/src/main/java -name "*.kt" -o -name "*.java" | xargs sed -i 's/package pkg.pkkstore/package io.nekohasekai.sagernet/g'
+          find app/src/main/java -name "*.kt" -o -name "*.java" | xargs sed -i 's/import pkg.pkkstore/import io.nekohasekai.sagernet/g'
           
-          # Also fix buildSrc if needed
-          for root, dirs, files in os.walk('buildSrc/src/main/kotlin'):
-              for file in files:
-                  if file.endswith('.kt'):
-                      fix_file(os.path.join(root, file))
-          "
-
-      - name: Fix Commandline.kt specifically
-        run: |
-          # Use a more direct approach for Commandline.kt
+          # Fix Commandline.kt syntax errors
           PATH_CL="app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt"
           if [ -f "$PATH_CL" ]; then
+            # Fix the corrupted line 45
+            # The corrupted line looks like: ' ', '\', '"', '\'' ->
+            # It should be: ' ', '\\', '"', '\'' ->
             sed -i "s/' ', '\\\\', '\"', '\\\\''/' ', '\\\\\\\\', '\"', '\\\\''/g" "$PATH_CL"
+            # Fix result.append('\') to result.append('\\')
             sed -i "s/result.append('\\\\')/result.append('\\\\\\\\')/g" "$PATH_CL"
+          fi
+          
+          # Fix NGUtil.kt syntax errors
+          PATH_NG="app/src/main/java/io/nekohasekai/sagernet/utils/NGUtil.kt"
+          if [ -f "$PATH_NG" ]; then
+            sed -i "s/split('\\\\'.')/split('.')/g" "$PATH_NG"
           fi
 
       - name: Commit and Push
@@ -75,13 +40,13 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          git commit -m \"Revert internal package names to fix build and KSP issues\" || echo \"No changes to commit\"
+          git commit -m "Revert internal package names and fix Kotlin syntax" || echo "No changes to commit"
           git push
       
       - name: Trigger Build
         run: |
           curl -X POST \
-            -H \"Authorization: token ${{ secrets.GITHUB_TOKEN }}\" \
-            -H \"Accept: application/vnd.github.v3+json\" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
-            -d '{\"ref\":\"main\"}'
+            -d '{"ref":"main"}'
