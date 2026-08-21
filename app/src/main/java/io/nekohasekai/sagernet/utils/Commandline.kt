@@ -22,7 +22,7 @@ import java.util.*
  *
  * Based on: https://github.com/apache/ant/blob/588ce1f/src/main/org/apache/tools/ant/types/Commandline.java
  *
- * Adds support for escape character ''.
+ * Adds support for escape character '\'.
  */
 object Commandline {
 
@@ -80,7 +80,7 @@ object Commandline {
         val inQuote = 1
         val inDoubleQuote = 2
         var state = normal
-        val tok = StringTokenizer(toProcess, "\\\"' ", true)
+        val tok = StringTokenizer(toProcess, "\\\"\' ", true)
         val result = ArrayList<String>()
         val current = StringBuilder()
         var lastTokenHasBeenQuoted = false
@@ -89,7 +89,7 @@ object Commandline {
         while (tok.hasMoreTokens()) {
             val nextTok = tok.nextToken()
             when (state) {
-                inQuote -> if ("'" == nextTok) {
+                inQuote -> if ("\'" == nextTok) {
                     lastTokenHasBeenQuoted = true
                     state = normal
                 } else current.append(nextTok)
@@ -120,7 +120,7 @@ object Commandline {
                             lastTokenIsSlash = false
                         }
                         "\\" == nextTok -> lastTokenIsSlash = true
-                        "'" == nextTok -> state = inQuote
+                        "\'" == nextTok -> state = inQuote
                         "\"" == nextTok -> state = inDoubleQuote
                         " " == nextTok -> if (lastTokenHasBeenQuoted || current.isNotEmpty()) {
                             result.add(current.toString())

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.utils
+package moe.matsuri.nb4a.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager

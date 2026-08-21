@@ -260,7 +260,7 @@
 <string name="mtrl_checkbox_state_description_checked">Флажок установлен.</string>
 <string name="mtrl_checkbox_state_description_indeterminate">Флажки установлены частично.</string>
 <string name="mtrl_checkbox_state_description_unchecked">Флажок не установлен.</string>
-<string name="mtrl_chip_close_icon_content_description">Удалить "%1$s"</string>
+<string name="mtrl_chip_close_icon_content_description">Удалить \"%1$s\"</string>
 <string name="mtrl_exceed_max_badge_number_content_description">Новых уведомлений больше %1$d</string>
 <string name="mtrl_picker_a11y_next_month">Перейти к следующему месяцу</string>
 <string name="mtrl_picker_a11y_prev_month">Перейти к предыдущему месяцу</string>
@@ -322,7 +322,7 @@
 <string name="port_proxy">Порт прокси SOCKS5</string>
 <string name="port_transproxy">Транспрокси-порт</string>
 <string name="prefer">Предпочитать</string>
-<string name="preference_copied">Текст "%1$s" скопирован в буфер обмена</string>
+<string name="preference_copied">Текст \"%1$s\" скопирован в буфер обмена</string>
 <string name="preview_version_hint">Это приложение является предварительной версией и может содержать множество проблем. Если вы не хотите тестировать его, скачайте релизную версию с GitHub!</string>
 <string name="profile_config">Конфигурация профиля</string>
 <string name="profile_empty">Пожалуйста, выберите профиль</string>

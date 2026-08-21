@@ -100,7 +100,7 @@
     <string name="security_settings">اعدادات الامان</string>
     <string name="show_direct_speed_sum">أظهر سرعة المرور بدون وكيل في الإشعار أيضًا</string>
     <string name="show_direct_speed">عرض السرعة المباشرة</string>
-    <string name="show_stop_sum">إذا كنت لا تريد استخدام \\"اللوحة السريعة\\" كمفتاح التبديل</string>
+    <string name="show_stop_sum">إذا كنت لا تريد استخدام \\\"اللوحة السريعة\\\" كمفتاح التبديل</string>
     <string name="allow_access_sum">ربط خوادم الإدخال إلى 0.0.0.0</string>
     <string name="show_stop">إظهار زر الإيقاف</string>
     <string name="cag_misc">إعدادات متنوعة</string>

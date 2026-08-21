@@ -12,13 +12,13 @@ import io.nekohasekai.sagernet.plugin.PluginManager.loadString
 import io.nekohasekai.sagernet.utils.PackageCache
 
 object Plugins {
-    const val AUTHORITIES_PREFIX_SEKAI_EXE = "pkg.pkkstore.plugin."
+    const val AUTHORITIES_PREFIX_SEKAI_EXE = "moe.matsuri.nb4a.plugin."
     const val AUTHORITIES_PREFIX_NEKO_EXE = "moe.matsuri.exe."
 
-    const val ACTION_NATIVE_PLUGIN = "pkg.pkkstore.plugin.ACTION_NATIVE_PLUGIN"
+    const val ACTION_NATIVE_PLUGIN = "moe.matsuri.nb4a.plugin.ACTION_NATIVE_PLUGIN"
 
-    const val METADATA_KEY_ID = "pkg.pkkstore.plugin.id"
-    const val METADATA_KEY_EXECUTABLE_PATH = "pkg.pkkstore.plugin.executable_path"
+    const val METADATA_KEY_ID = "moe.matsuri.nb4a.plugin.id"
+    const val METADATA_KEY_EXECUTABLE_PATH = "moe.matsuri.nb4a.plugin.executable_path"
 
     fun isExe(pkg: PackageInfo): Boolean {
         if (pkg.providers?.isEmpty() == true) return false
@@ -107,7 +107,7 @@ object Plugins {
                 flags or PackageManager.MATCH_DIRECT_BOOT_UNAWARE or PackageManager.MATCH_DIRECT_BOOT_AWARE
         }
         val list1 = SagerNet.application.packageManager.queryIntentContentProviders(
-            Intent(ACTION_NATIVE_PLUGIN, buildUri(pluginId, "pkg.pkkstore")), flags
+            Intent(ACTION_NATIVE_PLUGIN, buildUri(pluginId, "moe.matsuri.nb4a")), flags
         )
         val list2 = SagerNet.application.packageManager.queryIntentContentProviders(
             Intent(ACTION_NATIVE_PLUGIN, buildUri(pluginId, "moe.matsuri.lite")), flags

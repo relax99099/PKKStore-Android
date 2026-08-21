@@ -20,10 +20,10 @@ import io.nekohasekai.sagernet.fmt.v2ray.setTLS
 import io.nekohasekai.sagernet.fmt.wireguard.WireGuardBean
 import io.nekohasekai.sagernet.ktx.*
 import libcore.Libcore
-import io.nekohasekai.sagernet.Protocols
-import io.nekohasekai.sagernet.proxy.anytls.AnyTLSBean
-import io.nekohasekai.sagernet.proxy.config.ConfigBean
-import io.nekohasekai.sagernet.utils.Util
+import moe.matsuri.nb4a.Protocols
+import moe.matsuri.nb4a.proxy.anytls.AnyTLSBean
+import moe.matsuri.nb4a.proxy.config.ConfigBean
+import moe.matsuri.nb4a.utils.Util
 import org.ini4j.Ini
 import org.json.JSONArray
 import org.json.JSONObject
@@ -69,12 +69,8 @@ object RawUpdater : GroupUpdater() {
                 setURL(subscription.link)
                 setUserAgent(subscription.customUserAgent.takeIf { it.isNotBlank() } ?: USER_AGENT)
             }.execute()
-            val responseBody = Util.getStringBox(response.contentString)
-            proxies = parseRaw(responseBody)
+            proxies = parseRaw(Util.getStringBox(response.contentString))
                 ?: error(app.getString(R.string.no_proxies_found))
-            
-            // Log if we found any proxies to ensure parsing is working
-            println("Found ${proxies.size} proxies in subscription")
 
             subscription.subscriptionUserinfo =
                 Util.getStringBox(response.getHeader("Subscription-Userinfo"))

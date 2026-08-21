@@ -26,8 +26,8 @@ import kotlin.math.roundToInt
 class QRCodeDialog() : DialogFragment() {
 
     companion object {
-        private const val KEY_URL = "pkg.pkkstore.QRCodeDialog.KEY_URL"
-        private const val KEY_NAME = "pkg.pkkstore.QRCodeDialog.KEY_NAME"
+        private const val KEY_URL = "io.nekohasekai.sagernet.QRCodeDialog.KEY_URL"
+        private const val KEY_NAME = "io.nekohasekai.sagernet.QRCodeDialog.KEY_NAME"
         private val iso88591 = StandardCharsets.ISO_8859_1.newEncoder()
     }
 

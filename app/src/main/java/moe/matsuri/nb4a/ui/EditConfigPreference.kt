@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.ui
+package moe.matsuri.nb4a.ui
 
 import android.content.Context
 import android.content.Intent

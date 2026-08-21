@@ -17,7 +17,7 @@ import io.nekohasekai.sagernet.fmt.naive.NaiveBean
 import io.nekohasekai.sagernet.fmt.naive.buildNaiveConfig
 import io.nekohasekai.sagernet.fmt.naive.toUri
 import io.nekohasekai.sagernet.fmt.shadowsocks.*
-import io.nekohasekai.sagernet.proxy.shadowtls.ShadowTLSBean
+import moe.matsuri.nb4a.proxy.shadowtls.ShadowTLSBean
 import io.nekohasekai.sagernet.fmt.socks.SOCKSBean
 import io.nekohasekai.sagernet.fmt.socks.toUri
 import io.nekohasekai.sagernet.fmt.ssh.SSHBean
@@ -31,14 +31,14 @@ import io.nekohasekai.sagernet.fmt.v2ray.*
 import io.nekohasekai.sagernet.fmt.wireguard.WireGuardBean
 import io.nekohasekai.sagernet.ktx.app
 import io.nekohasekai.sagernet.ui.profile.*
-import io.nekohasekai.sagernet.SingBoxOptions.MultiplexOptions
-import io.nekohasekai.sagernet.proxy.anytls.AnyTLSBean
-import io.nekohasekai.sagernet.proxy.anytls.AnyTLSSettingsActivity
-import io.nekohasekai.sagernet.proxy.anytls.toUri
-import io.nekohasekai.sagernet.proxy.config.ConfigBean
-import io.nekohasekai.sagernet.proxy.config.ConfigSettingActivity
-import io.nekohasekai.sagernet.proxy.neko.*
-import io.nekohasekai.sagernet.proxy.shadowtls.ShadowTLSSettingsActivity
+import moe.matsuri.nb4a.SingBoxOptions.MultiplexOptions
+import moe.matsuri.nb4a.proxy.anytls.AnyTLSBean
+import moe.matsuri.nb4a.proxy.anytls.AnyTLSSettingsActivity
+import moe.matsuri.nb4a.proxy.anytls.toUri
+import moe.matsuri.nb4a.proxy.config.ConfigBean
+import moe.matsuri.nb4a.proxy.config.ConfigSettingActivity
+import moe.matsuri.nb4a.proxy.neko.*
+import moe.matsuri.nb4a.proxy.shadowtls.ShadowTLSSettingsActivity
 
 @Entity(
     tableName = "proxy_entities", indices = [Index("groupId", name = "groupId")]

@@ -12,7 +12,7 @@ enum class PluginEntry(
     TrojanGo(
         "trojan-go-plugin",
         SagerNet.application.getString(R.string.action_trojan_go),
-        "pkg.pkkstore.plugin.trojan_go"
+        "io.nekohasekai.sagernet.plugin.trojan_go"
     ),
     MieruProxy(
         "mieru-plugin",
