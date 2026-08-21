@@ -23,21 +23,12 @@ jobs:
           import os
           import subprocess
           import re
-          import urllib.request
+          import shutil
 
-          print('Restoring proxy and utils directories from git HEAD / upstream...')
-          subprocess.run(['git', 'checkout', 'app/src/main/java/moe/matsuri/nb4a/proxy/'], check=False)
-          subprocess.run(['git', 'checkout', 'app/src/main/java/pkg/pkkstore/proxy/'], check=False)
-          subprocess.run(['git', 'checkout', 'app/src/main/res/'], check=False)
-
-          def download_upstream(path):
-              url = f'https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/master/{path}'
-              try:
-                  with urllib.request.urlopen(url) as response:
-                      return response.read().decode('utf-8')
-              except Exception as e:
-                  print(f'Error downloading {path}: {e}')
-                  return None
+          print('Removing incompatible shadowtls directory...')
+          shadowtls_dir = 'app/src/main/java/moe/matsuri/nb4a/proxy/shadowtls'
+          if os.path.exists(shadowtls_dir):
+              shutil.rmtree(shadowtls_dir)
 
           # 1. Rebrand strings.xml across all values-* directories
           res_dir = 'app/src/main/res'
@@ -52,7 +43,6 @@ jobs:
                           content = content.replace('NekoBox', 'PKKStore').replace('Matsuri', 'PKKStore')
                           content = re.sub(r'<string name=\"app_name\" translatable=\"false\">.*?</string>', 
                                          '<string name=\"app_name\" translatable=\"false\">PKKStore</string>', content)
-                          # Sanitize unescaped single quotes
                           content = re.sub(r\"(?<!\\\\)'\", \"\\\\'\", content)
 
                           with open(filepath, 'w', encoding='utf-8') as f:
@@ -105,7 +95,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Restore pristine proxy modules and apply clean PKKStore rebranding" || echo "No changes to commit"
+          git commit -m "Remove incompatible shadowtls and apply clean PKKStore rebranding" || echo "No changes to commit"
           git push origin main
 
       - name: Trigger Build
