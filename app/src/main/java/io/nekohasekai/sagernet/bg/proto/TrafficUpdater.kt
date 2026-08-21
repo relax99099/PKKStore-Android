@@ -1,4 +1,4 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
 class TrafficUpdater(
     private val box: libcore.BoxInstance,

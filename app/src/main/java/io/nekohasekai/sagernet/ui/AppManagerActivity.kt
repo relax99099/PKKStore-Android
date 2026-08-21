@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -27,24 +27,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
-import pkg.pkkstore.BuildConfig
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.databinding.LayoutAppsBinding
-import pkg.pkkstore.databinding.LayoutAppsItemBinding
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.crossFadeFrom
-import pkg.pkkstore.ktx.onMainDispatcher
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
-import pkg.pkkstore.utils.PackageCache
-import pkg.pkkstore.widget.ListListener
+import io.nekohasekai.sagernet.BuildConfig
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.databinding.LayoutAppsBinding
+import io.nekohasekai.sagernet.databinding.LayoutAppsItemBinding
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.crossFadeFrom
+import io.nekohasekai.sagernet.ktx.onMainDispatcher
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.utils.PackageCache
+import io.nekohasekai.sagernet.widget.ListListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.withContext
-import pkg.pkkstore.utils.NGUtil
+import io.nekohasekai.sagernet.utils.NGUtil
 import kotlin.coroutines.coroutineContext
 
 class AppManagerActivity : ThemedActivity() {

@@ -1,4 +1,4 @@
-package pkg.pkkstore.database
+package io.nekohasekai.sagernet.database
 
 import androidx.room.AutoMigration
 import androidx.room.Database
@@ -6,10 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import dev.matrix.roomigrant.GenerateRoomMigrations
-import pkg.pkkstore.Key
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.fmt.KryoConverters
-import pkg.pkkstore.fmt.gson.GsonConverters
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.fmt.KryoConverters
+import io.nekohasekai.sagernet.fmt.gson.GsonConverters
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

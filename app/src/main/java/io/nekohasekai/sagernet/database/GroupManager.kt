@@ -1,8 +1,8 @@
-package pkg.pkkstore.database
+package io.nekohasekai.sagernet.database
 
-import pkg.pkkstore.GroupType
-import pkg.pkkstore.bg.SubscriptionUpdater
-import pkg.pkkstore.ktx.applyDefaultValues
+import io.nekohasekai.sagernet.GroupType
+import io.nekohasekai.sagernet.bg.SubscriptionUpdater
+import io.nekohasekai.sagernet.ktx.applyDefaultValues
 
 object GroupManager {
 

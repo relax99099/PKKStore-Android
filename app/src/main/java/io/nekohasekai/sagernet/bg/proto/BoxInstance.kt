@@ -1,27 +1,27 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
 import android.os.SystemClock
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.bg.AbstractInstance
-import pkg.pkkstore.bg.GuardedProcessPool
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProxyEntity
-import pkg.pkkstore.fmt.ConfigBuildResult
-import pkg.pkkstore.fmt.buildConfig
-import pkg.pkkstore.fmt.hysteria.HysteriaBean
-import pkg.pkkstore.fmt.hysteria.buildHysteria1Config
-import pkg.pkkstore.fmt.mieru.MieruBean
-import pkg.pkkstore.fmt.mieru.buildMieruConfig
-import pkg.pkkstore.fmt.naive.NaiveBean
-import pkg.pkkstore.fmt.naive.buildNaiveConfig
-import pkg.pkkstore.fmt.trojan_go.TrojanGoBean
-import pkg.pkkstore.fmt.trojan_go.buildTrojanGoConfig
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.plugin.PluginManager
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.bg.AbstractInstance
+import io.nekohasekai.sagernet.bg.GuardedProcessPool
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProxyEntity
+import io.nekohasekai.sagernet.fmt.ConfigBuildResult
+import io.nekohasekai.sagernet.fmt.buildConfig
+import io.nekohasekai.sagernet.fmt.hysteria.HysteriaBean
+import io.nekohasekai.sagernet.fmt.hysteria.buildHysteria1Config
+import io.nekohasekai.sagernet.fmt.mieru.MieruBean
+import io.nekohasekai.sagernet.fmt.mieru.buildMieruConfig
+import io.nekohasekai.sagernet.fmt.naive.NaiveBean
+import io.nekohasekai.sagernet.fmt.naive.buildNaiveConfig
+import io.nekohasekai.sagernet.fmt.trojan_go.TrojanGoBean
+import io.nekohasekai.sagernet.fmt.trojan_go.buildTrojanGoConfig
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.plugin.PluginManager
 import kotlinx.coroutines.*
 import libcore.BoxInstance
 import libcore.Libcore
-import pkg.pkkstore.net.LocalResolverImpl
+import io.nekohasekai.sagernet.net.LocalResolverImpl
 import java.io.File
 
 abstract class BoxInstance(

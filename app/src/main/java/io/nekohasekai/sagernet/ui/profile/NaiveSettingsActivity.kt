@@ -1,13 +1,13 @@
-package pkg.pkkstore.ui.profile
+package io.nekohasekai.sagernet.ui.profile
 
 import android.os.Bundle
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
-import pkg.pkkstore.Key
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.preference.EditTextPreferenceModifiers
-import pkg.pkkstore.fmt.naive.NaiveBean
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.preference.EditTextPreferenceModifiers
+import io.nekohasekai.sagernet.fmt.naive.NaiveBean
 
 class NaiveSettingsActivity : ProfileSettingsActivity<NaiveBean>() {
 

@@ -1,10 +1,10 @@
-package pkg.pkkstore.bg
+package io.nekohasekai.sagernet.bg
 
 import android.annotation.SuppressLint
 import android.app.Service
 import android.content.Intent
 import android.os.PowerManager
-import pkg.pkkstore.SagerNet
+import io.nekohasekai.sagernet.SagerNet
 
 class ProxyService : Service(), BaseService.Interface {
     override val data = BaseService.Data(this)

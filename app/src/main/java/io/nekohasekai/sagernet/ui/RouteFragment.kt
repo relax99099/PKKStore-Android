@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,16 +10,16 @@ import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProfileManager
-import pkg.pkkstore.database.RuleEntity
-import pkg.pkkstore.database.SagerDatabase
-import pkg.pkkstore.databinding.LayoutEmptyRouteBinding
-import pkg.pkkstore.databinding.LayoutRouteItemBinding
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.widget.ListListener
-import pkg.pkkstore.widget.UndoSnackbarManager
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProfileManager
+import io.nekohasekai.sagernet.database.RuleEntity
+import io.nekohasekai.sagernet.database.SagerDatabase
+import io.nekohasekai.sagernet.databinding.LayoutEmptyRouteBinding
+import io.nekohasekai.sagernet.databinding.LayoutRouteItemBinding
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.widget.ListListener
+import io.nekohasekai.sagernet.widget.UndoSnackbarManager
 
 class RouteFragment : ToolbarFragment(R.layout.layout_route), Toolbar.OnMenuItemClickListener {
 

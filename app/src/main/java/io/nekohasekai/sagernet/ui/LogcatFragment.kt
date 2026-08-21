@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -13,12 +13,12 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.doOnLayout
-import pkg.pkkstore.R
-import pkg.pkkstore.databinding.LayoutLogcatBinding
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.widget.ListListener
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.databinding.LayoutLogcatBinding
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.widget.ListListener
 import libcore.Libcore
-import pkg.pkkstore.utils.SendLog
+import io.nekohasekai.sagernet.utils.SendLog
 
 class LogcatFragment : ToolbarFragment(R.layout.layout_logcat),
     Toolbar.OnMenuItemClickListener {

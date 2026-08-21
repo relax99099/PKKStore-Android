@@ -1,14 +1,14 @@
-package pkg.pkkstore.fmt.v2ray
+package io.nekohasekai.sagernet.fmt.v2ray
 
 import android.text.TextUtils
 import com.google.gson.Gson
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.fmt.http.HttpBean
-import pkg.pkkstore.fmt.trojan.TrojanBean
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.SingBoxOptions.*
-import pkg.pkkstore.utils.NGUtil
-import pkg.pkkstore.utils.listByLineOrComma
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.fmt.http.HttpBean
+import io.nekohasekai.sagernet.fmt.trojan.TrojanBean
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.SingBoxOptions.*
+import io.nekohasekai.sagernet.utils.NGUtil
+import io.nekohasekai.sagernet.utils.listByLineOrComma
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import org.json.JSONObject

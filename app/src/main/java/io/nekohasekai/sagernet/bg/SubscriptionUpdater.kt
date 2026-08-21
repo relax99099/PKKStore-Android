@@ -1,4 +1,4 @@
-package pkg.pkkstore.bg
+package io.nekohasekai.sagernet.bg
 
 import android.content.Context
 import androidx.core.app.NotificationCompat
@@ -8,12 +8,12 @@ import androidx.work.ExistingPeriodicWorkPolicy.UPDATE
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkerParameters
 import androidx.work.multiprocess.RemoteWorkManager
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.SagerDatabase
-import pkg.pkkstore.group.GroupUpdater
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.app
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.SagerDatabase
+import io.nekohasekai.sagernet.group.GroupUpdater
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.app
 import java.util.concurrent.TimeUnit
 
 object SubscriptionUpdater {

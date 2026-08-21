@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Context
 import android.util.AttributeSet

@@ -1,4 +1,4 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import java.util.*
 
@@ -42,8 +42,8 @@ object Commandline {
             if (result.isNotEmpty()) result.append(' ')
             arg.indices.map { arg[it] }.forEach {
                 when (it) {
-                    ' ', '\', '"', '\'' -> {
-                        result.append('\')  // intentionally no break
+                    ' ', '\\', '"', '\'' -> {
+                        result.append('\\')  // intentionally no break
                         result.append(it)
                     }
                     else -> result.append(it)

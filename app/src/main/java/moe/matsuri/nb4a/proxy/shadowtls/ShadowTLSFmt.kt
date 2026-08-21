@@ -1,7 +1,7 @@
-package pkg.pkkstore.proxy.shadowtls
+package io.nekohasekai.sagernet.proxy.shadowtls
 
-import pkg.pkkstore.fmt.v2ray.buildSingBoxOutboundTLS
-import pkg.pkkstore.SingBoxOptions
+import io.nekohasekai.sagernet.fmt.v2ray.buildSingBoxOutboundTLS
+import io.nekohasekai.sagernet.SingBoxOptions
 
 fun buildSingBoxOutboundShadowTLSBean(bean: ShadowTLSBean): SingBoxOptions.Outbound_ShadowTLSOptions {
     return SingBoxOptions.Outbound_ShadowTLSOptions().apply {

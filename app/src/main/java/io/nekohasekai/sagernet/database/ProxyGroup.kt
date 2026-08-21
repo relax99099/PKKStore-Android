@@ -1,14 +1,14 @@
-package pkg.pkkstore.database
+package io.nekohasekai.sagernet.database
 
 import androidx.room.*
 import com.esotericsoftware.kryo.io.ByteBufferInput
 import com.esotericsoftware.kryo.io.ByteBufferOutput
-import pkg.pkkstore.GroupOrder
-import pkg.pkkstore.GroupType
-import pkg.pkkstore.R
-import pkg.pkkstore.fmt.Serializable
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.applyDefaultValues
+import io.nekohasekai.sagernet.GroupOrder
+import io.nekohasekai.sagernet.GroupType
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.fmt.Serializable
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.applyDefaultValues
 
 @Entity(tableName = "proxy_groups")
 data class ProxyGroup(

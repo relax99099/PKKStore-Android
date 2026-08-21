@@ -1,4 +1,4 @@
-package pkg.pkkstore.widget
+package io.nekohasekai.sagernet.widget
 
 import android.content.Context
 import android.util.AttributeSet

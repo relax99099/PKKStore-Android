@@ -1,4 +1,4 @@
-package pkg.pkkstore.bg
+package io.nekohasekai.sagernet.bg
 
 import java.io.Closeable
 

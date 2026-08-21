@@ -1,8 +1,8 @@
-package pkg.pkkstore.fmt
+package io.nekohasekai.sagernet.fmt
 
-import pkg.pkkstore.database.ProxyEntity
-import pkg.pkkstore.database.ProxyGroup
-import pkg.pkkstore.utils.Util
+import io.nekohasekai.sagernet.database.ProxyEntity
+import io.nekohasekai.sagernet.database.ProxyGroup
+import io.nekohasekai.sagernet.utils.Util
 
 fun parseUniversal(link: String): AbstractBean {
     return if (link.contains("?")) {

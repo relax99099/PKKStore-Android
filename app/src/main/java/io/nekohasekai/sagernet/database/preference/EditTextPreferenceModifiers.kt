@@ -1,4 +1,4 @@
-package pkg.pkkstore.database.preference
+package io.nekohasekai.sagernet.database.preference
 
 import android.graphics.Typeface
 import android.text.InputFilter

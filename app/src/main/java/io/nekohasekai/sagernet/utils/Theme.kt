@@ -1,11 +1,11 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.app
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.app
 
 object Theme {
 

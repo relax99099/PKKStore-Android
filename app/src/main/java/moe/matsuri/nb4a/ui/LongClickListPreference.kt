@@ -1,11 +1,11 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceViewHolder
-import pkg.pkkstore.R
+import io.nekohasekai.sagernet.R
 
 class LongClickListPreference
 @JvmOverloads constructor(

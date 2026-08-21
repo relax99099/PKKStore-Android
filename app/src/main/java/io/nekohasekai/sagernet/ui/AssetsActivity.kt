@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.os.Bundle
 import android.provider.OpenableColumns
@@ -11,14 +11,14 @@ import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.databinding.LayoutAssetItemBinding
-import pkg.pkkstore.databinding.LayoutAssetsBinding
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.widget.UndoSnackbarManager
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.databinding.LayoutAssetItemBinding
+import io.nekohasekai.sagernet.databinding.LayoutAssetsBinding
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.widget.UndoSnackbarManager
 import libcore.Libcore
-import pkg.pkkstore.utils.Util
+import io.nekohasekai.sagernet.utils.Util
 import org.json.JSONObject
 import java.io.File
 import java.io.FileWriter

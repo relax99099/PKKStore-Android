@@ -1,14 +1,14 @@
-package pkg.pkkstore.proxy.config
+package io.nekohasekai.sagernet.proxy.config
 
 import android.os.Bundle
 import androidx.preference.PreferenceDataStore
 import androidx.preference.PreferenceFragmentCompat
-import pkg.pkkstore.Key
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.preference.OnPreferenceDataStoreChangeListener
-import pkg.pkkstore.ui.profile.ProfileSettingsActivity
-import pkg.pkkstore.ui.EditConfigPreference
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.preference.OnPreferenceDataStoreChangeListener
+import io.nekohasekai.sagernet.ui.profile.ProfileSettingsActivity
+import io.nekohasekai.sagernet.ui.EditConfigPreference
 
 class ConfigSettingActivity :
     ProfileSettingsActivity<ConfigBean>(),

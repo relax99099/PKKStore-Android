@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.Manifest
 import android.content.Intent
@@ -20,12 +20,12 @@ import com.king.zxing.analyze.QRCodeAnalyzer
 import com.king.zxing.util.CodeUtils
 import com.king.zxing.util.LogUtils
 import com.king.zxing.util.PermissionUtils
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProfileManager
-import pkg.pkkstore.databinding.LayoutScannerBinding
-import pkg.pkkstore.group.RawUpdater
-import pkg.pkkstore.ktx.*
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProfileManager
+import io.nekohasekai.sagernet.databinding.LayoutScannerBinding
+import io.nekohasekai.sagernet.group.RawUpdater
+import io.nekohasekai.sagernet.ktx.*
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
 

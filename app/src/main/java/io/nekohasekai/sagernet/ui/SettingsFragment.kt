@@ -1,10 +1,10 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.ViewCompat
-import pkg.pkkstore.R
-import pkg.pkkstore.widget.ListListener
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.widget.ListListener
 
 class SettingsFragment : ToolbarFragment(R.layout.layout_config_settings) {
 

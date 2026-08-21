@@ -1,4 +1,4 @@
-package pkg.pkkstore.widget
+package io.nekohasekai.sagernet.widget
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -16,10 +16,10 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
-import pkg.pkkstore.R
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.readableMessage
-import pkg.pkkstore.ui.MainActivity
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.readableMessage
+import io.nekohasekai.sagernet.ui.MainActivity
 import java.nio.charset.StandardCharsets
 import kotlin.math.roundToInt
 

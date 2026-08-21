@@ -1,9 +1,9 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Intent
 import android.os.Bundle
-import pkg.pkkstore.R
-import pkg.pkkstore.database.ProxyEntity
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.ProxyEntity
 
 class ProfileSelectActivity : ThemedActivity(R.layout.layout_empty),
     ConfigurationFragment.SelectCallback {

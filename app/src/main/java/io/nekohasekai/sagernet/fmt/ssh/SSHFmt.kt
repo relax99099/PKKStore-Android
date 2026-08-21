@@ -1,7 +1,7 @@
-package pkg.pkkstore.fmt.ssh
+package io.nekohasekai.sagernet.fmt.ssh
 
-import pkg.pkkstore.SingBoxOptions
-import pkg.pkkstore.utils.listByLineOrComma
+import io.nekohasekai.sagernet.SingBoxOptions
+import io.nekohasekai.sagernet.utils.listByLineOrComma
 
 fun buildSingBoxOutboundSSHBean(bean: SSHBean): SingBoxOptions.Outbound_SSHOptions {
     return SingBoxOptions.Outbound_SSHOptions().apply {

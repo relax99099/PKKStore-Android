@@ -1,12 +1,12 @@
-package pkg.pkkstore.plugin
+package io.nekohasekai.sagernet.plugin
 
 import android.content.pm.ComponentInfo
 import android.content.pm.ProviderInfo
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.bg.BaseService
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.plugin.Plugins
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.bg.BaseService
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.plugin.Plugins
 import java.io.File
 import java.io.FileNotFoundException
 

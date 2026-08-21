@@ -1,4 +1,4 @@
-package pkg.pkkstore
+package io.nekohasekai.sagernet
 
 const val CONNECTION_TEST_URL = "http://cp.cloudflare.com/"
 

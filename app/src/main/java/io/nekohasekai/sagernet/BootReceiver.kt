@@ -1,4 +1,4 @@
-package pkg.pkkstore
+package io.nekohasekai.sagernet
 
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -6,10 +6,10 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
-import pkg.pkkstore.bg.SubscriptionUpdater
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.bg.SubscriptionUpdater
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 
 class BootReceiver : BroadcastReceiver() {
     companion object {

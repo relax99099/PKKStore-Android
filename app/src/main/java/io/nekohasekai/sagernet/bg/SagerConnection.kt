@@ -1,4 +1,4 @@
-package pkg.pkkstore.bg
+package io.nekohasekai.sagernet.bg
 
 import android.content.ComponentName
 import android.content.Context
@@ -6,14 +6,14 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
 import android.os.RemoteException
-import pkg.pkkstore.Action
-import pkg.pkkstore.Key
-import pkg.pkkstore.aidl.ISagerNetService
-import pkg.pkkstore.aidl.ISagerNetServiceCallback
-import pkg.pkkstore.aidl.SpeedDisplayData
-import pkg.pkkstore.aidl.TrafficData
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.runOnMainDispatcher
+import io.nekohasekai.sagernet.Action
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.aidl.ISagerNetService
+import io.nekohasekai.sagernet.aidl.ISagerNetServiceCallback
+import io.nekohasekai.sagernet.aidl.SpeedDisplayData
+import io.nekohasekai.sagernet.aidl.TrafficData
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.runOnMainDispatcher
 
 class SagerConnection(
     private var connectionId: Int,

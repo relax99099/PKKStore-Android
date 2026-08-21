@@ -1,4 +1,4 @@
-package pkg.pkkstore.ktx
+package io.nekohasekai.sagernet.ktx
 
 import android.content.res.Resources
 import kotlin.math.ceil

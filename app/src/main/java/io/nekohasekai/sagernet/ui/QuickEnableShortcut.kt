@@ -18,17 +18,17 @@
  *                                                                             *
  *******************************************************************************/
 
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.app.Activity
 import android.content.pm.ShortcutManager
 import android.os.Build
 import android.os.Bundle
 import androidx.core.content.getSystemService
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.aidl.ISagerNetService
-import pkg.pkkstore.bg.BaseService
-import pkg.pkkstore.bg.SagerConnection
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.aidl.ISagerNetService
+import io.nekohasekai.sagernet.bg.BaseService
+import io.nekohasekai.sagernet.bg.SagerConnection
 
 class QuickEnableShortcut : Activity(), SagerConnection.Callback {
     private val connection = SagerConnection(SagerConnection.CONNECTION_ID_SHORTCUT)

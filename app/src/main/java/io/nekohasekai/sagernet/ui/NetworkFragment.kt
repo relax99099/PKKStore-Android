@@ -1,11 +1,11 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import pkg.pkkstore.R
-import pkg.pkkstore.databinding.LayoutNetworkBinding
-import pkg.pkkstore.ktx.app
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.databinding.LayoutNetworkBinding
+import io.nekohasekai.sagernet.ktx.app
 
 class NetworkFragment : NamedFragment(R.layout.layout_network) {
 

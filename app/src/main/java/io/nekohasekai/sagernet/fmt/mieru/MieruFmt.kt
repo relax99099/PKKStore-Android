@@ -16,9 +16,9 @@
  *                                                                            *
  ******************************************************************************/
 
-package pkg.pkkstore.fmt.mieru
+package io.nekohasekai.sagernet.fmt.mieru
 
-import pkg.pkkstore.ktx.toStringPretty
+import io.nekohasekai.sagernet.ktx.toStringPretty
 import org.json.JSONArray
 import org.json.JSONObject
 

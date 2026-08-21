@@ -1,8 +1,8 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import pkg.pkkstore.utils.SendLog
+import io.nekohasekai.sagernet.utils.SendLog
 
 class BlankActivity : AppCompatActivity() {
 

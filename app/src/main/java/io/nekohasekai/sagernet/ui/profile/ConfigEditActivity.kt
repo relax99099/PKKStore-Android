@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui.profile
+package io.nekohasekai.sagernet.ui.profile
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -17,16 +17,16 @@ import com.blacksquircle.ui.language.json.JsonLanguage
 import com.github.shadowsocks.plugin.Empty
 import com.github.shadowsocks.plugin.fragment.AlertDialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import pkg.pkkstore.Key
-import pkg.pkkstore.R
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.databinding.LayoutEditConfigBinding
-import pkg.pkkstore.ktx.getColorAttr
-import pkg.pkkstore.ktx.readableMessage
-import pkg.pkkstore.ktx.toStringPretty
-import pkg.pkkstore.ui.ThemedActivity
-import pkg.pkkstore.widget.ListListener
-import pkg.pkkstore.ui.ExtendedKeyboard
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.databinding.LayoutEditConfigBinding
+import io.nekohasekai.sagernet.ktx.getColorAttr
+import io.nekohasekai.sagernet.ktx.readableMessage
+import io.nekohasekai.sagernet.ktx.toStringPretty
+import io.nekohasekai.sagernet.ui.ThemedActivity
+import io.nekohasekai.sagernet.widget.ListListener
+import io.nekohasekai.sagernet.ui.ExtendedKeyboard
 import org.json.JSONObject
 
 class ConfigEditActivity : ThemedActivity() {

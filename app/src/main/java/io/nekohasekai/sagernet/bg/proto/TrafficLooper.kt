@@ -1,15 +1,15 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
-import pkg.pkkstore.aidl.SpeedDisplayData
-import pkg.pkkstore.aidl.TrafficData
-import pkg.pkkstore.bg.BaseService
-import pkg.pkkstore.bg.SagerConnection
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProfileManager
-import pkg.pkkstore.fmt.TAG_BYPASS
-import pkg.pkkstore.fmt.TAG_PROXY
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.aidl.SpeedDisplayData
+import io.nekohasekai.sagernet.aidl.TrafficData
+import io.nekohasekai.sagernet.bg.BaseService
+import io.nekohasekai.sagernet.bg.SagerConnection
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProfileManager
+import io.nekohasekai.sagernet.fmt.TAG_BYPASS
+import io.nekohasekai.sagernet.fmt.TAG_PROXY
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 import kotlinx.coroutines.*
 
 class TrafficLooper

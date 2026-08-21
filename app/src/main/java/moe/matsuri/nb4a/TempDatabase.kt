@@ -1,10 +1,10 @@
-package pkg.pkkstore
+package io.nekohasekai.sagernet
 
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.database.preference.KeyValuePair
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.database.preference.KeyValuePair
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

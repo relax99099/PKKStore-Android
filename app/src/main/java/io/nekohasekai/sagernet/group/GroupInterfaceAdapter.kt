@@ -1,12 +1,12 @@
-package pkg.pkkstore.group
+package io.nekohasekai.sagernet.group
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import pkg.pkkstore.R
-import pkg.pkkstore.database.GroupManager
-import pkg.pkkstore.database.ProxyGroup
-import pkg.pkkstore.ktx.onMainDispatcher
-import pkg.pkkstore.ktx.runOnMainDispatcher
-import pkg.pkkstore.ui.ThemedActivity
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.GroupManager
+import io.nekohasekai.sagernet.database.ProxyGroup
+import io.nekohasekai.sagernet.ktx.onMainDispatcher
+import io.nekohasekai.sagernet.ktx.runOnMainDispatcher
+import io.nekohasekai.sagernet.ui.ThemedActivity
 import kotlinx.coroutines.delay
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine

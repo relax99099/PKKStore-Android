@@ -1,11 +1,11 @@
-package pkg.pkkstore.fmt.tuic
+package io.nekohasekai.sagernet.fmt.tuic
 
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.linkBuilder
-import pkg.pkkstore.ktx.toLink
-import pkg.pkkstore.ktx.urlSafe
-import pkg.pkkstore.SingBoxOptions
-import pkg.pkkstore.utils.listByLineOrComma
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.linkBuilder
+import io.nekohasekai.sagernet.ktx.toLink
+import io.nekohasekai.sagernet.ktx.urlSafe
+import io.nekohasekai.sagernet.SingBoxOptions
+import io.nekohasekai.sagernet.utils.listByLineOrComma
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 
 fun parseTuic(url: String): TuicBean {

@@ -1,7 +1,7 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProxyEntity
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProxyEntity
 
 class UrlTest {
 

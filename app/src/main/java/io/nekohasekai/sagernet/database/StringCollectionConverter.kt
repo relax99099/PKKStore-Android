@@ -1,4 +1,4 @@
-package pkg.pkkstore.database
+package io.nekohasekai.sagernet.database
 
 import androidx.room.TypeConverter
 

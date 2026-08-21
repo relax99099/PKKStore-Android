@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.app.Activity
 import android.content.Context
@@ -20,20 +20,20 @@ import com.danielstone.materialaboutlibrary.MaterialAboutFragment
 import com.danielstone.materialaboutlibrary.items.MaterialAboutActionItem
 import com.danielstone.materialaboutlibrary.model.MaterialAboutCard
 import com.danielstone.materialaboutlibrary.model.MaterialAboutList
-import pkg.pkkstore.BuildConfig
-import pkg.pkkstore.R
-import pkg.pkkstore.databinding.LayoutAboutBinding
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.plugin.PluginManager.loadString
-import pkg.pkkstore.utils.PackageCache
-import pkg.pkkstore.widget.ListListener
+import io.nekohasekai.sagernet.BuildConfig
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.databinding.LayoutAboutBinding
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.plugin.PluginManager.loadString
+import io.nekohasekai.sagernet.utils.PackageCache
+import io.nekohasekai.sagernet.widget.ListListener
 import libcore.Libcore
-import pkg.pkkstore.plugin.Plugins
+import io.nekohasekai.sagernet.plugin.Plugins
 import androidx.core.net.toUri
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.utils.Util
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.utils.Util
 import org.json.JSONObject
 
 class AboutFragment : ToolbarFragment(R.layout.layout_about) {

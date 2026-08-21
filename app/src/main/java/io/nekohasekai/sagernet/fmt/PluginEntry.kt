@@ -1,7 +1,7 @@
-package pkg.pkkstore.fmt
+package io.nekohasekai.sagernet.fmt
 
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
 
 enum class PluginEntry(
     val pluginId: String,

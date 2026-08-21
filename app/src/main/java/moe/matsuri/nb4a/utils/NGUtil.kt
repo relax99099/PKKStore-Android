@@ -1,4 +1,4 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -7,7 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.text.Editable
 import android.util.Base64
-import pkg.pkkstore.ktx.Logs
+import io.nekohasekai.sagernet.ktx.Logs
 import java.net.URLDecoder
 import java.net.URLEncoder
 import java.util.*

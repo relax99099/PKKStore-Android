@@ -1,9 +1,9 @@
-package pkg.pkkstore.bg
+package io.nekohasekai.sagernet.bg
 
 import android.system.ErrnoException
 import android.system.Os
 import android.system.OsConstants
-import pkg.pkkstore.ktx.Logs
+import io.nekohasekai.sagernet.ktx.Logs
 import java.io.File
 import java.io.IOException
 import androidx.core.text.isDigitsOnly

@@ -1,6 +1,6 @@
-package pkg.pkkstore.ui.profile
+package io.nekohasekai.sagernet.ui.profile
 
-import pkg.pkkstore.fmt.trojan.TrojanBean
+import io.nekohasekai.sagernet.fmt.trojan.TrojanBean
 
 class TrojanSettingsActivity : StandardV2RaySettingsActivity() {
 

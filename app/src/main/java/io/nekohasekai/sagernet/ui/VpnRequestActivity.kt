@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.app.Activity
 import android.app.KeyguardManager
@@ -13,12 +13,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.getSystemService
-import pkg.pkkstore.Key
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.broadcastReceiver
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.broadcastReceiver
 
 class VpnRequestActivity : AppCompatActivity() {
     private var receiver: BroadcastReceiver? = null

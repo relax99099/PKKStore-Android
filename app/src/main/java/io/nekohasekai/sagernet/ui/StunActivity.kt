@@ -1,13 +1,13 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
-import pkg.pkkstore.R
-import pkg.pkkstore.databinding.LayoutStunBinding
-import pkg.pkkstore.ktx.onMainDispatcher
-import pkg.pkkstore.ktx.readableMessage
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.databinding.LayoutStunBinding
+import io.nekohasekai.sagernet.ktx.onMainDispatcher
+import io.nekohasekai.sagernet.ktx.readableMessage
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 import libcore.Libcore
 
 class StunActivity : ThemedActivity() {

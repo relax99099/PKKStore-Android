@@ -1,10 +1,10 @@
-package pkg.pkkstore.fmt.trojan_go
+package io.nekohasekai.sagernet.fmt.trojan_go
 
-import pkg.pkkstore.IPv6Mode
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.fmt.LOCALHOST
-import pkg.pkkstore.ktx.*
-import pkg.pkkstore.Protocols
+import io.nekohasekai.sagernet.IPv6Mode
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.fmt.LOCALHOST
+import io.nekohasekai.sagernet.ktx.*
+import io.nekohasekai.sagernet.Protocols
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.json.JSONArray
 import org.json.JSONObject

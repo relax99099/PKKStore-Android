@@ -1,6 +1,6 @@
-package pkg.pkkstore.fmt
+package io.nekohasekai.sagernet.fmt
 
-import pkg.pkkstore.database.ProxyEntity
+import io.nekohasekai.sagernet.database.ProxyEntity
 
 object TypeMap : HashMap<String, Int>() {
     init {

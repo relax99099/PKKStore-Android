@@ -1,4 +1,4 @@
-package pkg.pkkstore.proxy
+package io.nekohasekai.sagernet.proxy
 
 import androidx.preference.PreferenceFragmentCompat
 

@@ -1,13 +1,13 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
-import pkg.pkkstore.BuildConfig
-import pkg.pkkstore.bg.BaseService
-import pkg.pkkstore.bg.ServiceNotification
-import pkg.pkkstore.database.ProxyEntity
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.BuildConfig
+import io.nekohasekai.sagernet.bg.BaseService
+import io.nekohasekai.sagernet.bg.ServiceNotification
+import io.nekohasekai.sagernet.database.ProxyEntity
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 import kotlinx.coroutines.runBlocking
-import pkg.pkkstore.utils.JavaUtil
+import io.nekohasekai.sagernet.utils.JavaUtil
 
 class ProxyInstance(profile: ProxyEntity, var service: BaseService.Interface? = null) :
     BoxInstance(profile) {

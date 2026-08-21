@@ -1,10 +1,10 @@
-  package pkg.pkkstore.ktx
+  package io.nekohasekai.sagernet.ktx
 
 import android.content.Context
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
-import pkg.pkkstore.R
+import io.nekohasekai.sagernet.R
 
 fun Context.launchCustomTab(link: String) {
     CustomTabsIntent.Builder().apply {

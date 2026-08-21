@@ -1,16 +1,16 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.listenForPackageChanges
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.listenForPackageChanges
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import pkg.pkkstore.plugin.Plugins
+import io.nekohasekai.sagernet.plugin.Plugins
 import java.util.concurrent.atomic.AtomicBoolean
 
 object PackageCache {

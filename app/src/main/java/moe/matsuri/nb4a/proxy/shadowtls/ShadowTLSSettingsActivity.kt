@@ -1,14 +1,14 @@
-package pkg.pkkstore.proxy.shadowtls
+package io.nekohasekai.sagernet.proxy.shadowtls
 
 import android.os.Bundle
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
-import pkg.pkkstore.R
-import pkg.pkkstore.database.preference.EditTextPreferenceModifiers
-import pkg.pkkstore.ui.profile.ProfileSettingsActivity
-import pkg.pkkstore.proxy.PreferenceBinding
-import pkg.pkkstore.proxy.PreferenceBindingManager
-import pkg.pkkstore.proxy.Type
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.database.preference.EditTextPreferenceModifiers
+import io.nekohasekai.sagernet.ui.profile.ProfileSettingsActivity
+import io.nekohasekai.sagernet.proxy.PreferenceBinding
+import io.nekohasekai.sagernet.proxy.PreferenceBindingManager
+import io.nekohasekai.sagernet.proxy.Type
 
 class ShadowTLSSettingsActivity : ProfileSettingsActivity<ShadowTLSBean>() {
 

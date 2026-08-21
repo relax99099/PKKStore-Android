@@ -1,6 +1,6 @@
 @file:Suppress("EXPERIMENTAL_API_USAGE")
 
-package pkg.pkkstore.ktx
+package io.nekohasekai.sagernet.ktx
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope

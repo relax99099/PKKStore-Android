@@ -1,4 +1,4 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import android.annotation.TargetApi
 import android.net.ConnectivityManager
@@ -8,8 +8,8 @@ import android.net.NetworkRequest
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.ktx.Logs
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.ktx.Logs
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

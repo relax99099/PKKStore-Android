@@ -1,4 +1,4 @@
-package pkg.pkkstore.widget
+package io.nekohasekai.sagernet.widget
 
 import android.view.View
 import androidx.core.view.OnApplyWindowInsetsListener

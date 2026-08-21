@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.content.Context
 import android.graphics.Color
@@ -24,7 +24,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import pkg.pkkstore.databinding.ItemKeyboardKeyBinding
+import io.nekohasekai.sagernet.databinding.ItemKeyboardKeyBinding
 
 class ExtendedKeyboard @JvmOverloads constructor(
     context: Context,

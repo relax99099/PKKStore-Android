@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.app.Activity
 import android.content.DialogInterface
@@ -22,24 +22,24 @@ import androidx.preference.PreferenceFragmentCompat
 import com.github.shadowsocks.plugin.Empty
 import com.github.shadowsocks.plugin.fragment.AlertDialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import pkg.pkkstore.Key
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.database.ProfileManager
-import pkg.pkkstore.database.RuleEntity
-import pkg.pkkstore.database.SagerDatabase
-import pkg.pkkstore.database.preference.OnPreferenceDataStoreChangeListener
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.onMainDispatcher
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
-import pkg.pkkstore.utils.PackageCache
-import pkg.pkkstore.widget.AppListPreference
-import pkg.pkkstore.widget.ListListener
-import pkg.pkkstore.widget.OutboundPreference
+import io.nekohasekai.sagernet.Key
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.database.ProfileManager
+import io.nekohasekai.sagernet.database.RuleEntity
+import io.nekohasekai.sagernet.database.SagerDatabase
+import io.nekohasekai.sagernet.database.preference.OnPreferenceDataStoreChangeListener
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.onMainDispatcher
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.utils.PackageCache
+import io.nekohasekai.sagernet.widget.AppListPreference
+import io.nekohasekai.sagernet.widget.ListListener
+import io.nekohasekai.sagernet.widget.OutboundPreference
 import kotlinx.parcelize.Parcelize
-import pkg.pkkstore.ui.EditConfigPreference
+import io.nekohasekai.sagernet.ui.EditConfigPreference
 
 @Suppress("UNCHECKED_CAST")
 class RouteSettingsActivity(

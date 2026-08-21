@@ -1,10 +1,10 @@
-package pkg.pkkstore.proxy
+package io.nekohasekai.sagernet.proxy
 
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import pkg.pkkstore.database.DataStore
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.readableMessage
+import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.readableMessage
 
 object Type {
     const val Text = 0

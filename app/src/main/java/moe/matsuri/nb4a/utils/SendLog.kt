@@ -1,15 +1,15 @@
-package pkg.pkkstore.utils
+package io.nekohasekai.sagernet.utils
 
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.FileProvider
-import pkg.pkkstore.BuildConfig
-import pkg.pkkstore.R
-import pkg.pkkstore.SagerNet
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.app
-import pkg.pkkstore.ktx.use
-import pkg.pkkstore.utils.CrashHandler
+import io.nekohasekai.sagernet.BuildConfig
+import io.nekohasekai.sagernet.R
+import io.nekohasekai.sagernet.SagerNet
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.app
+import io.nekohasekai.sagernet.ktx.use
+import io.nekohasekai.sagernet.utils.CrashHandler
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream

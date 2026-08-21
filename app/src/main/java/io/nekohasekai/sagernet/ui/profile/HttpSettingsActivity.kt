@@ -1,6 +1,6 @@
-package pkg.pkkstore.ui.profile
+package io.nekohasekai.sagernet.ui.profile
 
-import pkg.pkkstore.fmt.http.HttpBean
+import io.nekohasekai.sagernet.fmt.http.HttpBean
 
 class HttpSettingsActivity : StandardV2RaySettingsActivity() {
 

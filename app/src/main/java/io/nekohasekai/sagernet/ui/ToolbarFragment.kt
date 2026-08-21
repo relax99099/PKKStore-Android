@@ -1,4 +1,4 @@
-package pkg.pkkstore.ui
+package io.nekohasekai.sagernet.ui
 
 import android.os.Bundle
 import android.view.KeyEvent
@@ -6,7 +6,7 @@ import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import pkg.pkkstore.R
+import io.nekohasekai.sagernet.R
 
 open class ToolbarFragment : Fragment {
 

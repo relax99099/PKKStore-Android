@@ -1,16 +1,16 @@
-package pkg.pkkstore.bg.proto
+package io.nekohasekai.sagernet.bg.proto
 
-import pkg.pkkstore.BuildConfig
-import pkg.pkkstore.bg.GuardedProcessPool
-import pkg.pkkstore.database.ProxyEntity
-import pkg.pkkstore.fmt.buildConfig
-import pkg.pkkstore.ktx.Logs
-import pkg.pkkstore.ktx.runOnDefaultDispatcher
-import pkg.pkkstore.ktx.tryResume
-import pkg.pkkstore.ktx.tryResumeWithException
+import io.nekohasekai.sagernet.BuildConfig
+import io.nekohasekai.sagernet.bg.GuardedProcessPool
+import io.nekohasekai.sagernet.database.ProxyEntity
+import io.nekohasekai.sagernet.fmt.buildConfig
+import io.nekohasekai.sagernet.ktx.Logs
+import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
+import io.nekohasekai.sagernet.ktx.tryResume
+import io.nekohasekai.sagernet.ktx.tryResumeWithException
 import kotlinx.coroutines.delay
 import libcore.Libcore
-import pkg.pkkstore.net.LocalResolverImpl
+import io.nekohasekai.sagernet.net.LocalResolverImpl
 import kotlin.coroutines.suspendCoroutine
 
 class TestInstance(profile: ProxyEntity, val link: String, private val timeout: Int) :
