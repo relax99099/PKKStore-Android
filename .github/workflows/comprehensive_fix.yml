@@ -21,17 +21,14 @@ jobs:
         run: |
           python3 -c "
           import os
+          import subprocess
           import re
           import urllib.request
 
-          # Remove broken experimental files
-          bad_files = [
-              'app/src/main/java/moe/matsuri/nb4a/proxy/shadowtls/ShadowTLSFmt.kt'
-          ]
-          for f in bad_files:
-              if os.path.exists(f):
-                  os.remove(f)
-                  print(f'Removed {f}')
+          print('Restoring proxy and utils directories from git HEAD / upstream...')
+          subprocess.run(['git', 'checkout', 'app/src/main/java/moe/matsuri/nb4a/proxy/'], check=False)
+          subprocess.run(['git', 'checkout', 'app/src/main/java/pkg/pkkstore/proxy/'], check=False)
+          subprocess.run(['git', 'checkout', 'app/src/main/res/'], check=False)
 
           def download_upstream(path):
               url = f'https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/master/{path}'
@@ -42,38 +39,48 @@ jobs:
                   print(f'Error downloading {path}: {e}')
                   return None
 
-          # 1. Restore and Rebrand strings.xml
+          # 1. Rebrand strings.xml across all values-* directories
           res_dir = 'app/src/main/res'
           for root, dirs, files in os.walk(res_dir):
               for file in files:
                   if file == 'strings.xml':
-                      rel_path = os.path.relpath(os.path.join(root, file))
-                      print(f'Restoring and rebranding {rel_path}')
-                      upstream_content = download_upstream(rel_path)
-                      if upstream_content:
-                          content = upstream_content.replace('NekoBox', 'PKKStore').replace('Matsuri', 'PKKStore')
+                      filepath = os.path.join(root, file)
+                      try:
+                          with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                              content = f.read()
+                          
+                          content = content.replace('NekoBox', 'PKKStore').replace('Matsuri', 'PKKStore')
                           content = re.sub(r'<string name=\"app_name\" translatable=\"false\">.*?</string>', 
                                          '<string name=\"app_name\" translatable=\"false\">PKKStore</string>', content)
+                          # Sanitize unescaped single quotes
                           content = re.sub(r\"(?<!\\\\)'\", \"\\\\'\", content)
-                          
-                          with open(rel_path, 'w', encoding='utf-8') as f:
+
+                          with open(filepath, 'w', encoding='utf-8') as f:
                               f.write(content)
+                      except Exception as e:
+                          print(f'Error processing {filepath}: {e}')
 
-          # 2. Fix Kotlin Syntax in NGUtil.kt, Subnet.kt, Commandline.kt, RawUpdater.kt
-          files_to_fix = [
-              'app/src/main/java/moe/matsuri/nb4a/utils/NGUtil.kt',
-              'app/src/main/java/io/nekohasekai/sagernet/utils/Subnet.kt',
-              'app/src/main/java/io/nekohasekai/sagernet/utils/Commandline.kt',
-              'app/src/main/java/io/nekohasekai/sagernet/group/RawUpdater.kt'
-          ]
-          for rel_path in files_to_fix:
-              print(f'Restoring clean upstream {rel_path}')
-              upstream_content = download_upstream(rel_path)
-              if upstream_content:
-                  with open(rel_path, 'w', encoding='utf-8') as f:
-                      f.write(upstream_content)
+          # 2. Rebrand package names across the codebase: io.nekohasekai.sagernet -> pkg.pkkstore
+          for root, dirs, files in os.walk('.'):
+              if '.git' in root or 'build' in root or '.gradle' in root:
+                  continue
+              for file in files:
+                  if file.endswith(('.kt', '.java', '.xml', '.gradle', '.kts', '.properties', '.json')):
+                      filepath = os.path.join(root, file)
+                      try:
+                          with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                              content = f.read()
+                          
+                          new_content = content.replace('io.nekohasekai.sagernet', 'pkg.pkkstore')
+                          new_content = new_content.replace('NekoBox', 'PKKStore')
+                          
+                          if new_content != content:
+                              with open(filepath, 'w', encoding='utf-8') as f:
+                                  f.write(new_content)
+                      except Exception as e:
+                          print(f'Error updating {filepath}: {e}')
 
-          # 3. Fix build.gradle.kts
+          # 3. Ensure build.gradle.kts and nb4a.properties are correct
           app_gradle = 'app/build.gradle.kts'
           if os.path.exists(app_gradle):
               with open(app_gradle, 'r') as f:
@@ -82,7 +89,6 @@ jobs:
               with open(app_gradle, 'w') as f:
                   f.write(content)
 
-          # 4. Fix nb4a.properties
           nb4a_props = 'nb4a.properties'
           if os.path.exists(nb4a_props):
               with open(nb4a_props, 'r') as f:
@@ -90,6 +96,8 @@ jobs:
               content = re.sub(r'flavor=.*', 'flavor=oss', content)
               with open(nb4a_props, 'w') as f:
                   f.write(content)
+
+          print('Comprehensive fixes applied successfully.')
           "
 
       - name: Commit and Push
@@ -97,7 +105,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Remove broken ShadowTLSFmt.kt and restore clean upstream files" || echo "No changes to commit"
+          git commit -m "Restore pristine proxy modules and apply clean PKKStore rebranding" || echo "No changes to commit"
           git push origin main
 
       - name: Trigger Build
